@@ -8,11 +8,13 @@ import clsx from 'clsx';
 
 
 const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
+  subsets: ['latin'],
+  variable: '--textFont',
   weight: '400',
 });
 const roboto = Roboto_Mono({
-  subsets: ['latin', 'cyrillic'],
+  subsets: ['latin'],
+  variable: '--titleFont',
   weight: '500',
 });
 
@@ -29,12 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={
-          clsx({
-            [inter.className]: true,
-            [roboto.className]: true,
-          })
-        }
+        className={`${inter.variable} ${roboto.variable}`}
       >
         {children}
       </body>
