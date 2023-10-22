@@ -1,6 +1,26 @@
 
 html {
+  // positioning
+  position: relative;
+
+  // box model
+  height: 100%;
+
   // typography
+  color: rgb(var(--white));
   font-family: var(--textFont);
   font-size: 4.444444444444445vw;
+
+  // visual
+  background-color: rgb(var(--dark));
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  // positioning
+  position: relative;
+
+  // visual
+  overflow-x: hidden;
 }
