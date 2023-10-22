@@ -1,22 +1,6 @@
 import type { Metadata } from 'next';
-import {
-  Inter,
-  Roboto_Mono,
-} from 'next/font/google';
 import '@/styles/main.scss';
-import clsx from 'clsx';
 
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--textFont',
-  weight: '400',
-});
-const roboto = Roboto_Mono({
-  subsets: ['latin'],
-  variable: '--titleFont',
-  weight: '500',
-});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -30,9 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${roboto.variable}`}
-      >
+      <body>
         {children}
       </body>
     </html>
