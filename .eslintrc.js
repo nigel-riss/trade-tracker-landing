@@ -17,5 +17,10 @@ module.exports = {
 
       }
     ],
+    'max-len': ['error', {
+      ignoreStrings: true,
+      ignoreTemplateLiterals: true,
+      ignoreUrls: true,
+    }],
   },
 };

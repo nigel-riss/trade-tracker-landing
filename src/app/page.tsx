@@ -1,10 +1,16 @@
+import Header from '@/components/Header';
+import PricingSection from '@/components/PricingSection';
+import ProductsSection from '@/components/ProductsSection';
+import SlidersSection from '@/components/SlidersSection';
+
+
 export default function Home() {
   return (
     <main>
-      <h1>Random Title</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora culpa molestias ad at iste ex cumque deserunt libero quibusdam laborum corporis harum optio ducimus voluptatibus, consequatur tempore! Quasi, sed repudiandae!
-      </p>
+      <Header />
+      <ProductsSection />
+      <SlidersSection />
+      <PricingSection />
     </main>
   );
 }
