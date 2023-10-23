@@ -2,17 +2,10 @@ import styles from '@/styles/FAQSection.module.scss';
 import Title from './Title';
 import Subtitle from './Subtitle';
 import ArrowLink from './ArrowLink';
+import FAQ from './FAQ';
 
 
-interface FAQSectionProps {
-  
-}
-
-export default function FAQSection(props: FAQSectionProps) {
-  const {
-    
-  } = props;
-
+export default function FAQSection() {
   return (
     <section className={styles.section}>
       <header className={styles.header}>
@@ -25,6 +18,10 @@ export default function FAQSection(props: FAQSectionProps) {
           text="Learn more"
         />
       </header>
+
+      <div className={styles.content}>
+        <FAQ />
+      </div>
     </section>
   );
 }

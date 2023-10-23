@@ -1,7 +1,10 @@
+import FAQSection from '@/components/FAQSection';
 import Header from '@/components/Header';
+import JoinUsSection from '@/components/JoinUsSection';
 import PricingSection from '@/components/PricingSection';
 import ProductsSection from '@/components/ProductsSection';
 import SlidersSection from '@/components/SlidersSection';
+import SpecialOffer from '@/components/SpecialOffer';
 
 
 export default function Home() {
@@ -11,6 +14,9 @@ export default function Home() {
       <ProductsSection />
       <SlidersSection />
       <PricingSection />
+      <SpecialOffer />
+      <FAQSection />
+      <JoinUsSection />
     </main>
   );
 }
