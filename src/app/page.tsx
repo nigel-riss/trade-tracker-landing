@@ -1,4 +1,5 @@
 import FAQSection from '@/components/FAQSection';
+import products from '@/data/products';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import JoinUsSection from '@/components/JoinUsSection';
@@ -12,9 +13,15 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <ProductsSection />
-      <SlidersSection />
-      <PricingSection />
+      <ProductsSection
+        products={products}
+      />
+      <SlidersSection
+        products={products}
+      />
+      <PricingSection
+        products={products}
+      />
       <SpecialOffer />
       <FAQSection />
       <JoinUsSection />

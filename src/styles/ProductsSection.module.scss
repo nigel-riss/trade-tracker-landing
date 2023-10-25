@@ -1,0 +1,13 @@
+.section {
+  // box model
+  padding: 1.25rem;
+}
+
+.content {
+  // box model
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-top: 4.5rem;
+}

@@ -1,19 +1,49 @@
 .card {
+  // box model
+  flex-basis: calc(50% - 0.625rem);
+  flex-grow: 10;
+  height: 18.125rem;
+  padding: 1.5rem;
 
+  // border
+  border: 0.125rem solid rgb(var(--white));
+  border-radius: 1.5rem;
 }
 
 .link {
+  // box model
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 
+  // typography
+  color: rgb(var(--white));
+  text-decoration: none;
 }
 
 .icon {
-
+  // box model
+  flex-basis: 1.5rem;
+  flex-shrink: 0;
+  height: 1.5rem;
+  width: 100%;
+  border: 2px solid fuchsia;
 }
 
 .title {
-
+  // typography
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 500;
 }
 
 .description {
+  // box model
+  margin-top: 0.5rem;
 
+  // typography
+  font-size: 0.75rem;
+  line-height: 1.25;
 }

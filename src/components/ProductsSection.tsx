@@ -1,16 +1,16 @@
 import styles from '@/styles/ProductsSection.module.scss';
+import { Product } from '@/data/products';
 import Title from './Title';
 import Subtitle from './Subtitle';
+import BotCard from './BotCard';
 
 
 interface ProductsSectionProps {
-  
+  products: Product[];
 }
 
 export default function ProductsSection(props: ProductsSectionProps) {
-  const {
-    
-  } = props;
+  const { products } = props;
 
   return (
     <section
@@ -26,7 +26,22 @@ export default function ProductsSection(props: ProductsSectionProps) {
       </header>
 
       <div className={styles.content}>
-        
+        {products.map((product: Product) => {
+          const {
+            id,
+            title,
+            text,
+          } = product;
+
+          return (
+            <BotCard
+              key={id}
+              botID={id}
+              title={title}
+              description={text}
+            />
+          );
+        })}
       </div>
     </section>
   );
