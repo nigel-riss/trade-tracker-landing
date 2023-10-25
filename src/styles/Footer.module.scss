@@ -4,3 +4,63 @@
   padding: 0 1.25rem;
   padding-bottom: 3rem;
 }
+
+.description {
+  // box model
+  margin-top: 1.5rem;
+
+  // typography
+  font-size: 0.75rem;
+}
+
+.navigation {
+
+}
+
+.column {
+  // box model
+}
+
+.title {
+  // typography
+  color: rgb(var(--green));
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+ul.list {
+  // box model
+  margin-top: 3rem;
+
+  // visual
+  list-style: none;
+}
+
+.listColumn {
+
+}
+
+.item {
+
+}
+
+.link {
+
+}
+
+.legalInfo {
+
+}
+
+.copyrights {
+
+}
+
+.legalLinks {
+
+}
+
+.legalLink {
+
+}
