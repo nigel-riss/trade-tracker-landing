@@ -9,13 +9,15 @@ export default function Header() {
         <Logo />
       </nav>
 
-      <h1 className={styles.title}>
-        Unlock the next level
-      </h1>
-      <p className={styles.subtitle}>
-        A unique set of tools that provides a detailed analysis of the volume
-        changes in currencies and info on the buyers making those trends.
-      </p>
+      <div className={styles.caption}>
+        <h1 className={styles.title}>
+          Unlock the next level
+        </h1>
+        <p className={styles.subtitle}>
+          A unique set of tools that provides a detailed analysis of the volume
+          changes in currencies and info on the buyers making those trends.
+        </p>
+      </div>
     </header>
   );
 }

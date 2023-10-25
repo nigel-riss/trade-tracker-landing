@@ -1,0 +1,39 @@
+.header {
+  // box model
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 5rem);
+  // height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  padding: 2.75rem 1.25rem;
+  border: 2px solid fuchsia;
+}
+
+.nav {
+  // box model
+  display: flex;
+}
+
+.title {
+  // typography
+  font-family: var(--titleFont);
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.title::before {
+  content: "/";
+
+  // typography
+  color: rgba(var(--green));
+}
+
+.subtitle {
+  // box model
+  padding-left: 0.25rem;
+  padding-right: 3.625rem;
+
+  // typography
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
