@@ -13,13 +13,13 @@ export default function FAQItem(props: FAQItemProps) {
   } = props;
 
   return (
-    <>
+    <div className={styles.item}>
       <dt className={styles.question}>
         {question}
       </dt>
       <dd className={styles.answer}>
         {answer}
       </dd>
-    </>
+    </div>
   );
 }
