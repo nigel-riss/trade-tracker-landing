@@ -1,7 +1,25 @@
 .offer {
-  
+  // box model
+  padding: 1.5rem;
+
+  // border
+  border-radius: 1.25rem;
+
+  // visual
+  background-color: rgb(var(--green));
 }
 
 .title {
-  
+  // typography
+  color: rgb(var(--dark));
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.button {
+  // box model
+  margin-top: 0.75rem;
 }

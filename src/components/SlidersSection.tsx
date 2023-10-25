@@ -10,8 +10,8 @@ export default function SlidersSection(props: SlidersSectionProps) {
   const { products } = props;
 
   return (
-    <div className={styles.div}>
+    <section className={styles.section}>
       SlidersSection
-    </div>
+    </section>
   );
 }

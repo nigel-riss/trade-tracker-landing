@@ -1,4 +1,5 @@
 import styles from '@/styles/PricingSection.module.scss';
+import { Product } from '@/data/products';
 import Title from './Title';
 import Subtitle from './Subtitle';
 import Calculator from './Calculator';
@@ -6,13 +7,11 @@ import SpecialOffer from './SpecialOffer';
 
 
 interface PricingSectionProps {
-  
+  products: Product;
 }
 
 export default function PricingSection(props: PricingSectionProps) {
-  const {
-    
-  } = props;
+  const { products } = props;
 
   return (
     <section id="pricing" className={styles.section}>

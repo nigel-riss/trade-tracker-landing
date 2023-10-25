@@ -21,6 +21,8 @@ export default function JoinUsSection() {
           const {
             id,
             href,
+            width,
+            height,
           } = it;
 
           return (
@@ -28,6 +30,8 @@ export default function JoinUsSection() {
               key={id}
               id={id}
               href={href}
+              width={width}
+              height={height}
             />
           );
         })}

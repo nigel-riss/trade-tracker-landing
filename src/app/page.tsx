@@ -6,7 +6,6 @@ import JoinUsSection from '@/components/JoinUsSection';
 import PricingSection from '@/components/PricingSection';
 import ProductsSection from '@/components/ProductsSection';
 import SlidersSection from '@/components/SlidersSection';
-import SpecialOffer from '@/components/SpecialOffer';
 
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
       <PricingSection
         products={products}
       />
-      <SpecialOffer />
       <FAQSection />
       <JoinUsSection />
       <Footer />

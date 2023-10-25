@@ -1,5 +1,7 @@
 .section {
-
+  // box model
+  margin-top: 9rem;
+  padding: 0 1.25rem;
 }
 
 .sprites {
@@ -12,5 +14,11 @@
 }
 
 .content {
-
+  // box model
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 3rem;
+  row-gap: 2.25rem;
+  margin-top: 4.5rem;
 }

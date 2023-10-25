@@ -2,15 +2,15 @@
   // box model
   display: inline-block;
   vertical-align: middle;
-  height: 3rem;
+  height: 2.25rem;
+  flex-grow: 0;
 }
 
 .link:hover {
-
+  
 }
 
 .icon {
   // box model
   height: 100%;
-
 }
