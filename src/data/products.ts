@@ -11,6 +11,7 @@ interface Product {
     height: number;
     width: number;
   };
+  price: number;
   features: Feature[];
 }
 
@@ -23,6 +24,7 @@ const products: Product[] = [
       height: 24,
       width: 24,
     },
+    price: 200,
     features: [
       {
         value: '1000',
@@ -46,6 +48,7 @@ const products: Product[] = [
       height: 24,
       width: 24,
     },
+    price: 200,
     features: [
       {
         value: '1000',
@@ -69,6 +72,7 @@ const products: Product[] = [
       height: 24,
       width: 24,
     },
+    price: 200,
     features: [
       {
         value: '1000',
@@ -92,6 +96,7 @@ const products: Product[] = [
       height: 24,
       width: 24,
     },
+    price: 200,
     features: [
       {
         value: '1000',
@@ -115,6 +120,7 @@ const products: Product[] = [
       height: 24,
       width: 24,
     },
+    price: 200,
     features: [
       {
         value: '1000',

@@ -17,6 +17,7 @@ module.exports = {
 
       }
     ],
+    'react/require-default-props': ['off'],
     'max-len': ['error', {
       ignoreStrings: true,
       ignoreTemplateLiterals: true,

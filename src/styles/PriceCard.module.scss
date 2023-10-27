@@ -1,5 +1,6 @@
 .card {
   // box model
+  margin-top: 1.25rem;
   padding: 1.325rem;
 
   // border
@@ -34,7 +35,7 @@ ul.featureList {
   // box model
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  padding: 0.5rem 0;
   gap: 3rem;
 
   // typography
@@ -47,10 +48,17 @@ ul.featureList {
 }
 
 .featureTitle {
-
+  // box model
+  display: block;
 }
 
 .price {
+  // box model
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+
   // border
   border-top: 0.0625rem dashed rgb(var(--dark));
 }

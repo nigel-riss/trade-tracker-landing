@@ -20,6 +20,7 @@ export default function Calculator(props: CalculatorProps) {
           title,
           subtitle,
           features,
+          price,
         } = product;
 
         return (
@@ -28,6 +29,7 @@ export default function Calculator(props: CalculatorProps) {
             title={title}
             subtitle={subtitle}
             features={features}
+            price={price}
           />
         );
       })}

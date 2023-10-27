@@ -1,11 +1,15 @@
+'use client';
+
 import { Feature } from '@/data/products';
 import styles from '@/styles/PriceCard.module.scss';
+import PriceButton from './PriceButton';
 
 
 interface PriceCardProps {
   title: string;
   subtitle: string;
   features: Feature[];
+  price: number;
 }
 
 export default function PriceCard(props: PriceCardProps) {
@@ -13,7 +17,9 @@ export default function PriceCard(props: PriceCardProps) {
     title,
     subtitle,
     features,
+    price,
   } = props;
+
 
   return (
     <article className={styles.card}>
@@ -32,16 +38,18 @@ export default function PriceCard(props: PriceCardProps) {
                 key={featureTitle}
                 className={styles.feature}
               >
-                <b>{value}</b>
-                <br />
-                {featureTitle}
+                <span className={styles.featureValue}>{value}</span>
+                <span className={styles.featureTitle}>{featureTitle}</span>
               </li>
             );
           })}
         </ul>
       </div>
       <div className={styles.price}>
-
+        <PriceButton
+          value={price}
+          onClick={() => {}}
+        />
       </div>
     </article>
   );
