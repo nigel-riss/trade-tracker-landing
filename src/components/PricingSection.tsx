@@ -24,7 +24,9 @@ export default function PricingSection(props: PricingSectionProps) {
         </Subtitle>
       </header>
 
-      <Calculator />
+      <Calculator
+        products={products}
+      />
 
       <SpecialOffer />
     </section>

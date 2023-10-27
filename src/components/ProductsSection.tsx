@@ -30,7 +30,7 @@ export default function ProductsSection(props: ProductsSectionProps) {
           const {
             id,
             title,
-            text,
+            subtitle,
           } = product;
 
           return (
@@ -38,7 +38,7 @@ export default function ProductsSection(props: ProductsSectionProps) {
               key={id}
               botID={id}
               title={title}
-              description={text}
+              subtitle={subtitle}
             />
           );
         })}

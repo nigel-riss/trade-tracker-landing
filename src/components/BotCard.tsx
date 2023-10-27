@@ -5,14 +5,14 @@ import Link from 'next/link';
 interface BotCardProps {
   botID: string,
   title: string,
-  description: string,
+  subtitle: string,
 }
 
 export default function BotCard(props: BotCardProps) {
   const {
     botID,
     title,
-    description,
+    subtitle,
   } = props;
 
   return (
@@ -26,7 +26,7 @@ export default function BotCard(props: BotCardProps) {
         </svg>
         <div className={styles.caption}>
           <h3 className={styles.title}>{title}</h3>
-          <p className={styles.description}>{description}</p>
+          <p className={styles.subtitle}>{subtitle}</p>
         </div>
       </Link>
     </article>

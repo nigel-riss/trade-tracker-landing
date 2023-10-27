@@ -10,6 +10,11 @@
   border-radius: 1.5rem;
 }
 
+.card:last-of-type {
+  // box model
+  height: auto;
+}
+
 .link {
   // box model
   display: flex;
@@ -38,7 +43,7 @@
   font-weight: 500;
 }
 
-.description {
+.subtitle {
   // box model
   margin-top: 0.5rem;
 
