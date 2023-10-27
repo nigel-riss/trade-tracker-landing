@@ -4,6 +4,14 @@
   padding: 1.25rem;
 }
 
+.header {
+  // box model
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+}
+
 .content {
   // box model
   display: flex;

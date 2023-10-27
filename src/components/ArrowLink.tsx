@@ -1,5 +1,6 @@
 import styles from '@/styles/ArrowLink.module.scss';
 import Link from 'next/link';
+import ArrowIcon from '@/assets/icons/arrow.svg';
 
 
 interface ArrowLinkProps {
@@ -19,6 +20,7 @@ export default function ArrowLink(props: ArrowLinkProps) {
       href={href}
     >
       {text}
+      <ArrowIcon className={styles.icon} />
     </Link>
   );
 }

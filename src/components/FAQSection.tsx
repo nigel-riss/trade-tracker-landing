@@ -9,7 +9,7 @@ export default function FAQSection() {
   return (
     <section className={styles.section}>
       <header className={styles.header}>
-        <Title>FAQs</Title>
+        <Title><strong>FAQs</strong></Title>
         <Subtitle>
           For further enquiries, reach out to our support team
         </Subtitle>

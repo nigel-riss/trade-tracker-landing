@@ -1,5 +1,13 @@
 .link {
+  // box model
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 
+  // typography
+  color: rgb(var(--white));
+  font-size: 0.875rem;
+  text-decoration: none;
 }
 
 .link:hover {
@@ -8,4 +16,9 @@
 
 .link:active {
   
+}
+
+.icon {
+  // box model
+  height: 1.125rem;
 }

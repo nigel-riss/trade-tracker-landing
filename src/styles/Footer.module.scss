@@ -14,11 +14,13 @@
 }
 
 .navigation {
-
+  // box model
+  margin-top: 3rem;
 }
 
 .column {
   // box model
+  margin-top: 3rem;
 }
 
 .title {
@@ -31,14 +33,21 @@
 
 ul.list {
   // box model
-  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3rem;
+  row-gap: 1.5rem;
+  margin-top: 1.5rem;
 
   // visual
   list-style: none;
 }
 
 .listColumn {
-
+  // box model
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .item {
@@ -46,11 +55,20 @@ ul.list {
 }
 
 .link {
-
+  // typography
+  color: rgb(var(--white));
+  font-size: 0.875rem;
+  text-decoration: none;
 }
 
 .legalInfo {
+  // box model
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.75rem;
 
+  // typography
+  font-size: 0.75rem;
 }
 
 .copyrights {
@@ -62,5 +80,7 @@ ul.list {
 }
 
 .legalLink {
-
+  // typography
+  color: rgb(var(--white));
+  text-decoration: none;
 }

@@ -36,6 +36,11 @@
   border: 2px solid fuchsia;
 }
 
+.caption {
+  // box model
+  margin-top: 0.875rem;
+}
+
 .title {
   // typography
   font-family: var(--titleFont);

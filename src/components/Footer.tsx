@@ -85,9 +85,18 @@ export default function Footer() {
                   Product 4
                 </Link>
               </li>
+              <li className={styles.item}>
+                <Link
+                  className={styles.link}
+                  href="/"
+                >
+                  Product 5
+                </Link>
+              </li>
             </div>
           </ul>
         </div>
+
         <div className={styles.column}>
           <h3 className={styles.title}>Socials</h3>
           <ul className={styles.list}>
@@ -152,7 +161,7 @@ export default function Footer() {
           >
             Terms of use
           </Link>
-          /
+          &nbsp;/&nbsp;
           <Link
             className={styles.legalLink}
             href="/"
