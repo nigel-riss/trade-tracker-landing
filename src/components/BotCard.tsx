@@ -6,6 +6,8 @@ interface BotCardProps {
   botID: string,
   title: string,
   subtitle: string,
+  iconHeight: number,
+  iconWidth: number,
 }
 
 export default function BotCard(props: BotCardProps) {
@@ -13,6 +15,8 @@ export default function BotCard(props: BotCardProps) {
     botID,
     title,
     subtitle,
+    iconHeight,
+    iconWidth,
   } = props;
 
   return (
@@ -21,7 +25,10 @@ export default function BotCard(props: BotCardProps) {
         className={styles.link}
         href={`#${botID}`}
       >
-        <svg className={styles.icon}>
+        <svg
+          className={styles.icon}
+          viewBox={`0 0 ${iconWidth} ${iconHeight}`}
+        >
           <use xlinkHref={`#${botID}-icon`} />
         </svg>
         <div className={styles.caption}>

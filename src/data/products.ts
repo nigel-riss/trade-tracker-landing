@@ -94,7 +94,7 @@ const products: Product[] = [
     subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes',
     icon: {
       height: 24,
-      width: 24,
+      width: 40,
     },
     price: 200,
     features: [

@@ -1,5 +1,6 @@
 import styles from '@/styles/ProductsSection.module.scss';
 import { Product } from '@/data/products';
+import ProductsSprites from '@/components/ProductSprites';
 import Title from './Title';
 import Subtitle from './Subtitle';
 import BotCard from './BotCard';
@@ -17,6 +18,10 @@ export default function ProductsSection(props: ProductsSectionProps) {
       id="products"
       className={styles.section}
     >
+      <div className={styles.sprites}>
+        <ProductsSprites />
+      </div>
+
       <header className={styles.header}>
         <Title>Our products</Title>
         <Subtitle>
@@ -31,6 +36,7 @@ export default function ProductsSection(props: ProductsSectionProps) {
             id,
             title,
             subtitle,
+            icon,
           } = product;
 
           return (
@@ -39,6 +45,8 @@ export default function ProductsSection(props: ProductsSectionProps) {
               botID={id}
               title={title}
               subtitle={subtitle}
+              iconHeight={icon.height}
+              iconWidth={icon.width}
             />
           );
         })}

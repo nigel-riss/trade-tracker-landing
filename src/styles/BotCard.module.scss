@@ -19,6 +19,7 @@
   // box model
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   height: 100%;
 
@@ -32,8 +33,6 @@
   flex-basis: 1.5rem;
   flex-shrink: 0;
   height: 1.5rem;
-  width: 100%;
-  border: 2px solid fuchsia;
 }
 
 .caption {
@@ -50,8 +49,15 @@
 
 .subtitle {
   // box model
+  display: -webkit-box;
   margin-top: 0.5rem;
+  max-height: 6.5rem;
+  -webkit-box-orient: vertical;
 
   // typography
   font-size: 0.75rem;
+  -webkit-line-clamp: 7;
+
+  // visual
+  overflow: hidden;
 }
