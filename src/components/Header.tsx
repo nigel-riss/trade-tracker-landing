@@ -1,5 +1,6 @@
 import styles from '@/styles/Header.module.scss';
 import Logo from './Logo';
+import MainMenu from './MainMenu';
 
 
 export default function Header() {
@@ -7,6 +8,7 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Logo />
+        <MainMenu />
       </nav>
 
       <div className={styles.caption}>
