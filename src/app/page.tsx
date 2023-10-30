@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import JoinUsSection from '@/components/JoinUsSection';
 import PricingSection from '@/components/PricingSection';
 import ProductsSection from '@/components/ProductsSection';
-import SlidersSection from '@/components/SlidersSection';
+import SliderSection from '@/components/SliderSection';
 
 
 export default function Home() {
@@ -15,9 +15,12 @@ export default function Home() {
       <ProductsSection
         products={products}
       />
-      <SlidersSection
-        products={products}
-      />
+      {products.map((product) => (
+        <SliderSection
+          key={product.id}
+          product={product}
+        />
+      ))}
       <PricingSection
         products={products}
       />

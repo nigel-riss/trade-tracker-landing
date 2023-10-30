@@ -1,0 +1,26 @@
+.iphone {
+  // positioning
+  position: relative;
+
+  // box model
+  aspect-ratio: 404/832;
+  // border: 2px solid fuchsia;
+
+  // visual
+  background-image: url('../assets/img/deco/iphone-bg.png');
+  background-size: cover;
+}
+
+.frame {
+  // positioning
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  // visual
+  background-image: url('../assets/img/deco/iphone.png');
+  background-size: cover;
+}

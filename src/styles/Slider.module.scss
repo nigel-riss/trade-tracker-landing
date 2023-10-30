@@ -1,0 +1,32 @@
+.slider {
+  // positioning
+  position: relative;
+
+  // box model
+  padding: 1.5rem;
+  // padding-bottom: 40rem;
+  height: calc(100vh - 5rem);
+
+  // border
+  border-radius: 1.25rem;
+
+  // visual
+  background-color: rgb(var(--white));
+  background-image: radial-gradient(
+    685.06% 133.39% at 9.38% 2.12%,
+    rgb(var(--chineseWhite)) 0%,
+    rgb(var(--white)) 100%
+  );
+  overflow: hidden;
+}
+
+.phoneContainer {
+  // positioning
+  position: absolute;
+  z-index: 2;
+  bottom: -6rem;
+  left: 0.625rem;
+  right: 0.625rem;
+
+  // box model
+}
