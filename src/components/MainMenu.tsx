@@ -23,7 +23,7 @@ export default function MainMenu() {
         onClick={() => setIsOpen(!isOpen)}
       />
       <ul className={styles.list}>
-        {menu.map((item: MenuItem) => {
+        {menu.map((item: MenuItem, i: number) => {
           const {
             id,
             title,
@@ -34,6 +34,7 @@ export default function MainMenu() {
             <li
               key={id}
               className={styles.item}
+              style={{ ['--index' as any]: `${i + 1}` }}
             >
               <Link
                 className={styles.link}
