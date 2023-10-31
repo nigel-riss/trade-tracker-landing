@@ -1,7 +1,10 @@
 .card {
   // box model
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 1.25rem;
-  padding: 1.325rem;
+  padding: 0.625rem;
 
   // border
   border: 0.125rem solid rgb(var(--chineseWhite));
@@ -20,7 +23,8 @@
 }
 
 .content {
-
+  // box model
+  display: none;
 }
 
 .subtitle {
@@ -56,10 +60,33 @@ ul.featureList {
   // box model
   display: flex;
   flex-direction: column;
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
+  padding-left: 0.626rem;
 
   // border
-  border-top: 0.0625rem dashed rgb(var(--dark));
+  border-left: 0.0625rem dashed rgb(var(--dark));
 }
 
+.isOpen {
+  // box model
+  align-items: stretch;
+  flex-direction: column;
+  padding: 1.325rem;
+
+  .content {
+    // box model
+    display: block;
+  }
+
+  .price {
+    // box model
+    // display: flex;
+    // flex-direction: column;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    padding-left: 0;
+  
+    // border
+    border-left: none;
+    border-top: 0.0625rem dashed rgb(var(--dark));
+  }
+}

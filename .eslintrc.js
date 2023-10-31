@@ -14,7 +14,6 @@ module.exports = {
       {
         max: 2, 
         maxEOF: 1,
-
       }
     ],
     'react/require-default-props': ['off'],

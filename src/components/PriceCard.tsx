@@ -1,7 +1,12 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+
 'use client';
 
 import { Feature } from '@/data/products';
 import styles from '@/styles/PriceCard.module.scss';
+import { useState } from 'react';
+import clsx from 'clsx';
 import PriceButton from './PriceButton';
 
 
@@ -20,9 +25,16 @@ export default function PriceCard(props: PriceCardProps) {
     price,
   } = props;
 
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <article className={styles.card}>
+    <article
+      className={clsx({
+        [styles.card]: true,
+        [styles.isOpen]: isOpen,
+      })}
+      onClick={() => setIsOpen(!isOpen)}
+    >
       <h3 className={styles.title}>{title}</h3>
       <div className={styles.content}>
         <p className={styles.subtitle}>{subtitle}</p>
