@@ -42,6 +42,7 @@ export default function PricingSection(props: PricingSectionProps) {
 
       <Calculator
         products={products}
+        calcDiscount={(price: number) => Math.round(price * 0.75)}
       />
 
       <SpecialOffer />

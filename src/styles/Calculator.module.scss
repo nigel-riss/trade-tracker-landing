@@ -1,0 +1,76 @@
+.calculator {
+
+}
+
+.heading {
+
+}
+
+.title {
+
+}
+
+.products {
+
+}
+
+.cart {
+  // positioning
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  // box model
+  padding: 1.5rem;
+
+  // border
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+
+  // visual
+  background-color: rgb(var(--white));
+  box-shadow: 0 -0.625rem 0.625rem 0 rgb(var(--dark), 0.25);
+}
+
+.priceRow {
+  // box model
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+}
+
+.prices {
+  // box model
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  // typography
+  font-family: var(--titleFont);
+}
+
+.originalPrice {
+  // typography
+  color: rgb(var(--dark));
+  text-decoration: line-through;
+}
+
+.currentPrice {
+  // typography
+  color: rgb(var(--green));
+  font-size: 1.5rem;
+}
+
+.buttonsRow {
+  // box model
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.75rem;
+  gap: 0.5rem;
+
+  // border
+  border-top: 0.0625rem dashed rgb(var(--dark));
+}

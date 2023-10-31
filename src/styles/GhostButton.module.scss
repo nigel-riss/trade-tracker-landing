@@ -1,0 +1,16 @@
+.button {
+  // box model
+  padding: 0.25rem 1.25rem;
+
+  // border
+  border: none;
+  border-radius: 1.75rem;
+
+  // typography
+  color: rgb(var(--chineseWhite));
+  font-size: 0.875rem;
+
+  // visual
+  appearance: none;
+  background-color: transparent;
+}
