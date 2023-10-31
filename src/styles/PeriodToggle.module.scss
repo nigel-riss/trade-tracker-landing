@@ -1,0 +1,67 @@
+.toggle {
+  // positioning
+  position: relative;
+
+  // box model
+  display: flex;
+
+  // border
+  border: 0.125rem solid rgb(var(--chineseWhite));
+  border-radius: 1.5rem;
+}
+
+.option {
+  // positioning
+  position: relative;
+  z-index: 2;
+  
+  // box model
+  width: 7rem;
+  margin-left: -0.875rem;
+}
+
+.option:first-of-type {
+  // box model
+  margin-left: 0;
+}
+
+.label {
+  // box model
+  display: block;
+  padding: 0.625rem 0.875rem;
+
+  // typography
+  text-align: center;
+
+  // visual
+  transition: all 0.25s ease-out;
+}
+
+.input {
+  // box model
+  display: none;
+}
+
+.input:checked + .label {
+  // typography
+  color: rgb(var(--dark));
+}
+
+.track {
+  // positioning
+  position: absolute;
+  // left: 0;
+  top: -0.125rem;
+  bottom: -0.125rem;
+  z-index: 1;
+
+  // box model
+  width: 7rem;
+
+  // border
+  border-radius: 1.5rem;
+
+  // visual
+  background-color: rgb(var(--green));
+  transition: all 0.25s ease-out;
+}
