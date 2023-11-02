@@ -24,7 +24,10 @@ export default function Calculator(props: CalculatorProps) {
     <div className={styles.calculator}>
       <div className={styles.heading}>
         <h3 className={styles.title}>Choose products:</h3>
-        <PlanToggle />
+        <PlanToggle
+          isChecked={isProPlan}
+          onToggle={() => setIsProPlan(!isProPlan)}
+        />
       </div>
 
       <div className={styles.products}>
@@ -55,10 +58,13 @@ export default function Calculator(props: CalculatorProps) {
             <span className={styles.originalPrice}>$550</span>
             <span className={styles.currentPrice}>
               $
-              {calcDiscount(550)}
+              {calcDiscount(550, isProPlan)}
             </span>
           </div>
-          <PlanToggle />
+          <PlanToggle
+            isChecked={isProPlan}
+            onToggle={() => setIsProPlan(!isProPlan)}
+          />
         </div>
         <div className={styles.buttonsRow}>
           <CTAButton onClick={() => {}}>

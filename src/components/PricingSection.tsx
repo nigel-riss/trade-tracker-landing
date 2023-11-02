@@ -19,8 +19,6 @@ export default function PricingSection(props: PricingSectionProps) {
   const { products } = props;
   const [period, setPeriod] = useState(durations[0].name);
 
-  console.log(period);
-
   return (
     <section id="pricing" className={styles.section}>
       <header className={styles.header}>
@@ -35,7 +33,6 @@ export default function PricingSection(props: PricingSectionProps) {
           value={period}
           onToggle={(selectedValue: string) => {
             setPeriod(selectedValue);
-            console.log(selectedValue);
           }}
         />
       </header>
