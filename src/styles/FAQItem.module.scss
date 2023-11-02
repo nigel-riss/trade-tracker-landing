@@ -29,7 +29,7 @@
   // positioning
   position: absolute;
   transform-origin: center center;
-  transform: rotate(45deg) translate(0.25rem, 0.125rem);
+  transform: translate(0.25rem, 0.25rem) rotate(45deg);
 
   // box model
   display: inline-block;
@@ -40,12 +40,34 @@
   // visual
   background-image: url('../assets/icons/arrow.svg');
   background-size: cover;
+  transition: all 0.375s ease-out;
 }
 
 .answer {
   // box model
+  max-height: 0;
   margin-top: 0.75rem;
 
   // typography
   font-size: 0.875rem;
+
+  // visual
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.375s ease-out;
+}
+
+.isOpen {
+  .answer {
+    // box model
+    max-height: 10rem;
+
+    // visual
+    opacity: 1;
+  }
+
+  .arrow {
+    // positioning
+    transform: translate(0.25rem, 0.25rem) rotate(-45deg);
+  }
 }

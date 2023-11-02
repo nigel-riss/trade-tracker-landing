@@ -8,7 +8,7 @@ import GhostButton from './GhostButton';
 
 
 interface CalculatorProps {
-  calcDiscount: (price: number) => number;
+  calcDiscount: (price: number, isProPlan: boolean) => number;
   products: Product[];
 }
 

@@ -24,8 +24,6 @@ export default function PlanToggle(props: PlanToggleProps) {
 
   const inputId = useMemo(() => generateUniqueId(), []);
 
-  console.log(isChecked);
-
   return (
     <div
       className={clsx({
