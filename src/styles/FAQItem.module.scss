@@ -12,6 +12,9 @@
 }
 
 .question {
+  // box model
+  padding-right: 2rem;
+
   // typography
   font-family: var(--titleFont);
   font-size: 1.5rem;
@@ -20,6 +23,23 @@
 
 .question::before {
   content: '✽ ';
+}
+
+.arrow {
+  // positioning
+  position: absolute;
+  transform-origin: center center;
+  transform: rotate(45deg) translate(0.25rem, 0.125rem);
+
+  // box model
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.5rem;
+  width: 1.5rem;
+
+  // visual
+  background-image: url('../assets/icons/arrow.svg');
+  background-size: cover;
 }
 
 .answer {
