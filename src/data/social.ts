@@ -1,36 +1,51 @@
+interface SocialItem {
+  id: string;
+  title: string;
+  href: string;
+  width: number;
+  height: number;
+}
+
+
 const social = [
   {
     id: 'telegram',
+    title: 'Telegram',
     href: '#',
     width: 36,
     height: 37,
   },
   {
     id: 'facebook',
+    title: 'Facebook',
     href: '#',
     width: 36,
     height: 37,
   },
   {
     id: 'instagram',
+    title: 'Instagram',
     href: '#',
     width: 36,
     height: 37,
   },
   {
     id: 'twitter',
+    title: 'X (Twitter)',
     href: '#',
     width: 36,
     height: 37,
   },
   {
     id: 'discord',
+    title: 'Discord',
     href: '#',
     width: 48,
     height: 37,
   },
   {
     id: 'whatsapp',
+    title: 'WhatsApp',
     href: '#',
     width: 36,
     height: 37,
@@ -38,3 +53,4 @@ const social = [
 ];
 
 export default social;
+export type { SocialItem };

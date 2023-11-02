@@ -1,6 +1,34 @@
 import styles from '@/styles/Footer.module.scss';
 import Link from 'next/link';
+import menu, { MenuItem } from '@/data/menu';
+import products, { Product } from '@/data/products';
+import social, { SocialItem } from '@/data/social';
 import Logo from './Logo';
+
+
+const getMenuItems = (
+  items: Array<MenuItem | Product | SocialItem>,
+) => items.map((item: MenuItem | Product | SocialItem) => {
+  const {
+    id,
+    href,
+    title,
+  } = item;
+
+  return (
+    <li
+      className={styles.item}
+      key={id}
+    >
+      <Link
+        className={styles.link}
+        href={`/${href}`}
+      >
+        {title}
+      </Link>
+    </li>
+  );
+});
 
 
 export default function Footer() {
@@ -17,137 +45,23 @@ export default function Footer() {
       <nav className={styles.navigation}>
         <div className={styles.column}>
           <h3 className={styles.title}>Navigation</h3>
-          <ul className={styles.list}>
-            <div className={styles.listColumn}>
-              <li className={styles.item}>
-                <Link
-                  className={styles.link}
-                  href="/"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className={styles.item}>
-                <Link
-                  className={styles.link}
-                  href="/"
-                >
-                  Our products
-                </Link>
-              </li>
-              <li className={styles.item}>
-                <Link
-                  className={styles.link}
-                  href="/"
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li className={styles.item}>
-                <Link
-                  className={styles.link}
-                  href="/"
-                >
-                  Questions
-                </Link>
-              </li>
-            </div>
-            <div className={styles.listColumn}>
-              <li className={styles.item}>
-                <Link
-                  className={styles.link}
-                  href="/"
-                >
-                  Product 1
-                </Link>
-              </li>
-              <li className={styles.item}>
-                <Link
-                  className={styles.link}
-                  href="/"
-                >
-                  Product 2
-                </Link>
-              </li>
-              <li className={styles.item}>
-                <Link
-                  className={styles.link}
-                  href="/"
-                >
-                  Product 3
-                </Link>
-              </li>
-              <li className={styles.item}>
-                <Link
-                  className={styles.link}
-                  href="/"
-                >
-                  Product 4
-                </Link>
-              </li>
-              <li className={styles.item}>
-                <Link
-                  className={styles.link}
-                  href="/"
-                >
-                  Product 5
-                </Link>
-              </li>
-            </div>
-          </ul>
+          <div className={styles.listColumn}>
+            <ul className={styles.list}>
+              {getMenuItems(menu)}
+            </ul>
+          </div>
+
+          <div className={styles.listColumn}>
+            <ul className={styles.list}>
+              {getMenuItems(products)}
+            </ul>
+          </div>
         </div>
 
         <div className={styles.column}>
           <h3 className={styles.title}>Socials</h3>
           <ul className={styles.list}>
-            <li className={styles.item}>
-              <Link
-                className={styles.link}
-                href="/"
-              >
-                Telegram
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link
-                className={styles.link}
-                href="/"
-              >
-                Instagram
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link
-                className={styles.link}
-                href="/"
-              >
-                Discord
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link
-                className={styles.link}
-                href="/"
-              >
-                Facebook
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link
-                className={styles.link}
-                href="/"
-              >
-                WhatsApp
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link
-                className={styles.link}
-                href="/"
-              >
-                X (Twitter)
-              </Link>
-            </li>
+            {getMenuItems(social)}
           </ul>
         </div>
       </nav>
@@ -157,14 +71,14 @@ export default function Footer() {
         <div className={styles.legalLinks}>
           <Link
             className={styles.legalLink}
-            href="/"
+            href="/terms"
           >
             Terms of use
           </Link>
           &nbsp;/&nbsp;
           <Link
             className={styles.legalLink}
-            href="/"
+            href="/privacy"
           >
             Privacy
           </Link>
