@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from '@/styles/Badge.module.scss';
+import { get } from 'http';
 
 
 interface BadgeProps {
@@ -10,6 +11,13 @@ interface BadgeProps {
 const BASE_ANIMATION_DURATION = 10;
 
 const getRandomLeftPos = () => `${Math.random() * 80 + 10}%`;
+const getRandomDelay = () => `${Math.random() * BASE_ANIMATION_DURATION}s`;
+const getRandomDirection = () => (Math.random() > 0.5 ? 'normal' : 'reverse');
+const getRandomDuration = (speedModifier: number) => `${
+  (Math.random() * BASE_ANIMATION_DURATION * speedModifier)
+  / BASE_ANIMATION_DURATION
+  + BASE_ANIMATION_DURATION * speedModifier
+}s`;
 
 
 export default function Badge(props: BadgeProps) {
@@ -21,17 +29,18 @@ export default function Badge(props: BadgeProps) {
   const [leftPos, setLeftPos] = useState(getRandomLeftPos());
   const [animationDelay, setAnimationDelay] = useState('1s');
   const [animationDirection, setAnimationDirection] = useState('normal');
-  // const [speed, setSpeed] = useState(1);
+  const [animationDuration, setAnimationDuration] = useState('10s');
 
   useEffect(() => {
     setLeftPos(getRandomLeftPos());
-    setAnimationDelay(`${Math.random() * 5 + 1}s`);
-    setAnimationDirection(Math.random() > 0.5 ? 'normal' : 'reverse');
+    setAnimationDelay(getRandomDelay());
+    setAnimationDirection(getRandomDirection());
+    setAnimationDuration(getRandomDuration(speedModifier));
   }, []);
 
   const cssStyles = {
     animationDuration: `
-      10s,
+      ${animationDuration},
       10s
     `,
     animationDelay,

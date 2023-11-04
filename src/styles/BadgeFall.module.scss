@@ -5,7 +5,42 @@
   // box model
   height: 100%;
   width: 100%;
-  border: 2px solid fuchsia;
+}
 
+.front,
+.middle,
+.back {
+  // positioning
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 
+.front {
+  // positioning
+  z-index: 3;
+
+  // typography
+  font-size: 1.25rem;
+
+  // visual
+  filter: blur(4px);
+}
+
+.middle {
+  // positioning
+  z-index: 2;
+}
+
+.back {
+  // positioning
+  z-index: 1;
+
+  // typography
+  font-size: 0.75rem;
+
+  // visual
+  filter: blur(4px);
 }

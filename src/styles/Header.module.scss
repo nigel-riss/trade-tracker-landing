@@ -27,7 +27,6 @@
   display: block;
   height: 75rem;
   width: 75rem;
-  border: 2px solid fuchsia;
 
   // visual
   background: radial-gradient(37.59% 37.59% at 50% 50%, rgba(255, 255, 255, 0.17) 0%, rgba(32, 32, 32, 0.00) 100%);
@@ -77,7 +76,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
   z-index: -1;
+
+  // box model
+  height: 100vh;
 }
