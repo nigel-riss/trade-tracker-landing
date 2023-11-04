@@ -1,4 +1,4 @@
-'use client';
+'';
 
 import styles from '@/styles/PricingSection.module.scss';
 import { useState } from 'react';

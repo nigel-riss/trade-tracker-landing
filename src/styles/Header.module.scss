@@ -1,4 +1,7 @@
 .header {
+  // positioning
+  position: relative;
+
   // box model
   display: flex;
   flex-direction: column;
@@ -7,6 +10,29 @@
   // height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   padding: 2.75rem 1rem;
   padding-right: 1.75rem;
+}
+
+.header::after {
+  content: "";
+
+  // positioning
+  position: absolute;
+  top: 2rem;
+  left: 6rem;
+  z-index: -2;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+
+  // box model
+  display: block;
+  height: 75rem;
+  width: 75rem;
+  border: 2px solid fuchsia;
+
+  // visual
+  background: radial-gradient(37.59% 37.59% at 50% 50%, rgba(255, 255, 255, 0.17) 0%, rgba(32, 32, 32, 0.00) 100%);
+
+
 }
 
 .nav {
@@ -44,4 +70,14 @@
 
   // typography
   font-size: 0.75rem;
+}
+
+.back {
+  // positioning
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }

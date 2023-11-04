@@ -1,6 +1,7 @@
 import styles from '@/styles/Header.module.scss';
 import Logo from './Logo';
 import MainMenu from './MainMenu';
+import BadgeFall from './BadgeFall';
 
 
 export default function Header() {
@@ -19,6 +20,10 @@ export default function Header() {
           A unique set of tools that provides a detailed analysis of the volume
           changes in currencies and info on the buyers making those trends.
         </p>
+      </div>
+
+      <div className={styles.back}>
+        <BadgeFall amount={3} />
       </div>
     </header>
   );

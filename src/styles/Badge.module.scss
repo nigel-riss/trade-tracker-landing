@@ -1,0 +1,52 @@
+
+.badge {
+  // positioning
+  position: absolute;
+  top: -10%;
+
+  // box model
+  padding: 0.75em 1.75em;
+
+  // border
+  border-radius: 1.75rem;
+
+  // typography
+  color: rgb(var(--dark));
+  font-family: var(--titleFont);
+  font-size: 1.25em;
+  line-height: 1;
+
+  // visual
+  background-color: rgb(var(--green));
+
+  // animation
+  animation-name: drop, twist;
+  animation-iteration-count: infinite,;
+  animation-timing-function: linear;
+  animation-duration: var(--dropDuration, --twistDuration);
+  will-change: transform;
+}
+
+@keyframes drop {
+  from {
+    // positioning
+    top: -10%;
+  }
+
+  to {
+    // positioning
+    top: 110%;
+  }
+}
+
+@keyframes twist {
+  from {
+    // positioning
+    transform: rotate(0deg);
+  }
+
+  to {
+    // positioning
+    transform: rotate(360deg);
+  }
+}

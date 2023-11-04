@@ -1,4 +1,4 @@
-'use client';
+'';
 
 import styles from '@/styles/MainMenu.module.scss';
 import MenuIcon from '@/assets/icons/menu.svg';

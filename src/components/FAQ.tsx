@@ -1,4 +1,4 @@
-'use client';
+'';
 
 import styles from '@/styles/FAQ.module.scss';
 import faq from '@/data/faq';

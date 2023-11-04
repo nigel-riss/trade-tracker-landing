@@ -1,4 +1,4 @@
-'use client';
+'';
 
 import styles from '@/styles/SpecialOffer.module.scss';
 import ContactButton from './ContactButton';
