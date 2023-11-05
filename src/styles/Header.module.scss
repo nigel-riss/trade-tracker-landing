@@ -1,3 +1,6 @@
+@import './mixins';
+
+
 .header {
   // positioning
   position: relative;
@@ -10,6 +13,12 @@
   // height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   padding: 2.75rem 1rem;
   padding-right: 1.75rem;
+
+  @include atTablet {
+    // box model
+    align-items: center;
+    padding: 2.75rem 1.25rem;
+  }
 }
 
 .header::after {
@@ -38,6 +47,17 @@
   justify-content: space-between;
   align-items: flex-end;
   padding: 0 0.25rem;
+  width: 100%;
+}
+
+.caption {
+  @include atTablet {
+    // box model
+    width: 24rem;
+
+    // typography
+    text-align: center;
+  }
 }
 
 .title {
@@ -67,6 +87,12 @@
 
   // typography
   font-size: 0.75rem;
+
+
+  @include atTablet {
+    // box model
+    padding: 0 2rem;
+  }
 }
 
 .back {

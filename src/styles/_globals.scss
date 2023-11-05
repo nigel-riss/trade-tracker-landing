@@ -1,3 +1,5 @@
+@import './mixins';
+
 
 html {
   // positioning
@@ -15,6 +17,11 @@ html {
   background-color: rgb(var(--dark));
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  @include atTablet {
+    // typography
+    font-size: 2.666666666666667vw;
+  }
 }
 
 body {
