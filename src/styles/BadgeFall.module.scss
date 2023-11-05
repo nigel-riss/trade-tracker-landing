@@ -7,6 +7,32 @@
   width: 100%;
 }
 
+.fall::before,
+.fall::after {
+  content: "";
+
+  // positioning
+  position: absolute;
+  top: 50%;
+  bottom: -4.5rem;
+  left: 0;
+  right: 0;
+  z-index: 4;
+
+  // box model
+  display: block;
+  // border: 2px solid fuchsia;
+
+  // visual
+  background-image: linear-gradient(
+    to bottom,
+    rgb(var(--dark), 0) 0%,
+    rgb(var(--dark), 0.5) 75%,
+    // rgb(var(--dark), 1) calc(100% - 9rem),
+    rgb(var(--dark), 1) 100%,
+  );
+}
+
 .front,
 .middle,
 .back {
