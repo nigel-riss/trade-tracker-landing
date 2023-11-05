@@ -20,10 +20,15 @@
 
 .column {
   // box model
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 3rem;
 }
 
 .title {
+  // box model
+  flex-basis: 100%;
+
   // typography
   color: rgb(var(--green));
   font-family: var(--titleFont);
@@ -48,6 +53,7 @@ ul.list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex-basis: 40%;
 }
 
 .item {

@@ -1,7 +1,34 @@
 .section {
+  // positioning
+  position: relative;
+
   // box model
   margin-top: 9rem;
   padding: 0 1.25rem;
+}
+
+.section::before {
+  content: "";
+
+  // positioning
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform-origin: center center;
+  transform: translate(-50%, -50% );
+
+  // box model
+  display: block;
+  height: 100rem;
+  width: 100rem;
+
+  // visual
+  background-image: radial-gradient(
+    37.59% 37.59% at 50% 50%,
+    rgb(var(--green)) 0%,
+    rgb(var(--dark), 0) 100%
+  );
 }
 
 .header {
