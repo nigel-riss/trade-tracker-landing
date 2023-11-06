@@ -1,8 +1,18 @@
+@import './mixins';
+
+
 .footer {
   // box model
   margin-top: 9rem;
   padding: 0 1.25rem;
   padding-bottom: 3rem;
+}
+
+.info {
+  @include atTablet {
+    // box model
+    width: 50%;
+  }
 }
 
 .description {
@@ -16,6 +26,12 @@
 .navigation {
   // box model
   margin-top: 3rem;
+
+  @include atTablet {
+    // box model
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .column {
@@ -23,6 +39,11 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 3rem;
+
+  @include atTablet {
+    // box model
+    margin-top: 0;
+  }
 }
 
 .title {
@@ -46,6 +67,11 @@ ul.list {
 
   // visual
   list-style: none;
+
+  @include atTablet {
+    // box model
+    margin-top: 3rem;
+  }
 }
 
 .listColumn {

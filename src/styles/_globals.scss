@@ -22,6 +22,11 @@ html {
     // typography
     font-size: 2.666666666666667vw;
   }
+
+  @include atDesktopS {
+    // typography
+    font-size: 1.1111111111111112vw;
+  }
 }
 
 body {
