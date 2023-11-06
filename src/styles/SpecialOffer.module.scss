@@ -1,3 +1,6 @@
+@import './mixins';
+
+
 .offer {
   // box model
   margin-top: 1.25rem;
@@ -8,6 +11,21 @@
 
   // visual
   background-color: rgb(var(--green));
+
+  @include atDesktopS {
+    // positioning
+    position: relative;
+    z-index: -1;
+
+    // box model
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: -4.5rem;
+    padding-top: 6rem;
+    width: 40rem;
+  }
 }
 
 .title {
@@ -24,4 +42,9 @@
   display: flex;
   flex-direction: column;
   margin-top: 0.75rem;
+
+  @include atDesktopS {
+    // box model
+    margin-top: 0;
+  }
 }
