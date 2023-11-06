@@ -1,3 +1,6 @@
+@import './mixins';
+
+
 .title {
   // typography
   font-family: var(--titleFont);
@@ -5,6 +8,12 @@
   font-weight: 500;
   line-height: 1;
   text-align: center;
+
+  @include atDesktopS {
+    // typography
+    font-size: 3rem;
+    line-height: 4rem;
+  }
 }
 
 .title::before {

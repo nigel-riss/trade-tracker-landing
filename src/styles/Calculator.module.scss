@@ -2,23 +2,59 @@
 
 
 .calculator {
+  @include atDesktopS {
+    // box model
+    margin: 0 auto;
+    padding: 2.25rem 1.5rem;
+    width: var(--dWidth);
+
+    // border
+    border-radius: 1.25rem;
+
+    // visual
+    background-color: rgb(var(--white));
+  }
 }
 
 .heading {
   // box model
   display: none;
+
+  @include atDesktopS {
+    // box model
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .title {
-
+  // typography
+  color: rgb(var(--dark));
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .products {
-  // box model
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.25rem;
+  @include atTablet {
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+  }
+
+  @include atDesktopS {
+    // box model
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    // visual
+    border-bottom: 0.0625rem solid rgb(var(--chineseWhite));
+  }
 }
 
 .cart {
@@ -39,8 +75,22 @@
   // visual
   background-color: rgb(var(--white));
   box-shadow: 0 -0.625rem 0.625rem 0 rgb(var(--dark), 0.25);
-  opacity: 0.25;
-  display: none;
+  // opacity: 0.25;
+  // display: none;
+
+  @include atDesktopS {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    padding-top: 1.5rem;
+
+    // visual
+    box-shadow: none;
+  }
 }
 
 .priceRow {
@@ -54,7 +104,7 @@
 .prices {
   // box model
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.25rem;
 
   // typography
@@ -71,6 +121,33 @@
   // typography
   color: rgb(var(--green));
   font-size: 1.5rem;
+  line-height: 1;
+
+  @include atDesktopS {
+    // typography
+    font-size: 2.25rem;
+  }
+}
+
+.perMonth {
+  // box model
+  display: none;
+
+  @include atDesktopS {
+    // box model
+    display: inline-block;
+    vertical-align: top;
+
+    // typography
+    color: rgb(var(--chineseWhite));
+  }
+}
+
+.toggleWrapper {
+  @include atDesktopS {
+    // box model
+    display: none;
+  }
 }
 
 .buttonsRow {
@@ -82,4 +159,13 @@
 
   // border
   border-top: 0.0625rem dashed rgb(var(--dark));
+
+  @include atDesktopS {
+    // box model
+    flex-direction: row-reverse;
+    padding: 0;
+
+    // border
+    border-top: none;
+  }
 }

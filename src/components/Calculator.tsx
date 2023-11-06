@@ -60,11 +60,14 @@ export default function Calculator(props: CalculatorProps) {
               $
               {calcDiscount(550, isProPlan)}
             </span>
+            <span className={styles.perMonth}> / per month</span>
           </div>
-          <PlanToggle
-            isChecked={isProPlan}
-            onToggle={() => setIsProPlan(!isProPlan)}
-          />
+          <div className={styles.toggleWrapper}>
+            <PlanToggle
+              isChecked={isProPlan}
+              onToggle={() => setIsProPlan(!isProPlan)}
+            />
+          </div>
         </div>
         <div className={styles.buttonsRow}>
           <CTAButton onClick={() => {}}>

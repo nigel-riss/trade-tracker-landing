@@ -29,6 +29,11 @@
     margin-top: 0;
     padding: 1.5rem;
   }
+
+  @include atDesktopS {
+    // box model
+    flex-basis: calc(20% - 0.75rem);
+  }
 }
 
 .title {
@@ -68,16 +73,32 @@ ul.featureList {
     // box model
     gap: 1.5rem;
   }
+
+  @include atDesktopS {
+    // box model
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .featureValue {
   // typography
   font-weight: 700;
+
+  @include atDesktopS {
+    // box model
+    margin-right: 0.325em;
+  }
 }
 
 .featureTitle {
   // box model
   display: block;
+
+  @include atDesktopS {
+    // box model
+    display: inline-block;
+  }
 }
 
 .price {
@@ -98,6 +119,11 @@ ul.featureList {
     // border
     border-left: none;
     border-top: 0.0625rem dashed rgb(var(--dark));
+  }
+
+  @include atDesktopS {
+    // box model
+    margin-top: 0;
   }
 }
 

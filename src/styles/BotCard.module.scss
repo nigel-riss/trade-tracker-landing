@@ -17,6 +17,11 @@
     flex-basis: calc(100% / 3 - 1rem);
     flex-grow: 0;
   }
+
+  @include atDesktopS {
+    // box model
+    flex-basis: calc(100% / 5 - 1.25rem);
+  }
 }
 
 .card:last-of-type {

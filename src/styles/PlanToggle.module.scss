@@ -1,13 +1,26 @@
+@import './mixins';
+ 
+
 .toggle {
+  // box model
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.25em;
+  font-size: 1rem;
+
+  @include atDesktopS {
+    // typography
+    font-size: 1.5rem;
+  }
 }
 
 .title {
   // typography
   color: rgb(var(--chineseWhite));
-  font-size: 0.875rem;
+  font-size: 0.875em;
+
+  // visual
+  transition: all 0.25s ease-out;
 }
 
 .label {
@@ -15,16 +28,14 @@
   position: relative;
 
   // box model
-  display: block;
-  height: 1.5rem;
-  width: 2.75rem;
+  display: flex;
+  height: 1.5em;
+  width: 2.75em;
+  padding: 0.125em;
 
   // border
-  border: 0.125rem solid rgb(var(--dark));
-  border-radius: 0.875rem;
-
-  // width: 3.5rem;
-  // height: 1.875rem;
+  border: 0.125em solid rgb(var(--dark));
+  border-radius: 0.875em;
 }
 
 .input {
@@ -33,14 +44,10 @@
 }
 
 .slider {
-  // positioning
-  position: absolute;
-  top: 0.125rem;
-  left: 0.125rem;
-
   // box model
-  height: 1rem;
-  width: 1rem;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
 
   // border
   border-radius: 50%;
@@ -55,10 +62,10 @@
     // typography
     color: rgb(var(--dark));
   }
+
   .slider {
     // positioning
-    left: 1.375rem;
-    // right: 0.125rem;
+    transform: translateX(1.25em);
 
     // visual
     background-color: rgb(var(--green));
