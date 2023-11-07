@@ -8,6 +8,7 @@
   align-items: center;
   margin-top: 1.25rem;
   padding: 0.625rem;
+  padding-left: 1.25rem;
 
   // border
   border: 0.125rem solid rgb(var(--chineseWhite));
@@ -106,6 +107,7 @@ ul.featureList {
   display: flex;
   flex-direction: column;
   padding-left: 0.626rem;
+  flex-basis: 8rem;
 
   // border
   border-left: 0.0625rem dashed rgb(var(--dark));

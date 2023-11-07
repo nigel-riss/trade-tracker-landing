@@ -4,7 +4,8 @@
 .card {
   // box model
   flex-basis: calc(50% - 0.625rem);
-  flex-grow: 10;
+  flex-grow: 0;
+  flex-shrink: 0;
   height: 18.125rem;
   padding: 1.5rem;
 
@@ -27,6 +28,7 @@
 .card:last-of-type {
   // box model
   height: auto;
+  flex-grow: 10;
 }
 
 .link {
@@ -57,8 +59,13 @@
 .title {
   // typography
   font-family: var(--titleFont);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
+
+  @include atTablet {
+    // typography
+    font-size: 1.5rem;
+  }
 }
 
 .subtitle {

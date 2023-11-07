@@ -19,6 +19,7 @@
 
   // visual
   background-color: rgb(var(--green));
+  overflow: hidden;
 
   // animation
   animation-name: drop, twist;
@@ -32,7 +33,7 @@
 @keyframes drop {
   from {
     // positioning
-    top: -30%;
+    top: -26rem;
   }
 
   to {

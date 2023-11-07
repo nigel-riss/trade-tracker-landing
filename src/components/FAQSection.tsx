@@ -7,7 +7,10 @@ import FAQ from './FAQ';
 
 export default function FAQSection() {
   return (
-    <section className={styles.section}>
+    <section
+      id="faq"
+      className={styles.section}
+    >
       <header className={styles.header}>
         <Title><strong>FAQs</strong></Title>
         <Subtitle>

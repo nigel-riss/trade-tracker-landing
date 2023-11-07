@@ -24,8 +24,9 @@ export default function PriceButton(props: PriceButtonProps) {
       onClick={onClick}
       type="button"
     >
-      {value}
-      &nbsp;USDT
+      {(value === 0)
+        ? 'Free'
+        : `${value} USDT`}
     </button>
   );
 }

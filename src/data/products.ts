@@ -18,6 +18,7 @@ interface Product {
     width: number;
   };
   price: number;
+  proPrice?: number;
   features: Feature[];
   slides: Slide[];
 }
@@ -25,14 +26,14 @@ interface Product {
 const products: Product[] = [
   {
     id: 'bot1',
-    title: 'Trade volume bot',
+    title: 'Trade Volume Bot',
     subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes in currencies and info on the buyers making those trends.',
     href: '#',
     icon: {
       height: 24,
       width: 24,
     },
-    price: 200,
+    price: 249,
     features: [
       {
         value: '1000',
@@ -72,14 +73,15 @@ const products: Product[] = [
   },
   {
     id: 'bot2',
-    title: 'Bot name 2',
+    title: 'Wallet Analyzer',
     subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes',
     href: '#',
     icon: {
       height: 24,
       width: 24,
     },
-    price: 200,
+    price: 99,
+    proPrice: 249,
     features: [
       {
         value: '1000',
@@ -111,14 +113,14 @@ const products: Product[] = [
   },
   {
     id: 'bot3',
-    title: 'Bot name 3',
+    title: 'Profit Maker',
     subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes',
     href: '#',
     icon: {
       height: 24,
       width: 24,
     },
-    price: 200,
+    price: 499,
     features: [
       {
         value: '1000',
@@ -142,14 +144,14 @@ const products: Product[] = [
   },
   {
     id: 'bot4',
-    title: 'Bot name 4',
+    title: 'Whales Allert',
     subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes',
     href: '#',
     icon: {
       height: 24,
       width: 40,
     },
-    price: 200,
+    price: 0,
     features: [
       {
         value: '1000',
@@ -173,14 +175,14 @@ const products: Product[] = [
   },
   {
     id: 'bot5',
-    title: 'Bot name 5',
+    title: 'Easy Trade Bot',
     subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes',
     href: '#',
     icon: {
       height: 24,
       width: 24,
     },
-    price: 200,
+    price: 0,
     features: [
       {
         value: '1000',
