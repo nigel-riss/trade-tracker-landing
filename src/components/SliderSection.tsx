@@ -1,6 +1,7 @@
 import { Product } from '@/data/products';
 import styles from '@/styles/SliderSection.module.scss';
 import Slider from './Slider';
+import IPhone from './IPhone';
 
 
 interface SliderSectionProps {
@@ -12,8 +13,10 @@ export default function SliderSection(props: SliderSectionProps) {
 
   return (
     <section className={styles.section}>
-      SliderSection
       <Slider />
+      <div className={styles.phoneContainer}>
+        <IPhone />
+      </div>
     </section>
   );
 }
