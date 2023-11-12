@@ -35,7 +35,16 @@ export default function PriceCard(props: PriceCardProps) {
       })}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <h3 className={styles.title}>{title}</h3>
+      <div className={styles.header}>
+        <h3 className={styles.title}>{title}</h3>
+        <div className={styles.price}>
+          <PriceButton
+            value={price}
+            onClick={() => {}}
+          />
+        </div>
+      </div>
+
       <div className={styles.content}>
         <p className={styles.subtitle}>{subtitle}</p>
         <ul className={styles.featureList}>
@@ -56,12 +65,6 @@ export default function PriceCard(props: PriceCardProps) {
             );
           })}
         </ul>
-      </div>
-      <div className={styles.price}>
-        <PriceButton
-          value={price}
-          onClick={() => {}}
-        />
       </div>
     </article>
   );

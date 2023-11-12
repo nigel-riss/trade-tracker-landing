@@ -7,4 +7,13 @@
 .logo svg {
   // box model
   height: 100%;
+
+  // visual
+  fill: rgb(var(--white));
+  transition: all 0.25s ease-out;
+}
+
+.logo:hover svg {
+  // visual
+  fill: rgb(var(--green));
 }

@@ -9,22 +9,22 @@ const menu: MenuItem[] = [
   {
     id: 'home',
     title: 'Home',
-    href: '/',
+    href: '',
   },
   {
     id: 'products',
     title: 'Our Products',
-    href: '/#products',
+    href: '#products',
   },
   {
     id: 'pricing',
     title: 'Pricing',
-    href: '/#pricing',
+    href: '#pricing',
   },
   {
     id: 'faq',
     title: 'Questions',
-    href: '/#faq',
+    href: '#faq',
   },
 ];
 
