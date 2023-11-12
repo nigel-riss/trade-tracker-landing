@@ -3,12 +3,10 @@
 
 .card {
   // box model
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 1.25rem;
   padding: 0.625rem;
-  padding-left: 1.25rem;
+  padding: 0.625rem 0.75rem;
+  // padding-left: 1.25rem;
 
   // border
   border: 0.125rem solid rgb(var(--chineseWhite));
@@ -19,22 +17,32 @@
 
   // visual
   background-color: rgb(var(--chineseWhite));
+  transition: all 0.325s ease-in-out;
+  overflow: hidden;
 
   @include atTablet {
     // box model
-    align-items: stretch;
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex-basis: calc(50% - 0.625rem);
     flex-grow: 0;
     flex-shrink: 0;
     margin-top: 0;
-    padding: 1.5rem;
+    padding: 1.125rem;
   }
 
   @include atDesktopS {
     // box model
     flex-basis: calc(20% - 0.75rem);
   }
+}
+
+.header {
+  // box model
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .title {
@@ -44,17 +52,26 @@
 
 .content {
   // box model
-  display: none;
+  max-height: 0;
+
+  // visual
+  opacity: 0;
+  transition: all 0.325s ease-in-out;
 
   @include atTablet {
     // box model
-    display: block;
+    max-height: initial;
+
+    // visual
+    opacity: 1;
   }
 }
 
 .subtitle {
   // box model
   padding: 0.75rem 0;
+  padding-top: 1.5rem;
+  padding-right: 1rem;
   
   // typography
   font-size: 0.75rem;
@@ -62,44 +79,27 @@
 
 ul.featureList {
   // box model
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-  gap: 3rem;
+  padding-left: 1rem;
+
+  // list
+  list-style-type: disc;
 
   // typography
   font-size: 0.875rem;
+}
 
-  @include atTablet {
-    // box model
-    gap: 1.5rem;
-  }
-
-  @include atDesktopS {
-    // box model
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+.feature {
+  // box model
+  margin-top: 0.25rem;
 }
 
 .featureValue {
   // typography
   font-weight: 700;
-
-  @include atDesktopS {
-    // box model
-    margin-right: 0.325em;
-  }
 }
 
 .featureTitle {
-  // box model
-  display: block;
 
-  @include atDesktopS {
-    // box model
-    display: inline-block;
-  }
 }
 
 .price {
@@ -112,15 +112,17 @@ ul.featureList {
   // border
   border-left: 0.0625rem dashed rgb(var(--dark));
 
+  // visual
+  transition: all 0.325s ease-in-out;
+
   @include atTablet {
     // box model
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
-    padding-left: 0;
+    // margin-top: 0.75rem;
+    // padding-top: 0.75rem;
+    // padding-left: 0;
 
     // border
     border-left: none;
-    border-top: 0.0625rem dashed rgb(var(--dark));
   }
 
   @include atDesktopS {
@@ -131,26 +133,23 @@ ul.featureList {
 
 .isOpen {
   // box model
-  align-items: stretch;
-  flex-direction: column;
-  padding: 1.325rem;
+  padding: 1.25rem;
 
+  @include atTablet {
+    // box model
+    padding: 1.125rem;
+  }
+  
   .content {
     // box model
-    display: block;
+    max-height: 20rem;
+    
+    // visual
+    opacity: 1;
   }
 
   .price {
-    // box model
-    // display: flex;
-    // flex-direction: column;
-    flex-basis: auto;
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
-    padding-left: 0;
-  
     // border
-    border-left: none;
-    border-top: 0.0625rem dashed rgb(var(--dark));
+    border-color: transparent;
   }
 }

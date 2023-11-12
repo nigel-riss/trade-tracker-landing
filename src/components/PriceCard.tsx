@@ -60,6 +60,7 @@ export default function PriceCard(props: PriceCardProps) {
                 className={styles.feature}
               >
                 <span className={styles.featureValue}>{value}</span>
+                &nbsp;
                 <span className={styles.featureTitle}>{featureTitle}</span>
               </li>
             );
