@@ -64,6 +64,7 @@
   left: 0;
   right: 0;
   z-index: 3;
+  transform: translateY(110%);
 
   // box model
   padding: 1.5rem;
@@ -75,12 +76,14 @@
   // visual
   background-color: rgb(var(--white));
   box-shadow: 0 -0.625rem 0.625rem 0 rgb(var(--dark), 0.25);
-  // opacity: 0.25;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.325s ease-in-out;
 
   @include atDesktopS {
     // positioning
     position: relative;
+    transform: translateY(0);
 
     // box model
     display: flex;
@@ -90,6 +93,8 @@
 
     // visual
     box-shadow: none;
+    opacity: 1;
+    pointer-events: all;
   }
 }
 
@@ -160,7 +165,7 @@
   // border
   border-top: 0.0625rem dashed rgb(var(--dark));
 
-  @include atDesktopS {
+  @include atTablet {
     // box model
     flex-direction: row-reverse;
     padding: 0;
@@ -168,4 +173,20 @@
     // border
     border-top: none;
   }
+}
+
+.buttonsRow button {
+  @include atTablet {
+    // box model
+    flex-grow: 2;
+  }
+}
+
+.isCartVisible {
+  // positioning
+  transform: translateY(0);
+
+  // visual
+  opacity: 1;
+  pointer-events: all;
 }

@@ -1,6 +1,11 @@
 import { Product } from '@/data/products';
 import styles from '@/styles/Calculator.module.scss';
-import { useState } from 'react';
+import {
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+import clsx from 'clsx';
 import PriceCard from './PriceCard';
 import PlanToggle from './PlanToggle';
 import CTAButton from './CTAButton';
@@ -19,9 +24,34 @@ export default function Calculator(props: CalculatorProps) {
   } = props;
 
   const [isProPlan, setIsProPlan] = useState(false);
+  const [isCartVisible, setIsCartVisible] = useState(false);
+
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentSection = sectionRef.current;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => setIsCartVisible(entry.isIntersecting));
+    }, { threshold: 0.5 });
+
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => {
+      if (currentSection) {
+        observer.unobserve(currentSection);
+      }
+    };
+  }, []);
+
 
   return (
-    <div className={styles.calculator}>
+    <div
+      className={styles.calculator}
+      ref={sectionRef}
+    >
       <div className={styles.heading}>
         <h3 className={styles.title}>Choose products:</h3>
         <PlanToggle
@@ -52,7 +82,12 @@ export default function Calculator(props: CalculatorProps) {
         })}
       </div>
 
-      <div className={styles.cart}>
+      <div
+        className={clsx({
+          [styles.cart]: true,
+          [styles.isCartVisible]: isCartVisible,
+        })}
+      >
         <div className={styles.priceRow}>
           <div className={styles.prices}>
             <span className={styles.originalPrice}>$550</span>

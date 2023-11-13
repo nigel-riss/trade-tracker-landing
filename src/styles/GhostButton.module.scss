@@ -1,9 +1,9 @@
 .button {
   // box model
-  padding: 0.25rem 1.25rem;
+  padding: 0.5rem 1.5rem;
 
   // border
-  border: none;
+  border: 0.125rem solid rgb(var(--chineseWhite));
   border-radius: 1.75rem;
 
   // typography
@@ -13,4 +13,5 @@
   // visual
   appearance: none;
   background-color: transparent;
+  cursor: pointer;
 }

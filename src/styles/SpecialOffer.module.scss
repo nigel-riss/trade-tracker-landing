@@ -13,18 +13,16 @@
   background-color: rgb(var(--green));
 
   @include atDesktopS {
-    // positioning
-    position: relative;
-    z-index: -1;
-
     // box model
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    margin-top: -4.5rem;
-    padding-top: 6rem;
     width: 40rem;
+
+    // border
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 
@@ -38,6 +36,10 @@
 }
 
 .button {
+  // positioning
+  position: relative;
+  z-index: 2;
+
   // box model
   display: flex;
   flex-direction: column;
