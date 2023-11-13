@@ -29,7 +29,7 @@
     flex-grow: 0;
     flex-shrink: 0;
     margin-top: 0;
-    padding: 1.125rem;
+    padding: 1.5rem;
   }
 
   @include atDesktopS {
@@ -48,6 +48,30 @@
 .title {
   // typography
   font-size: 0.875rem;
+}
+
+.price {
+  // box model
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.626rem;
+  flex-basis: 8rem;
+
+  // border
+  border-left: 0.0625rem dashed rgb(var(--dark));
+
+  // visual
+  transition: all 0.325s ease-in-out;
+
+  @include atTablet {
+    // box model
+    display: none;
+  }
+
+  @include atDesktopS {
+    // box model
+    margin-top: 0;
+  }
 }
 
 .content {
@@ -75,6 +99,11 @@
   
   // typography
   font-size: 0.75rem;
+
+  @include atTablet {
+    // box model
+    padding-top: 1rem;
+  }
 }
 
 ul.featureList {
@@ -102,32 +131,20 @@ ul.featureList {
 
 }
 
-.price {
+.priceBottom {
   // box model
-  display: flex;
-  flex-direction: column;
-  padding-left: 0.626rem;
-  flex-basis: 8rem;
-
-  // border
-  border-left: 0.0625rem dashed rgb(var(--dark));
-
-  // visual
-  transition: all 0.325s ease-in-out;
+  display: none;
 
   @include atTablet {
     // box model
-    // margin-top: 0.75rem;
-    // padding-top: 0.75rem;
-    // padding-left: 0;
+    display: flex;
+    // align-items: stretch;
+    // justify-content: stretch;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
 
     // border
-    border-left: none;
-  }
-
-  @include atDesktopS {
-    // box model
-    margin-top: 0;
+    border-top: 0.0625rem dashed rgb(var(--dark));
   }
 }
 
@@ -137,13 +154,13 @@ ul.featureList {
 
   @include atTablet {
     // box model
-    padding: 1.125rem;
+    padding: 1.5rem;
   }
   
   .content {
     // box model
     max-height: 20rem;
-    
+
     // visual
     opacity: 1;
   }

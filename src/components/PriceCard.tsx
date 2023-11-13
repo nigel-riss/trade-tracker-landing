@@ -66,6 +66,12 @@ export default function PriceCard(props: PriceCardProps) {
             );
           })}
         </ul>
+        <div className={styles.priceBottom}>
+          <PriceButton
+            value={price}
+            onClick={() => {}}
+          />
+        </div>
       </div>
     </article>
   );

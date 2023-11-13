@@ -36,6 +36,10 @@
   // border
   border: 0.125em solid rgb(var(--dark));
   border-radius: 0.875em;
+
+  // visual
+  cursor: pointer;
+  transition: all 0.25s ease-out;
 }
 
 .input {
@@ -54,6 +58,7 @@
 
   // visual
   background-color: rgb(var(--chineseWhite));
+  box-shadow: none;
   transition: all 0.25s ease-out;
 }
 
@@ -63,11 +68,17 @@
     color: rgb(var(--dark));
   }
 
+  .label {
+    // visual
+    background-color: rgb(var(--green));
+  }
+
   .slider {
     // positioning
     transform: translateX(1.25em);
 
     // visual
-    background-color: rgb(var(--green));
+    background-color: rgb(var(--white));
+    box-shadow: 0px 4px 12px 0px rgba(1, 0, 0, 0.15);
   }
 }
