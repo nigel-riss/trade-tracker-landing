@@ -6,12 +6,29 @@
   margin-top: 9rem;
   padding: 0 1.25rem;
   padding-bottom: 3rem;
+
+  @include atDesktopS {
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 9rem;
+    width: var(--dWidth);
+  }
 }
 
 .info {
   @include atTablet {
     // box model
     width: 50%;
+  }
+
+  @include atDesktopS {
+    // box model
+    flex-basis: 14rem;
+    width: auto;
   }
 }
 
@@ -32,6 +49,13 @@
     display: flex;
     align-items: flex-start;
   }
+
+  @include atDesktopS {
+    // box model
+    flex-basis: calc(100% - 30rem);
+    gap: 6rem;
+    margin-top: 0;
+  }
 }
 
 .column {
@@ -43,6 +67,11 @@
   @include atTablet {
     // box model
     margin-top: 0;
+  }
+
+  @include atDesktopS {
+    // box model
+    // fxb
   }
 }
 
@@ -91,6 +120,12 @@ ul.list {
   color: rgb(var(--white));
   font-size: 0.875rem;
   text-decoration: none;
+
+  &:hover {
+    // typography
+    color: rgb(var(--green));
+    text-decoration: underline;
+  }
 }
 
 .legalInfo {
@@ -101,6 +136,11 @@ ul.list {
 
   // typography
   font-size: 0.75rem;
+
+  @include atDesktopS {
+    // box model
+    flex-basis: 100%;
+  }
 }
 
 .copyrights {
@@ -115,4 +155,10 @@ ul.list {
   // typography
   color: rgb(var(--white));
   text-decoration: none;
+
+  &:hover {
+    // typography
+    color: rgb(var(--green));
+    text-decoration: underline;
+  }
 }

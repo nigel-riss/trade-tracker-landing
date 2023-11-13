@@ -6,11 +6,20 @@
   flex-grow: 0;
 }
 
-.link:hover {
-  
-}
-
 .icon {
   // box model
   height: 100%;
+
+  // visual
+  fill: rgb(var(--white));
+  transition: all 0.25s ease-out;
 }
+
+.link:hover {
+  // visual
+  .icon {
+    // visual
+    fill: rgb(var(--green));
+  }
+}
+
