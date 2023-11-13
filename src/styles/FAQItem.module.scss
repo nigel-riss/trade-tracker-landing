@@ -1,3 +1,6 @@
+@import './mixins';
+
+
 .item {
   // box model
   padding: 1.5rem 0;
@@ -19,17 +22,30 @@
   font-family: var(--titleFont);
   font-size: 1.5rem;
   font-weight: 500;
-}
 
-.question::before {
-  content: '✽ ';
+  // visual
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+
+  @include atTablet {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 0;
+  }
+
+  &:hover {
+    // typography
+    color: rgb(var(--green));
+  }
 }
 
 .arrow {
   // positioning
   position: absolute;
   transform-origin: center center;
-  transform: translate(0.25rem, 0.25rem) rotate(45deg);
+  transform: translate(0.25rem, 0.25rem);
 
   // box model
   display: inline-block;
@@ -41,6 +57,18 @@
   background-image: url('../assets/icons/arrow.svg');
   background-size: cover;
   transition: all 0.375s ease-out;
+
+  @include atTablet {
+    // positioning
+    position: relative;
+    transform: translate(0, 0);
+
+    // box model
+    height: 2.25rem;
+    width: 2.25rem;
+    flex-basis: 2.25rem;
+    flex-shrink: 0;
+  }
 }
 
 .answer {
@@ -68,6 +96,11 @@
 
   .arrow {
     // positioning
-    transform: translate(0.25rem, 0.25rem) rotate(-45deg);
+    transform: translate(0.25rem, 0.25rem) rotate(-90deg);
+
+    @include atTablet {
+      // positioning
+      transform: translate(0, 0) rotate(-90deg);
+    }
   }
 }

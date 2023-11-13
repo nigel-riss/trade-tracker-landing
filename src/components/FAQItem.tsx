@@ -28,6 +28,7 @@ export default function FAQItem(props: FAQItemProps) {
       onClick={() => setIsOpen(!isOpen)}
     >
       <dt className={styles.question}>
+        ✽&nbsp;
         {question}
         <span className={styles.arrow} />
       </dt>

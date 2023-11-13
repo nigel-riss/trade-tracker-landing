@@ -8,17 +8,33 @@
   color: rgb(var(--white));
   font-size: 0.875rem;
   text-decoration: none;
+
+  // visual
+  transition: all 0.25s ease-out;
+}
+
+.icon {
+  // positioning
+  transform-origin: center center;
+  transform: translate(0, -0.125rem) rotate(-45deg);
+
+  // box model
+  height: 1.125rem;
+
+  // visual
+  transition: all 0.25s ease-out;
 }
 
 .link:hover {
+  // typography
+  color: rgb(var(--green));
 
+  .icon {
+    // positioning
+    transform: translate(0.5rem, -0.125rem) rotate(-45deg);
+  }
 }
 
 .link:active {
   
-}
-
-.icon {
-  // box model
-  height: 1.125rem;
 }
