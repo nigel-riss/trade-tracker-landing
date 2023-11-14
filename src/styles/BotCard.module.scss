@@ -69,13 +69,8 @@
 .title {
   // typography
   font-family: var(--titleFont);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
-
-  @include atTablet {
-    // typography
-    font-size: 1.125rem;
-  }
 
   @include atDesktopS {
     // typography

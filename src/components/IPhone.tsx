@@ -13,7 +13,6 @@ export default function IPhone(props: IPhoneProps) {
   return (
     <div className={styles.iphone}>
       <div className={styles.frame} />
-      IPhone
     </div>
   );
 }

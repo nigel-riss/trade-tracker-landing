@@ -1,8 +1,108 @@
-.slider {
-  // positioning
-  position: relative;
+@import './mixins';
 
+
+.slider {
   // box model
-  padding: 1.5rem;
+  // height: 100%;
+
+  @include atDesktopS {
+    // box model
+    height: 100%;
+  }
 }
 
+.pagination {
+  // positioning
+  top: -0.25rem !important;
+  bottom: auto !important;
+
+  @include atDesktopS {
+    // positioning
+    left: 0 !important;
+    right: auto !important;
+    width: auto !important;
+  }
+
+  span {
+    // box model
+    // display: inline-block;
+    // height: 0.375rem !important;
+    // width: 0.375rem !important;
+
+    // typography
+    font-size: 0;
+    
+    // visual
+    background-color: rgb(var(--dark));
+    opacity: 1;
+  }
+}
+
+.bullet {
+  // visual
+}
+
+.currentBullet {
+  // visual
+  background-color: rgb(var(--green)) !important;
+  opacity: 1 !important;
+}
+
+.slide {
+  // box model
+  padding: 2.25rem 0;
+
+  @include atTablet {
+    // typography
+    text-align: center;
+  }
+
+  @include atDesktopS {
+    // box model
+    height: calc(100% - 2.5rem);
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    // typography
+    text-align: left;
+  }
+}
+
+.title {
+  // typography
+  color: rgb(var(--dark));
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  @include atDesktopS {
+    // typography
+    font-size: 2.25rem;
+  }
+}
+
+.title::before {
+  content: "/";
+
+  // typography
+  color: rgb(var(--green));
+}
+
+.text {
+  // box model
+  margin-top: 0.75rem;
+
+  // typography
+  color: rgb(var(--dark));
+  font-size: 0.75rem;
+
+  @include atDesktopS {
+    // box model
+    margin-top: 1.5rem;
+
+    // typography
+    font-size: 0.875rem;
+  }
+}

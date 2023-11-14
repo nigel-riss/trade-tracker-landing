@@ -1,3 +1,6 @@
+@import './mixins';
+
+
 .section {
   // positioning
   position: relative;
@@ -7,6 +10,7 @@
   width: calc(100vw - 3rem);
   margin: 0 auto;
   margin-top: 9rem;
+  max-height: 36rem;
   padding: 1.25rem;
 
   // border
@@ -20,14 +24,43 @@
     rgb(var(--white)) 100%
   );
   overflow: hidden;
+
+  @include atTablet {
+    // box model
+    max-height: 46rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    padding: 2.5rem;
+    max-height: 36rem;
+    width: var(--dWidth);
+
+    // visual
+    overflow: visible;
+  }
 }
 
 
 .phoneContainer {
-  // positioning
-  position: absolute;
-  z-index: 2;
-  bottom: -6rem;
-  left: 0.625rem;
-  right: 0.625rem;
+  // box model
+  margin: 0 -0.5rem;
+
+  @include atTablet {
+    // box model
+    margin: 0 auto;
+    width: 19rem;
+  }
+
+  @include atDesktopS {
+    // positioning
+    position: absolute;
+    right: 11.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    // box model
+
+  }
 }

@@ -33,6 +33,12 @@
     rgb(var(--dark), 0) 100%
   );
   pointer-events: none;
+
+  @include atDesktopS {
+    // box model
+    height: 130rem;
+    width: 130rem;
+  }
 }
 
 .header {

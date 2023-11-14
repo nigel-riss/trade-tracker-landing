@@ -210,4 +210,5 @@ export default products;
 export type {
   Product,
   Feature,
+  Slide,
 };

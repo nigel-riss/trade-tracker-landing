@@ -13,7 +13,9 @@ export default function SliderSection(props: SliderSectionProps) {
 
   return (
     <section className={styles.section}>
-      <Slider />
+      <Slider
+        slides={product.slides}
+      />
       <div className={styles.phoneContainer}>
         <IPhone />
       </div>

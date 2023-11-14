@@ -22,6 +22,9 @@
 }
 
 .icon {
+  // positioning
+  transform: translate(0, -0.125rem) rotate(-45deg);
+
   // box model
   height: 1.5rem;
   width: 1.5rem;
