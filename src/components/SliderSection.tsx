@@ -13,11 +13,13 @@ export default function SliderSection(props: SliderSectionProps) {
 
   return (
     <section className={styles.section}>
-      <Slider
-        slides={product.slides}
-      />
-      <div className={styles.phoneContainer}>
-        <IPhone />
+      <div className={styles.content}>
+        <Slider
+          slides={product.slides}
+        />
+        <div className={styles.phoneContainer}>
+          <IPhone />
+        </div>
       </div>
     </section>
   );

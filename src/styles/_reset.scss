@@ -78,3 +78,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}

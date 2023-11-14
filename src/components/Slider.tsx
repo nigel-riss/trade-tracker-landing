@@ -9,7 +9,6 @@ import {
 import {
   Pagination,
 } from 'swiper/modules';
-import clsx from 'clsx';
 
 
 interface SliderProps {
@@ -22,7 +21,6 @@ export default function Slider(props: SliderProps) {
   } = props;
 
   const paginationClass = styles.pagination;
-  const bulletClass = styles.bullet;
   const currentBulletClass = styles.currentBullet;
 
   return (
@@ -35,7 +33,6 @@ export default function Slider(props: SliderProps) {
       pagination={{
         enabled: true,
         horizontalClass: paginationClass,
-        // bulletClass,
         bulletActiveClass: currentBulletClass,
       }}
       modules={[Pagination]}

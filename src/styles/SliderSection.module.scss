@@ -1,7 +1,15 @@
 @import './mixins';
 
-
 .section {
+  @include atDesktopS {
+    // box model
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+}
+
+.content {
   // positioning
   position: relative;
 
