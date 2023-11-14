@@ -1,12 +1,14 @@
 import { Slide } from '@/data/products';
 import styles from '@/styles/Slider.module.scss';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {
   Swiper,
   SwiperSlide,
 } from 'swiper/react';
 import {
+  Navigation,
   Pagination,
 } from 'swiper/modules';
 
@@ -30,13 +32,23 @@ export default function Slider(props: SliderProps) {
       slidesPerView={1}
       onSlideChange={(swiper) => console.log(swiper)}
       // onSwiper={(swiper) => console.log(swiper)}
+      loop
+      navigation={{
+        enabled: true,
+      }}
       pagination={{
         enabled: true,
         horizontalClass: paginationClass,
         bulletActiveClass: currentBulletClass,
       }}
-      modules={[Pagination]}
+      modules={[
+        Navigation,
+        Pagination,
+      ]}
     >
+      {/* <div className={styles.navigation}>
+        <button className={styles.prev}>&larr;</button>
+      </div> */}
       {slides.map((slide) => (
         <SwiperSlide key={slide.title}>
           <div className={styles.slide}>

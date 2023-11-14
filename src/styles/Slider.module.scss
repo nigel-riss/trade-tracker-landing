@@ -2,12 +2,58 @@
 
 
 .slider {
-  // box model
-  // height: 100%;
+  // positioning
+  position: relative;
 
   @include atDesktopS {
     // box model
     height: 100%;
+  }
+}
+
+.navigation {
+  // positioning
+  position: relative;
+  left: -10rem;
+  z-index: 3;
+
+  border: 2px solid fuchsia;
+  // typography
+  color: rgb(var(--dark));
+  font-size: 2rem;
+}
+
+.prev {
+  // typography
+  color: rgb(var(--dark));
+}
+
+.slider {
+  :global .swiper-button-prev,
+  :global .swiper-button-next {
+    // box model
+    display: none;
+    height: 3rem;
+    width: 3rem;
+
+    // border
+    border-radius: 50%;
+
+    // visual
+    background-color: rgb(var(--green));
+
+  }
+
+  :global .swiper-button-prev {
+    // positioning
+  }
+
+  @include atDesktopS {
+    :global .swiper-button-prev,
+    :global .swiper-button-next {
+      // box model
+      display: block;
+    }
   }
 }
 

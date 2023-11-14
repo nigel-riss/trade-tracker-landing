@@ -1,7 +1,8 @@
 import Footer from '@/components/Footer';
-import JoinUsSection from '@/components/JoinUsSection';
-import PolicySection from '@/components/PolicySection';
 import SimpleHeader from '@/components/SimpleHeader';
+import PolicySection from '@/components/PolicySection';
+import JoinUsSection from '@/components/JoinUsSection';
+
 
 export default function Terms() {
   return (
