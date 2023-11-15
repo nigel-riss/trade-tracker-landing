@@ -13,18 +13,45 @@ import GhostButton from './GhostButton';
 
 
 interface CalculatorProps {
-  calcDiscount: (price: number, isProPlan: boolean) => number;
+  periodDiscount: number,
   products: Product[];
 }
 
+interface CartProducts {
+  [productId: string]: boolean;
+}
+
+const calcPrice = (
+  products: Product[],
+  cartProducts: CartProducts,
+  periodDiscount: number,
+  isProPlan: boolean,
+) => {
+  const rawPrice = products.reduce(
+    (acc, product) => acc + (cartProducts[product.id] ? product.price : 0),
+    0,
+  );
+
+  const proDiscount = isProPlan ? 0.15 : 0;
+
+  return rawPrice * (1 - proDiscount - periodDiscount);
+};
+
+
 export default function Calculator(props: CalculatorProps) {
   const {
-    calcDiscount,
+    periodDiscount,
     products,
   } = props;
 
+  const cart:CartProducts = {};
+  products.forEach((product) => {
+    cart[product.id] = false;
+  });
+
   const [isProPlan, setIsProPlan] = useState(false);
   const [isCartVisible, setIsCartVisible] = useState(false);
+  const [cartProducts, setCartProducts] = useState(cart);
 
   const sectionRef = useRef(null);
 
@@ -72,11 +99,19 @@ export default function Calculator(props: CalculatorProps) {
 
           return (
             <PriceCard
+              id={id}
+              isInCart={cartProducts[id]}
               key={id}
               title={title}
               subtitle={subtitle}
               features={features}
               price={price}
+              onPriceClick={(productId: string) => {
+                setCartProducts((prevState) => ({
+                  ...prevState,
+                  [productId]: !prevState[productId],
+                }));
+              }}
             />
           );
         })}
@@ -93,7 +128,12 @@ export default function Calculator(props: CalculatorProps) {
             <span className={styles.originalPrice}>$550</span>
             <span className={styles.currentPrice}>
               $
-              {calcDiscount(550, isProPlan)}
+              {calcPrice(
+                products,
+                cartProducts,
+                periodDiscount,
+                isProPlan,
+              ).toFixed(2)}
             </span>
             <span className={styles.perMonth}> / per month</span>
           </div>

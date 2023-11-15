@@ -48,6 +48,9 @@
 .title {
   // typography
   font-size: 0.875rem;
+
+  // visual
+  cursor: pointer;
 }
 
 .price {
@@ -169,4 +172,8 @@ ul.featureList {
     // border
     border-color: transparent;
   }
+}
+
+.isInCart {
+  
 }

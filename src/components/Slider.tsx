@@ -33,9 +33,9 @@ export default function Slider(props: SliderProps) {
       onSlideChange={(swiper) => console.log(swiper)}
       // onSwiper={(swiper) => console.log(swiper)}
       loop
-      navigation={{
-        enabled: true,
-      }}
+      // navigation={{
+      //   enabled: true,
+      // }}
       pagination={{
         enabled: true,
         horizontalClass: paginationClass,

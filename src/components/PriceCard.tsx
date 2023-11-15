@@ -11,18 +11,24 @@ import PriceButton from './PriceButton';
 
 
 interface PriceCardProps {
+  id: string;
+  isInCart: boolean;
   title: string;
   subtitle: string;
   features: Feature[];
   price: number;
+  onPriceClick: (id: string) => void;
 }
 
 export default function PriceCard(props: PriceCardProps) {
   const {
+    id,
+    isInCart,
     title,
     subtitle,
     features,
     price,
+    onPriceClick,
   } = props;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -32,15 +38,21 @@ export default function PriceCard(props: PriceCardProps) {
       className={clsx({
         [styles.card]: true,
         [styles.isOpen]: isOpen,
+        [styles.isInCart]: isInCart,
       })}
-      onClick={() => setIsOpen(!isOpen)}
     >
       <div className={styles.header}>
-        <h3 className={styles.title}>{title}</h3>
+        <h3
+          className={styles.title}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {title}
+        </h3>
         <div className={styles.price}>
           <PriceButton
             value={price}
-            onClick={() => {}}
+            onClick={() => onPriceClick(id)}
+            isActive={isInCart}
           />
         </div>
       </div>
@@ -69,7 +81,8 @@ export default function PriceCard(props: PriceCardProps) {
         <div className={styles.priceBottom}>
           <PriceButton
             value={price}
-            onClick={() => {}}
+            onClick={() => onPriceClick(id)}
+            isActive={isInCart}
           />
         </div>
       </div>
