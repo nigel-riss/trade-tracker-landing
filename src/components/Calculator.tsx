@@ -28,13 +28,19 @@ const calcPrice = (
   isProPlan: boolean,
 ) => {
   const rawPrice = products.reduce(
-    (acc, product) => acc + (cartProducts[product.id] ? product.price : 0),
+    (acc, product) => {
+      const price = (isProPlan && product.proPrice)
+        ? product.proPrice
+        : product.price;
+
+      return acc + (cartProducts[product.id] ? price : 0);
+    },
     0,
   );
 
-  const proDiscount = isProPlan ? 0.15 : 0;
+  // const proDiscount = isProPlan ? 0.15 : 0;
 
-  return rawPrice * (1 - proDiscount - periodDiscount);
+  return rawPrice * (1 - periodDiscount);
 };
 
 
@@ -95,6 +101,7 @@ export default function Calculator(props: CalculatorProps) {
             subtitle,
             features,
             price,
+            proPrice,
           } = product;
 
           return (
@@ -105,7 +112,7 @@ export default function Calculator(props: CalculatorProps) {
               title={title}
               subtitle={subtitle}
               features={features}
-              price={price}
+              price={(isProPlan && proPrice) ? proPrice : price}
               onPriceClick={(productId: string) => {
                 setCartProducts((prevState) => ({
                   ...prevState,

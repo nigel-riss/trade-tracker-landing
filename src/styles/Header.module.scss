@@ -139,6 +139,10 @@
   @include atDesktopS {
     // box model
     padding: 0;
+    padding-bottom: 1rem;
+
+    // typography
+    font-size: 1rem;
   }
 }
 
