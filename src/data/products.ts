@@ -12,6 +12,7 @@ interface Product {
   id: string;
   title: string;
   subtitle: string;
+  isComingSoon?: boolean;
   href: string;
   icon: {
     height: number;
@@ -25,9 +26,10 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: 'bot1',
-    title: 'Trade Volume Bot',
-    subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes in currencies and info on the buyers making those trends.',
+    id: 'trade-volume-bot',
+    title: `Trade
+      Volume Bot`,
+    subtitle: 'Leverage the power of AI and Machine Learning with our Trade Volume Bot, featuring a proprietary rating system for tokens and assets. Benefit from our unique classification of transaction participants and stay ahead with real-time data.',
     href: '#',
     icon: {
       height: 24,
@@ -72,13 +74,14 @@ const products: Product[] = [
     ],
   },
   {
-    id: 'bot2',
-    title: 'Wallet Analyzer',
-    subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes',
+    id: 'wallet-analyzer',
+    title: `Wallet
+      Analyzer`,
+    subtitle: 'Introducing the most precise and advanced Wallet Analyzer on the market. Access a suite of essential and unique metrics designed to provide a comprehensive analysis of your wallet\'s performance.',
     href: '#',
     icon: {
-      height: 24,
-      width: 24,
+      height: 30,
+      width: 30,
     },
     price: 99,
     proPrice: 249,
@@ -112,9 +115,10 @@ const products: Product[] = [
     ],
   },
   {
-    id: 'bot3',
-    title: 'Profit Maker',
-    subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes',
+    id: 'profit-maker',
+    title: `Profit
+      Maker`,
+    subtitle: 'Track the most successful traders and gain insights with real-time summaries of their profitable trades. Profit Maker empowers you to mirror the strategies of top performers in the market.',
     href: '#',
     icon: {
       height: 24,
@@ -143,13 +147,14 @@ const products: Product[] = [
     ],
   },
   {
-    id: 'bot4',
-    title: 'Whales Allert',
-    subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes',
+    id: 'whales-alert',
+    title: `Whales
+      Alert`,
+    subtitle: 'Stay informed with Whale Alert as it monitors the significant fund movements of crypto whales, providing forecasts and tips on how to capitalize on these insights for informed trading decisions.',
     href: '#',
     icon: {
       height: 24,
-      width: 40,
+      width: 24,
     },
     price: 0,
     features: [
@@ -174,13 +179,15 @@ const products: Product[] = [
     ],
   },
   {
-    id: 'bot5',
-    title: 'Easy Trade Bot',
-    subtitle: 'A unique set of tools that provides a detailed analysis of the volume changes',
+    id: 'easy-trade',
+    title: `ET
+      Bot`,
+    subtitle: 'COMING SOON',
+    isComingSoon: true,
     href: '#',
     icon: {
       height: 24,
-      width: 24,
+      width: 40,
     },
     price: 0,
     features: [

@@ -1,4 +1,5 @@
 import styles from '@/styles/BotCard.module.scss';
+import { clsx } from 'clsx';
 import Link from 'next/link';
 
 
@@ -8,6 +9,7 @@ interface BotCardProps {
   subtitle: string,
   iconHeight: number,
   iconWidth: number,
+  isComingSoon: boolean,
 }
 
 export default function BotCard(props: BotCardProps) {
@@ -17,12 +19,16 @@ export default function BotCard(props: BotCardProps) {
     subtitle,
     iconHeight,
     iconWidth,
+    isComingSoon = false,
   } = props;
 
   return (
     <article className={styles.card}>
       <Link
-        className={styles.link}
+        className={clsx({
+          [styles.link]: true,
+          [styles.comingSoon]: isComingSoon,
+        })}
         href={`#${botID}`}
       >
         <svg

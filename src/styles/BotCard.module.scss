@@ -3,10 +3,7 @@
 
 .card {
   // box model
-  flex-basis: calc(50% - 0.625rem);
-  flex-grow: 0;
-  flex-shrink: 0;
-  height: 18.125rem;
+  margin-top: 1.5rem;
   padding: 1.5rem;
 
   // border
@@ -15,26 +12,28 @@
 
   @include atTablet {
     // box model
-    height: 16rem;
-    flex-basis: calc(100% / 3 - 1rem);
+    // height: 16rem;
+    flex-basis: calc(100% / 2 - 0.625rem);
     flex-grow: 0;
+    flex-shrink: 0;
+    margin-top: 0;
+    grid-column: span 2;
   }
 
   @include atDesktopS {
     // box model
-    height: 18.125rem;
     flex-basis: calc(100% / 5 - 1.25rem);
+    grid-column: span 1;
   }
 }
 
-.card:last-of-type {
+.card:last-child:nth-child(2n - 1) {
   // box model
-  height: auto;
-  flex-grow: 10;
+  grid-column-end: 4;
 
-  @include atTablet {
+  @include atDesktopS {
     // box model
-    flex-grow: 0;
+    grid-column-end: auto;
   }
 }
 
@@ -43,7 +42,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  // justify-content: space-between;
   height: 100%;
 
   // typography
@@ -63,7 +62,7 @@
 
 .caption {
   // box model
-  margin-top: 0.875rem;
+  margin-top: 3rem;
 }
 
 .title {
@@ -71,6 +70,11 @@
   font-family: var(--titleFont);
   font-size: 1.125rem;
   font-weight: 500;
+
+  @include atTablet {
+    // typography
+    white-space: pre-line;
+  }
 
   @include atDesktopS {
     // typography
@@ -80,14 +84,10 @@
 
 .subtitle {
   // box model
-  display: -webkit-box;
   margin-top: 0.5rem;
-  max-height: 6.5rem;
-  -webkit-box-orient: vertical;
 
   // typography
   font-size: 0.75rem;
-  -webkit-line-clamp: 7;
 
   // visual
   overflow: hidden;
@@ -116,4 +116,8 @@
     // visual
     transition: all 0.25s ease-out;
   }
+}
+
+.isComingSoon {
+  
 }
