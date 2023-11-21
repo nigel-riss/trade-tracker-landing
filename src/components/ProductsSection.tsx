@@ -48,7 +48,7 @@ export default function ProductsSection(props: ProductsSectionProps) {
               subtitle={subtitle}
               iconHeight={icon.height}
               iconWidth={icon.width}
-              isComingSoon
+              isComingSoon={isComingSoon}
             />
           );
         })}

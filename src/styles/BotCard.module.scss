@@ -119,5 +119,13 @@
 }
 
 .isComingSoon {
-  
+  // visual
+  opacity: 0.5;
+
+  .link {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }

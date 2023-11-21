@@ -9,7 +9,7 @@ interface BotCardProps {
   subtitle: string,
   iconHeight: number,
   iconWidth: number,
-  isComingSoon: boolean,
+  isComingSoon?: boolean,
 }
 
 export default function BotCard(props: BotCardProps) {
@@ -23,12 +23,14 @@ export default function BotCard(props: BotCardProps) {
   } = props;
 
   return (
-    <article className={styles.card}>
+    <article
+      className={clsx({
+        [styles.card]: true,
+        [styles.isComingSoon]: isComingSoon,
+      })}
+    >
       <Link
-        className={clsx({
-          [styles.link]: true,
-          [styles.comingSoon]: isComingSoon,
-        })}
+        className={styles.link}
         href={`#${botID}`}
       >
         <svg
