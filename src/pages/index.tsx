@@ -15,12 +15,9 @@ export default function Home() {
       <ProductsSection
         products={products}
       />
-      {products.map((product) => (
-        <SliderSection
-          key={product.id}
-          product={product}
-        />
-      ))}
+      <SliderSection
+        products={products}
+      />
       <PricingSection
         products={products}
       />

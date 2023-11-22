@@ -1,22 +1,40 @@
 import { Product } from '@/data/products';
 import styles from '@/styles/SliderSection.module.scss';
-import Slider from './Slider';
 import IPhone from './IPhone';
+import ProductButton from './ProductButton';
 
 
 interface SliderSectionProps {
-  product: Product;
+  products: Product[];
 }
 
 export default function SliderSection(props: SliderSectionProps) {
-  const { product } = props;
+  const { products } = props;
 
   return (
     <section className={styles.section}>
+      <nav className={styles.nav}>
+        {products
+          .filter((product) => !product.isComingSoon)
+          .map((product) => {
+            const {
+              id,
+              title,
+              icon,
+            } = product;
+            return (
+              <ProductButton
+                key={id}
+                id={id}
+                title={title}
+                onClick={() => {}}
+                iconWidth={icon.width}
+                iconHeight={icon.height}
+              />
+            );
+          })}
+      </nav>
       <div className={styles.content}>
-        <Slider
-          slides={product.slides}
-        />
         <div className={styles.phoneContainer}>
           <IPhone />
         </div>
