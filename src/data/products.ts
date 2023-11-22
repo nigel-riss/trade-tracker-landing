@@ -11,7 +11,7 @@ interface Slide {
 interface Product {
   id: string;
   title: string;
-  subtitle: string;
+  description: string;
   isComingSoon?: boolean;
   href: string;
   icon: {
@@ -29,7 +29,7 @@ const products: Product[] = [
     id: 'trade-volume-bot',
     title: `Trade
       Volume Bot`,
-    subtitle: 'Leverage the power of AI and Machine Learning with our Trade Volume Bot, featuring a proprietary rating system for tokens and assets. Benefit from our unique classification of transaction participants and stay ahead with real-time data.',
+    description: 'Leverage the power of AI and Machine Learning with our Trade Volume Bot, featuring a proprietary rating system for tokens and assets. Benefit from our unique classification of transaction participants and stay ahead with real-time data.',
     href: '#',
     icon: {
       height: 24,
@@ -77,7 +77,7 @@ const products: Product[] = [
     id: 'wallet-analyzer',
     title: `Wallet
       Analyzer`,
-    subtitle: 'Introducing the most precise and advanced Wallet Analyzer on the market. Access a suite of essential and unique metrics designed to provide a comprehensive analysis of your wallet\'s performance.',
+    description: 'Introducing the most precise and advanced Wallet Analyzer on the market. Access a suite of essential and unique metrics designed to provide a comprehensive analysis of your wallet\'s performance.',
     href: '#',
     icon: {
       height: 30,
@@ -118,7 +118,7 @@ const products: Product[] = [
     id: 'profit-maker',
     title: `Profit
       Maker`,
-    subtitle: 'Track the most successful traders and gain insights with real-time summaries of their profitable trades. Profit Maker empowers you to mirror the strategies of top performers in the market.',
+    description: 'Track the most successful traders and gain insights with real-time summaries of their profitable trades. Profit Maker empowers you to mirror the strategies of top performers in the market.',
     href: '#',
     icon: {
       height: 24,
@@ -150,7 +150,7 @@ const products: Product[] = [
     id: 'whales-alert',
     title: `Whales
       Alert`,
-    subtitle: 'Stay informed with Whale Alert as it monitors the significant fund movements of crypto whales, providing forecasts and tips on how to capitalize on these insights for informed trading decisions.',
+    description: 'Stay informed with Whale Alert as it monitors the significant fund movements of crypto whales, providing forecasts and tips on how to capitalize on these insights for informed trading decisions.',
     href: '#',
     icon: {
       height: 24,
@@ -182,7 +182,7 @@ const products: Product[] = [
     id: 'easy-trade',
     title: `ET
       Bot`,
-    subtitle: 'COMING SOON',
+    description: 'COMING SOON',
     isComingSoon: true,
     href: '#',
     icon: {

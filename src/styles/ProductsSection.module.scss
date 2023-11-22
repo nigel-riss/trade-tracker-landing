@@ -7,6 +7,11 @@
 
   // visual
   background-color: rgb(var(--dark));
+
+  @include atDesktopS {
+    // box model
+    padding: 9rem 0;
+  }
 }
 
 .sprites {

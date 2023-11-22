@@ -35,7 +35,7 @@ export default function ProductsSection(props: ProductsSectionProps) {
           const {
             id,
             title,
-            subtitle,
+            description,
             icon,
             isComingSoon,
           } = product;
@@ -45,7 +45,7 @@ export default function ProductsSection(props: ProductsSectionProps) {
               key={id}
               botID={id}
               title={title}
-              subtitle={subtitle}
+              subtitle={description}
               iconHeight={icon.height}
               iconWidth={icon.width}
               isComingSoon={isComingSoon}
