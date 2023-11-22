@@ -1,5 +1,3 @@
-'';
-
 import styles from '@/styles/BadgeFall.module.scss';
 import badges from '@/data/badges';
 import Badge from './Badge';

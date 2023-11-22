@@ -1,4 +1,5 @@
 import styles from '@/styles/ProductButton.module.scss';
+import clsx from 'clsx';
 
 
 interface ProductButtonProps {
@@ -7,6 +8,7 @@ interface ProductButtonProps {
   onClick: () => void,
   iconWidth: number,
   iconHeight: number,
+  isCurrent: boolean,
 }
 
 export default function ProductButton(props: ProductButtonProps) {
@@ -16,11 +18,15 @@ export default function ProductButton(props: ProductButtonProps) {
     onClick,
     iconWidth,
     iconHeight,
+    isCurrent = false,
   } = props;
 
   return (
     <button
-      className={styles.button}
+      className={clsx({
+        [styles.button]: true,
+        [styles.isCurrent]: isCurrent,
+      })}
       type="button"
       onClick={onClick}
     >

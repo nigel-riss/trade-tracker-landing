@@ -43,5 +43,16 @@
 }
 
 .isCurrent {
+  // visual
+  opacity: 1;
 
+  .icon {
+    // visual
+    background-color: rgb(var(--dark));
+  }
+
+  .icon svg {
+    // visual
+    fill: rgb(var(--green));
+  }
 }
