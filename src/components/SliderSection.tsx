@@ -13,16 +13,24 @@ interface SliderSectionProps {
 export default function SliderSection(props: SliderSectionProps) {
   const { products } = props;
   const [currentId, setCurrentId] = useState(products[0].id);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const paginationRef = useRef(null);
   const [paginationEl, setPaginationEl] = useState(null);
 
   useEffect(() => {
     setPaginationEl(paginationRef.current);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [paginationRef.current]);
+
+  const currentProduct:Product | undefined = products
+    .find((product) => product.id === currentId);
 
   return (
     <section className={styles.section}>
-      <nav className={styles.nav}>
+      <nav
+        id="slider-nav"
+        className={styles.nav}
+      >
         {products
           .filter((product) => !product.isComingSoon)
           .map((product) => {
@@ -54,11 +62,18 @@ export default function SliderSection(props: SliderSectionProps) {
         />
         <Slider
           key={currentId}
-          slides={products.find((product) => product.id === currentId)?.slides}
+          slides={currentProduct?.slides}
           paginationEl={paginationEl}
+          onSlideChange={(index: number) => {
+            console.log(index);
+            setCurrentSlide(index);
+          }}
         />
         <div className={styles.phoneContainer}>
-          <IPhone />
+          <IPhone
+            current={currentSlide}
+            messages={currentProduct?.messages}
+          />
         </div>
       </div>
     </section>

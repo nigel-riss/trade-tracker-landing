@@ -31,7 +31,7 @@ export default function BotCard(props: BotCardProps) {
     >
       <Link
         className={styles.link}
-        href={`#${botID}`}
+        href="/#slider-nav"
       >
         <svg
           className={styles.icon}

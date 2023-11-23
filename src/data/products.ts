@@ -22,6 +22,7 @@ interface Product {
   proPrice?: number;
   features: Feature[];
   slides: Slide[];
+  messages?: string[];
 }
 
 const products: Product[] = [
@@ -71,6 +72,27 @@ const products: Product[] = [
         title: 'Bot 1 slide 5',
         text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
       },
+    ],
+    messages: [
+      `Number of alerts: 8 in 28m38s
+
+      Name: MoonPepe (MoonPepe)
+      Contract age: 22h48m13s
+      CA: 0xF6323287F5EF3518800090d05C17a
+      0Ac109A0e04`,
+      `Tax: 0.0% | 0.0%
+      Honeypot: Sellable ✅
+      Liquidity: $20.22k ➡️ $20.36k 🟢
+      Buyers - Sellers: 83 (69 uniq) | 35 (34 uniq)
+      Buys - Sells: 18.43k | 4.01k 🟢
+      Volume: $22.44k
+      Mcap - Ath: $78.57k ^ $206.47k`,
+      `DETAILS 🔍
+      Supply: 10000000000
+      Contract verified: true
+      Name: MoonPepe (MoonPepe)
+      Contract age: 22h48m13s
+      Number of alerts: 8 in 28m38s`,
     ],
   },
   {

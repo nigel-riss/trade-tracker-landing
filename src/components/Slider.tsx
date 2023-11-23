@@ -16,12 +16,14 @@ import {
 interface SliderProps {
   slides?: Slide[],
   paginationEl: HTMLElement | null,
+  onSlideChange: (index: number) => void,
 }
 
 export default function Slider(props: SliderProps) {
   const {
     slides,
     paginationEl,
+    onSlideChange,
   } = props;
 
   const paginationClass = styles.pagination;
@@ -32,7 +34,7 @@ export default function Slider(props: SliderProps) {
       className={styles.slider}
       spaceBetween={50}
       slidesPerView={1}
-      onSlideChange={(swiper) => console.log(swiper.activeIndex)}
+      onSlideChange={(swiper) => { onSlideChange(swiper.activeIndex); }}
       // onSwiper={(swiper) => console.log(swiper)}
       loop
       // navigation={{

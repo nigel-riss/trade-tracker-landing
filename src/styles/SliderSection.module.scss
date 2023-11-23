@@ -109,9 +109,6 @@
 }
 
 .phoneContainer {
-  // box model
-  margin: 0 -0.5rem;
-
   @include atTablet {
     // box model
     margin: 0 auto;
