@@ -1,0 +1,17 @@
+.pagination {
+
+}
+
+.bullet {
+  // box model
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid fuchsia;
+}
+
+.currentBullet {
+  // box model
+  // visual
+  background-color: fuchsia;
+}

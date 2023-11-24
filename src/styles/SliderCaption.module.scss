@@ -1,0 +1,56 @@
+.caption {
+  // box model
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0;
+
+  // border
+  border: none;
+
+  // visual
+  appearance: none;
+  background-color: transparent;
+}
+
+.icon {
+  // box model
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.75rem;
+
+  // border
+  border-radius: 50%;
+
+  svg {
+    // visual
+    fill: rgb(var(--chineseWhite));
+  }
+}
+
+.title {
+  // typography
+  color: rgb(var(--chineseWhite));
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.25s ease-out;
+}
+
+.isCurrent {
+  .icon {
+    // visual
+    background-color: rgb(var(--dark));
+
+    svg {
+      // visual
+      fill: rgb(var(--green));
+    }
+  }
+
+  .title {
+    // typography
+    color: rgb(var(--dark));
+    font-size: 2.25rem;
+  }
+}

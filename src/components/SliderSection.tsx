@@ -5,6 +5,8 @@ import clsx from 'clsx';
 import IPhone from './IPhone';
 import ProductButton from './ProductButton';
 import Slider from './Slider';
+import SliderCaption from './SliderCaption';
+import SliderPagination from './SliderPagination';
 
 
 interface SliderSectionProps {
@@ -40,7 +42,7 @@ export default function SliderSection(props: SliderSectionProps) {
     <section className={styles.section}>
       <nav
         id="slider-nav"
-        className={styles.nav}
+        className={styles.mobileNav}
       >
         {products
           .filter((product) => !product.isComingSoon)
@@ -72,16 +74,62 @@ export default function SliderSection(props: SliderSectionProps) {
           ref={paginationRef}
         />
 
-        <Slider
-          key={currentId}
-          slides={currentProduct?.slides}
-          paginationEl={paginationEl}
-          leftButtonEl={leftButtonEl}
-          rightButtonEl={rightButtonEl}
-          onSlideChange={(index: number) => {
-            setCurrentSlide(index);
-          }}
+        <SliderPagination
+          currentIndex={currentSlide}
+          slidesCount={3}
         />
+
+        <div className={styles.mobileSlider}>
+          <Slider
+            key={currentId}
+            slides={currentProduct?.slides}
+            paginationEl={paginationEl}
+            leftButtonEl={leftButtonEl}
+            rightButtonEl={rightButtonEl}
+            onSlideChange={(index: number) => {
+              setCurrentSlide(index);
+            }}
+          />
+        </div>
+
+        <div className={styles.desktopSlider}>
+          {products
+            .filter((product) => !product.isComingSoon)
+            .map((product) => {
+              const {
+                id,
+                title,
+                icon,
+              } = product;
+              return (
+                <div
+                  className={styles.productContainer}
+                  key={id}
+                >
+                  <SliderCaption
+                    id={id}
+                    title={title}
+                    iconHeight={icon.height}
+                    iconWidth={icon.width}
+                    isCurrent={currentId === id}
+                    onClick={() => {
+                      setCurrentId(id);
+                    }}
+                  />
+                  <Slider
+                    key={id}
+                    slides={product?.slides}
+                    paginationEl={paginationEl}
+                    leftButtonEl={leftButtonEl}
+                    rightButtonEl={rightButtonEl}
+                    onSlideChange={(index: number) => {
+                      setCurrentSlide(index);
+                    }}
+                  />
+                </div>
+              );
+            })}
+        </div>
 
         <div className={styles.phoneContainer}>
           <div className={styles.navigation}>
