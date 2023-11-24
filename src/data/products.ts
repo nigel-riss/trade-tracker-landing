@@ -78,8 +78,8 @@ const products: Product[] = [
 
       Name: MoonPepe (MoonPepe)
       Contract age: 22h48m13s
-      CA: 0xF6323287F5EF3518800090d05C17a
-      0Ac109A0e04`,
+      CA: 0xF6323287F5EF3518800090d05C
+      17a0Ac109A0e04`,
       `Tax: 0.0% | 0.0%
       Honeypot: Sellable ✅
       Liquidity: $20.22k ➡️ $20.36k 🟢

@@ -2,10 +2,15 @@
 
 
 .iphone {
-
   @include atTablet {
     // positioning
     position: relative;
+
+    // box model
+    width: 19rem;
+
+    // border
+    border-radius: 3rem;
   
     // box model
     aspect-ratio: 404/832;
@@ -13,6 +18,7 @@
     // visual
     background-image: url('../assets/img/deco/iphone-bg.png');
     background-size: cover;
+    overflow: hidden;
   }
 }
 
@@ -22,6 +28,12 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 0.875rem;
+
+  @include atTablet {
+    // box model
+    padding: 1rem;
+    padding-top: 6rem;
+  }
 }
 
 .badge {
@@ -75,8 +87,12 @@
   transition: all 0.25s ease-in-out;
 
   @include atTablet {
+    // border
     border-top: 0.125rem solid rgb(var(--white));
     border-bottom: 0.125rem solid rgb(var(--white));
+
+    // typography
+    font-size: 0.75rem;
   }
 }
 
@@ -91,6 +107,9 @@
   @include atTablet {
     // border
     border-color: rgb(var(--green));
+
+    // visual
+    background-color: transparent;
   }
 }
 

@@ -16,6 +16,8 @@ import {
 interface SliderProps {
   slides?: Slide[],
   paginationEl: HTMLElement | null,
+  leftButtonEl: HTMLElement | null,
+  rightButtonEl: HTMLElement | null,
   onSlideChange: (index: number) => void,
 }
 
@@ -23,6 +25,8 @@ export default function Slider(props: SliderProps) {
   const {
     slides,
     paginationEl,
+    leftButtonEl,
+    rightButtonEl,
     onSlideChange,
   } = props;
 
@@ -34,12 +38,16 @@ export default function Slider(props: SliderProps) {
       className={styles.slider}
       spaceBetween={50}
       slidesPerView={1}
-      onSlideChange={(swiper) => { onSlideChange(swiper.activeIndex); }}
+      onSlideChange={(swiper) => {
+        onSlideChange(swiper.realIndex);
+      }}
       // onSwiper={(swiper) => console.log(swiper)}
       loop
-      // navigation={{
-      //   enabled: true,
-      // }}
+      navigation={{
+        enabled: true,
+        prevEl: leftButtonEl,
+        nextEl: rightButtonEl,
+      }}
       pagination={{
         enabled: true,
         horizontalClass: paginationClass,
