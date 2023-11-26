@@ -9,13 +9,11 @@ import {
 } from 'swiper/react';
 import {
   Navigation,
-  Pagination,
 } from 'swiper/modules';
 
 
 interface SliderProps {
   slides?: Slide[],
-  paginationEl: HTMLElement | null,
   leftButtonEl: HTMLElement | null,
   rightButtonEl: HTMLElement | null,
   onSlideChange: (index: number) => void,
@@ -24,14 +22,11 @@ interface SliderProps {
 export default function Slider(props: SliderProps) {
   const {
     slides,
-    paginationEl,
     leftButtonEl,
     rightButtonEl,
     onSlideChange,
   } = props;
 
-  const paginationClass = styles.pagination;
-  const currentBulletClass = styles.currentBullet;
 
   return (
     <Swiper
@@ -48,15 +43,8 @@ export default function Slider(props: SliderProps) {
         prevEl: leftButtonEl,
         nextEl: rightButtonEl,
       }}
-      pagination={{
-        enabled: true,
-        horizontalClass: paginationClass,
-        bulletActiveClass: currentBulletClass,
-        el: paginationEl,
-      }}
       modules={[
         Navigation,
-        Pagination,
       ]}
     >
       {/* <div className={styles.navigation}>

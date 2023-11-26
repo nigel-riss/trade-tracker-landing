@@ -3,13 +3,13 @@ import clsx from 'clsx';
 
 
 interface IPhoneProps {
-  current: number;
+  currentIndex: number;
   messages?: string[];
 }
 
 export default function IPhone(props: IPhoneProps) {
   const {
-    current,
+    currentIndex,
     messages,
   } = props;
 
@@ -22,7 +22,8 @@ export default function IPhone(props: IPhoneProps) {
             <p
               className={clsx({
                 [styles.message]: true,
-                [styles.messageCurrent]: current === messages.indexOf(message),
+                [styles.messageCurrent]:
+                  currentIndex === messages.indexOf(message),
               })}
               key={message}
             >

@@ -83,16 +83,6 @@
   }
 }
 
-.bullet {
-  // visual
-}
-
-.currentBullet {
-  // visual
-  background-color: rgb(var(--green)) !important;
-  opacity: 1 !important;
-}
-
 .slide {
   // box model
   padding: 2.25rem 0;
@@ -104,11 +94,8 @@
 
   @include atDesktopS {
     // box model
-    height: calc(100% - 2.5rem);
+    padding: 0;
     width: 23rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 
     // typography
     text-align: left;
@@ -121,10 +108,14 @@
   font-family: var(--titleFont);
   font-size: 1.5rem;
   font-weight: 500;
+}
 
+.title::before {
   @include atDesktopS {
+    content: "/";
+  
     // typography
-    font-size: 2.25rem;
+    color: rgb(var(--green));
   }
 }
 
@@ -141,6 +132,6 @@
     margin-top: 1.5rem;
 
     // typography
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 }

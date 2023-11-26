@@ -14,13 +14,6 @@
     rgb(var(--green)) 42rem,
     rgb(var(--dark)) calc(100% - 16rem),
   );
-
-  @include atDesktopS {
-    // box model
-    // display: flex;
-    // align-items: center;
-    // height: 100vh;
-  }
 }
 
 .section::after {
@@ -102,24 +95,16 @@
 
   @include atDesktopS {
     // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
     padding: 2.5rem;
-    max-height: 36rem;
+    height: 36rem;
     width: var(--dWidth);
 
     // visual
     overflow: visible;
-  }
-}
-
-.pagination {
-  // box model
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-
-  @include atDesktopS {
-    // box model
-    justify-content: flex-start;
   }
 }
 
@@ -206,7 +191,20 @@
     // box model
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
   }
+}
+
+.sliderContainer {
+  // box model
+  display: none;
+  padding-top: 1.5rem;
+
+}
+
+.isCurrent {
+  // box model
+  display: block;
 }
 
 .phoneContainer {

@@ -1,17 +1,40 @@
-.pagination {
+@import './mixins';
 
+
+.pagination {
+  // box model
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+
+  @include atDesktopS {
+    // box model
+    justify-content: flex-start;
+  }
 }
 
 .bullet {
+  // positioning
+  transform-origin: center center;
+  transform: scale(1);
+
   // box model
   display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  border: 2px solid fuchsia;
+  height: 0.5rem;
+  width: 0.5rem;
+
+  // border
+  border-radius: 50%;
+
+  // visual
+  background-color: rgb(var(--dark));
+  transition: all 0.25s ease-out;
 }
 
 .currentBullet {
-  // box model
+  // positioning
+  transform: scale(1.25);
+
   // visual
-  background-color: fuchsia;
+  background-color: rgb(var(--green));
 }

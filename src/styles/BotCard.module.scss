@@ -10,6 +10,9 @@
   border: 0.125rem solid rgb(var(--white), 0.875);
   border-radius: 1.5rem;
 
+  // visual
+  --initialOpacity: 1;
+
   @include atTablet {
     // box model
     // height: 16rem;
@@ -120,7 +123,7 @@
 
 .isComingSoon {
   // visual
-  opacity: 0.5;
+  --initialOpacity: 0.5;
 
   .link {
     // box model
@@ -148,6 +151,6 @@
   }
   to {
     // visual
-    opacity: 1;
+    opacity: var(--initialOpacity);
   }
 }
