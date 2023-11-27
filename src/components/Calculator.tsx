@@ -13,7 +13,7 @@ import GhostButton from './GhostButton';
 
 
 interface CalculatorProps {
-  periodDiscount: number,
+  periodName: string,
   products: Product[];
 }
 
@@ -21,32 +21,67 @@ interface CartProducts {
   [productId: string]: boolean;
 }
 
-const calcPrice = (
+const getProductPrice = (
+  product: Product,
+  periodName: string,
+  isProPlan: boolean,
+):number => {
+  if (!isProPlan || !product.price[periodName].pro) {
+    return product.price[periodName].regular;
+  }
+  return product.price[periodName].pro || 0;
+};
+
+const calcRawTotalPrice = (
   products: Product[],
   cartProducts: CartProducts,
-  periodDiscount: number,
+  periodName: string,
   isProPlan: boolean,
 ) => {
-  const rawPrice = products.reduce(
+  const totalPrice = products.reduce(
     (acc, product) => {
-      const price = (isProPlan && product.proPrice)
-        ? product.proPrice
-        : product.price;
+      const price = getProductPrice(
+        product,
+        'one',
+        isProPlan,
+      );
 
       return acc + (cartProducts[product.id] ? price : 0);
     },
     0,
   );
 
-  // const proDiscount = isProPlan ? 0.15 : 0;
+  return periodName === 'one' ? totalPrice : totalPrice * 3;
+};
 
-  return rawPrice * (1 - periodDiscount);
+const calcTotalPrice = (
+  products: Product[],
+  cartProducts: CartProducts,
+  periodName: string,
+  isProPlan: boolean,
+) => {
+  let paidProductsCount = 0;
+  const totalPrice = products.reduce(
+    (acc, product) => {
+      const price = getProductPrice(
+        product,
+        periodName,
+        isProPlan,
+      );
+      paidProductsCount += cartProducts[product.id] && price ? 1 : 0;
+      return acc + (cartProducts[product.id] ? price : 0);
+    },
+    0,
+  );
+
+  const priceMultiplier = paidProductsCount > 1 ? 0.9 : 1;
+  return totalPrice * priceMultiplier;
 };
 
 
 export default function Calculator(props: CalculatorProps) {
   const {
-    periodDiscount,
+    periodName,
     products,
   } = props;
 
@@ -79,6 +114,19 @@ export default function Calculator(props: CalculatorProps) {
     };
   }, []);
 
+  const rawTotalPrice = calcRawTotalPrice(
+    products,
+    cartProducts,
+    periodName,
+    isProPlan,
+  );
+  const totalPrice = calcTotalPrice(
+    products,
+    cartProducts,
+    periodName,
+    isProPlan,
+  );
+  const isOriginalPriceShown = rawTotalPrice !== totalPrice;
 
   return (
     <div
@@ -94,34 +142,34 @@ export default function Calculator(props: CalculatorProps) {
       </div>
 
       <div className={styles.products}>
-        {products.map((product: Product) => {
-          const {
-            id,
-            title,
-            subtitle,
-            features,
-            price,
-            proPrice,
-          } = product;
+        {products
+          .filter((product: Product) => !product.isComingSoon)
+          .map((product: Product) => {
+            const {
+              id,
+              title,
+              calcDescription,
+              features,
+            } = product;
 
-          return (
-            <PriceCard
-              id={id}
-              isInCart={cartProducts[id]}
-              key={id}
-              title={title}
-              subtitle={subtitle}
-              features={features}
-              price={(isProPlan && proPrice) ? proPrice : price}
-              onPriceClick={(productId: string) => {
-                setCartProducts((prevState) => ({
-                  ...prevState,
-                  [productId]: !prevState[productId],
-                }));
-              }}
-            />
-          );
-        })}
+            return (
+              <PriceCard
+                id={id}
+                isInCart={cartProducts[id]}
+                key={id}
+                title={title}
+                subtitle={calcDescription}
+                features={features}
+                price={getProductPrice(product, periodName, isProPlan)}
+                onPriceClick={(productId: string) => {
+                  setCartProducts((prevState) => ({
+                    ...prevState,
+                    [productId]: !prevState[productId],
+                  }));
+                }}
+              />
+            );
+          })}
       </div>
 
       <div
@@ -131,16 +179,19 @@ export default function Calculator(props: CalculatorProps) {
         })}
       >
         <div className={styles.priceRow}>
-          <div className={styles.prices}>
-            <span className={styles.originalPrice}>$550</span>
+          <div
+            className={clsx({
+              [styles.prices]: true,
+              [styles.isOriginalPriceShown]: isOriginalPriceShown,
+            })}
+          >
+            <span className={styles.originalPrice}>
+              $
+              {rawTotalPrice.toFixed(2)}
+            </span>
             <span className={styles.currentPrice}>
               $
-              {calcPrice(
-                products,
-                cartProducts,
-                periodDiscount,
-                isProPlan,
-              ).toFixed(2)}
+              {totalPrice.toFixed(2)}
             </span>
             <span className={styles.perMonth}> / per month</span>
           </div>

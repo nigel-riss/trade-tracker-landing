@@ -3,7 +3,7 @@
 import styles from '@/styles/PricingSection.module.scss';
 import { useState } from 'react';
 import { Product } from '@/data/products';
-import durations from '@/data/constants';
+import durations from '@/data/duration';
 import Title from './Title';
 import Subtitle from './Subtitle';
 import Calculator from './Calculator';
@@ -39,7 +39,7 @@ export default function PricingSection(props: PricingSectionProps) {
 
       <Calculator
         products={products}
-        periodDiscount={period === durations[1].name ? 0.1 : 0}
+        periodName={period}
       />
 
       <SpecialOffer />

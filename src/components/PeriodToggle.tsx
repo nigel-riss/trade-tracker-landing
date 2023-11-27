@@ -1,4 +1,4 @@
-import durations from '@/data/constants';
+import durations from '@/data/duration';
 import styles from '@/styles/PeriodToggle.module.scss';
 
 

@@ -13,14 +13,19 @@ interface Product {
   id: string;
   title: string;
   description: string;
+  calcDescription: string;
   isComingSoon?: boolean;
   href: string;
   icon: {
     height: number;
     width: number;
   };
-  price: number;
-  proPrice?: number;
+  price: {
+    [index: string]: {
+      regular: number;
+      pro?: number;
+    },
+  }
   features: Feature[];
   slides: Slide[];
   messages?: string[];
@@ -32,12 +37,20 @@ const products: Product[] = [
     title: `Trade
       Volume Bot`,
     description: 'Leverage the power of AI and Machine Learning with our Trade Volume Bot, featuring a proprietary rating system for tokens and assets. Benefit from our unique classification of transaction participants and stay ahead with real-time data.',
+    calcDescription: 'AI and Machine Learning proprietary rating system for tokens and assets.',
     href: '#',
     icon: {
       height: 24,
       width: 24,
     },
-    price: 249,
+    price: {
+      one: {
+        regular: 249,
+      },
+      three: {
+        regular: 699,
+      },
+    },
     features: [
       {
         value: '1000',
@@ -106,13 +119,22 @@ const products: Product[] = [
     title: `Wallet
       Analyzer`,
     description: 'Introducing the most precise and advanced Wallet Analyzer on the market. Access a suite of essential and unique metrics designed to provide a comprehensive analysis of your wallet\'s performance.',
+    calcDescription: 'Most precise and advanced Wallet Analyzer on the market.',
     href: '#',
     icon: {
       height: 30,
       width: 30,
     },
-    price: 99,
-    proPrice: 249,
+    price: {
+      one: {
+        regular: 99,
+        pro: 249,
+      },
+      three: {
+        regular: 249,
+        pro: 699,
+      },
+    },
     features: [
       {
         value: '1000',
@@ -171,12 +193,20 @@ const products: Product[] = [
     title: `Profit
       Maker`,
     description: 'Track the most successful traders and gain insights with real-time summaries of their profitable trades. Profit Maker empowers you to mirror the strategies of top performers in the market.',
+    calcDescription: 'Track the most successful traders and gain insights with real-time summaries of their profitable trades.',
     href: '#',
     icon: {
       height: 24,
       width: 24,
     },
-    price: 499,
+    price: {
+      one: {
+        regular: 499,
+      },
+      three: {
+        regular: 1399,
+      },
+    },
     features: [
       {
         value: '1000',
@@ -224,12 +254,20 @@ const products: Product[] = [
     title: `Whales
       Alert`,
     description: 'Stay informed with Whale Alert as it monitors the significant fund movements of crypto whales, providing forecasts and tips on how to capitalize on these insights for informed trading decisions.',
+    calcDescription: 'Stay informed with Whale Alert as it monitors the significant fund movements of crypto whales.',
     href: '#',
     icon: {
       height: 24,
       width: 24,
     },
-    price: 0,
+    price: {
+      one: {
+        regular: 0,
+      },
+      three: {
+        regular: 0,
+      },
+    },
     features: [
       {
         value: '1000',
@@ -298,13 +336,21 @@ const products: Product[] = [
     title: `ET
       Bot`,
     description: 'COMING SOON',
+    calcDescription: 'COMING SOON',
     isComingSoon: true,
     href: '#',
     icon: {
       height: 24,
       width: 40,
     },
-    price: 0,
+    price: {
+      one: {
+        regular: 249,
+      },
+      three: {
+        regular: 699,
+      },
+    },
     features: [
       {
         value: '1000',
