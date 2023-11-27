@@ -14,25 +14,45 @@
     rgb(var(--green)) 42rem,
     rgb(var(--dark)) calc(100% - 16rem),
   );
+
+  @include atTablet {
+    // box model
+    background-image: none;
+  }
 }
 
 .section::after {
-  // content: "";
+  @include atTablet {
+    content: "";
 
-  // // positioning
-  // position: absolute;
-  // top: -50%;
-  // left: -50%;
-  // z-index: 1;
+    // positioning
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
 
-  // // box model
-  // display: block;
-  // width: 100rem;
-  // height: 100rem;
-  // border: 2px solid fuchsia;
+    // box model
+    display: block;
+    height: 80rem;
+    width: 80rem;
 
-  // // visual
-  // background: radial-gradient(37.59% 37.59% at 50% 50%, #2FE82B 0%, rgba(32, 32, 32, 0.00) 100%);
+    // visual
+    background: radial-gradient(37.59% 37.59% at 50% 50%, rgb(var(--green), 0.5) 0%, rgba(32, 32, 32, 0.00) 100%);
+  }
+
+  @include atDesktopS {
+    // positioning
+    top: 40%;
+    left: 65%;
+
+    // box model
+    height: 80rem;
+    width: 80rem;
+
+    // visual
+    background: radial-gradient(37.59% 37.59% at 50% 50%, rgb(var(--white), 0.25) 0%, rgb(var(--dark), 0.00) 100%);
+  }
 }
 
 .mobileNav {
@@ -191,20 +211,37 @@
     // box model
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+
+    // visual
+    overflow: hidden;
   }
+}
+
+.productContainer {
+  // box model
+  margin-bottom: 1.5rem;
 }
 
 .sliderContainer {
   // box model
-  display: none;
-  padding-top: 1.5rem;
+  max-height: 0;
 
+  // visual
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.45s linear;
 }
 
 .isCurrent {
   // box model
   display: block;
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+  max-height: 18rem;
+
+  // visual
+  opacity: 1;
+  transition: all 0.5s linear, opacity 0.5s ease-in 0.125s;
 }
 
 .phoneContainer {

@@ -27,11 +27,10 @@
   width: 100rem;
 
   // visual
-  background-image: radial-gradient(
-    37.59% 37.59% at 50% 50%,
-    rgb(var(--green), 0.625 ) 0%,
-    rgb(var(--dark), 0) 100%
-  );
+  background-image: url('../assets/img/bgs/green-radial.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   pointer-events: none;
 
   @include atDesktopS {
