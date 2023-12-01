@@ -14,10 +14,8 @@ export default function ProductsSection(props: ProductsSectionProps) {
   const { products } = props;
 
   return (
-    <section
-      id="products"
-      className={styles.section}
-    >
+    <section className={styles.section}>
+      <a href="#products" id="products" className={styles.anchor}>Products</a>
       <div className={styles.sprites}>
         <ProductsSprites />
       </div>

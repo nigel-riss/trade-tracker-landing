@@ -7,39 +7,44 @@
   // box model
   padding: 9rem 0;
 
-  // visual
-  background-image: linear-gradient(
-    to bottom,
-    rgb(var(--dark)) 0,
-    rgb(var(--green)) 42rem,
-    rgb(var(--dark)) calc(100% - 16rem),
-  );
-
   @include atTablet {
     // box model
     background-image: none;
   }
+
+  @include atDesktopS {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 4rem);
+    min-height: calc(100svh - 4rem);
+    padding: 4.5rem 0;
+  }
 }
 
 .section::after {
-  @include atTablet {
-    content: "";
+  content: "";
 
-    // positioning
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    transform: translate(-50%, -50%);
+  // positioning
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: 20rem;
+  z-index: -1;
+  transform: translate(-50%, -50%);
 
-    // box model
-    display: block;
-    height: 80rem;
-    width: 80rem;
+  // box model
+  display: block;
+  height: 60rem;
+  width: 60rem;
 
-    // visual
-    background: radial-gradient(37.59% 37.59% at 50% 50%, rgb(var(--green), 0.5) 0%, rgba(32, 32, 32, 0.00) 100%);
-  }
+  // visual
+  // background: radial-gradient(37.59% 37.59% at 50% 50%, rgb(var(--green), 0.5) 0%, rgba(32, 32, 32, 0.00) 100%);
+  background-image: url(../assets/img/bgs/green-radial.svg);
+  background-size: contain;
+  background-position: center center;
+
 
   @include atDesktopS {
     // positioning
@@ -51,7 +56,12 @@
     width: 80rem;
 
     // visual
-    background: radial-gradient(37.59% 37.59% at 50% 50%, rgb(var(--white), 0.25) 0%, rgb(var(--dark), 0.00) 100%);
+    // background: radial-gradient(37.59% 37.59% at 50% 50%, rgb(var(--white), 0.25) 0%, rgb(var(--dark), 0.00) 100%);
+    background-image: radial-gradient(
+      37.59% 37.59% at 50% 50%,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(32, 32, 32, 0.00) 100%
+    );
   }
 }
 
@@ -97,11 +107,6 @@
 
   // visual
   background-color: rgb(var(--chineseWhite));
-  // background-image: radial-gradient(
-  //   685.06% 133.39% at 9.38% 2.12%,
-  //   rgb(var(--chineseWhite)) 0%,
-  //   rgb(var(--white)) 100%
-  // );
 
   @include atTablet {
     // box model
@@ -124,7 +129,10 @@
     width: var(--dWidth);
 
     // visual
-    overflow: visible;
+    animation: fadeIn linear forwards;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
   }
 }
 
@@ -155,8 +163,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2rem;
-  width: 2rem;
+  height: 2.5rem;
+  width: 2.5rem;
 
   // border
   border: none;
@@ -169,29 +177,30 @@
   // visual
   appearance: none;
   background-color: rgb(var(--dark));
+  cursor: pointer;
+  transition: all 0.25s ease-out;
 }
 
-.button::after {
-  content: "";
-
-  // positioning
-  position: absolute;
-  transform: translate(-30%, 0);
-
-  // border
-  border: 0.5em solid transparent;
-  border-right: 1em solid rgb(var(--white));
-
+.button svg {
   // box model
-  display: block;
-  height: 1em;
-  width: 2em;
+  height: 1rem;
+  width: 1rem;
 
-  // typography
-  font-size: 0.75rem;
+  // visual
+  fill: rgb(var(--white));
 }
 
-.buttonRight {
+.button:hover {
+  // visual
+  background-color: rgb(var(--green));
+}
+
+.button:active {
+  // visual
+  opacity: 0.5;
+}
+
+.buttonLeft {
   // positioning
   transform-origin: center center;
   transform: rotate(180deg);
@@ -213,6 +222,10 @@
     flex-direction: column;
 
     // visual
+    animation: fadeLeft linear forwards;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
     overflow: hidden;
   }
 }
@@ -265,5 +278,47 @@
 
     // box model
 
+    // visual
+    animation: fadeRight linear forwards;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 25%;
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30rem);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30rem);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    // visual
+    opacity: 0;
+  }
+  100% {
+    // visual
+    opacity: 1;
   }
 }

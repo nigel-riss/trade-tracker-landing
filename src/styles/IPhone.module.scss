@@ -34,6 +34,12 @@
     padding: 1.25rem;
     padding-top: 6rem;
   }
+
+  @include atDesktopS {
+    // visual
+    animation-name: fadeTop;
+    animation-duration: 1s;
+  }
 }
 
 .badge {
@@ -126,5 +132,15 @@
     // visual
     background-image: url('../assets/img/deco/iphone.png');
     background-size: cover;
+  }
+}
+
+@keyframes fadeTop {
+  0% {
+    opacity: 0;
+    transform: translateY(30rem);
+  }
+  100% {
+    opacity: 1;
   }
 }

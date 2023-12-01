@@ -33,6 +33,8 @@
     grid-column: span 1;
 
     // visual
+    // animation: fadeInDesktop linear forwards;
+    animation-delay: 0.5s;
     transition: all 0.5s ease-out;
   }
 }
@@ -131,6 +133,7 @@
 .isComingSoon {
   // visual
   --initialOpacity: 0.5;
+  pointer-events: none;
 
   .link {
     // box model
@@ -144,19 +147,31 @@
   0% {
     // visual
     opacity: 0;
-    transform: translateY(30rem);
+    transform: translateX(90rem);
   }
   100% {
     // visual
     opacity: var(--initialOpacity);
-    // transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDesktop {
+  0% {
+    // visual
+    opacity: 0;
+    transform: translateY(30rem);
+
+  }
+  100% {
+    // visual
+    opacity: var(--initialOpacity);
   }
 }
 
 @include atDesktopS {
-  .card:nth-of-type(1) { animation-range: entry 15% cover 27.5%; }
-  .card:nth-of-type(2) { animation-range: entry 20% cover 30%; }
-  .card:nth-of-type(3) { animation-range: entry 25% cover 32.5%; }
-  .card:nth-of-type(4) { animation-range: entry 30% cover 35%; }
-  .card:nth-of-type(5) { animation-range: entry 35% cover 37.5%; }
+  .card:nth-of-type(1) { animation-range: entry 25% cover 27.5%; }
+  .card:nth-of-type(2) { animation-range: entry 27.5% cover 30%; }
+  .card:nth-of-type(3) { animation-range: entry 30% cover 32.5%; }
+  .card:nth-of-type(4) { animation-range: entry 32.5% cover 35%; }
+  .card:nth-of-type(5) { animation-range: entry 35% cover 35%; }
 }

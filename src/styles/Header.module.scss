@@ -9,10 +9,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100vh + 8rem);
+  height: calc(100vh + 2rem);
+  height: calc(100svh + 2rem);
   padding: 2.75rem 1rem;
   padding-right: 1.75rem;
-  padding-bottom: 15rem;
+  padding-bottom: 4.5rem;
 
   // visual
   overflow: hidden;
@@ -25,9 +26,10 @@
 
   @include atDesktopS {
     // box model
-    aspect-ratio: 2 / 1;
+    // aspect-ratio: 2 / 1;
     width: 100%;
     height: auto;
+    min-height: calc(100vh - 4rem);
     padding: 3.25rem 0;
     padding-bottom: 4.5rem;
   }
@@ -54,7 +56,11 @@
   // visual
   
   background-image: url('../assets/img/bgs/white-radial.svg');
-  // background: radial-gradient(37.59% 37.59% at 50% 50%, rgba(255, 255, 255, 0.17) 0%, rgba(32, 32, 32, 0.00) 100%);
+  background-image: radial-gradient(
+    37.59% 37.59% at 50% 50%,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(32, 32, 32, 0.00) 100%
+  );
   background-size: cover;
 }
 
@@ -70,6 +76,10 @@
     // box model
     width: var(--dWidth);
     margin: 0 auto;
+
+    // visual
+    animation-name: fadeTop;
+    animation-duration: 1s;
   }
 }
 
@@ -116,6 +126,10 @@
     // typography
     font-size: 8rem;
     line-height: 8rem;
+
+    // visual
+    animation-name: fadeLeft;
+    animation-duration: 1s;
   }
 }
 
@@ -148,6 +162,10 @@
 
     // typography
     font-size: 1rem;
+
+    // visual
+    animation-name: fadeRight;
+    animation-duration: 1s;
   }
 }
 
@@ -160,4 +178,34 @@
   bottom: -0.125rem;
   z-index: -1;
 
+}
+
+@keyframes fadeTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(30rem);
+  }
+  to {
+    opacity: 1;
+  }
 }

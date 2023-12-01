@@ -139,7 +139,16 @@ export default function SliderSection(props: SliderSectionProps) {
               type="button"
               ref={leftButtonRef}
             >
-              &larr;
+              <svg
+                viewBox="0 0 100 100"
+                x="0px"
+                y="0px"
+                version="1.1"
+              >
+                <g transform="translate(10)">
+                  <polygon points="11.895,6 11.895,94 88.105,50" />
+                </g>
+              </svg>
             </button>
             <button
               className={clsx({
@@ -149,10 +158,20 @@ export default function SliderSection(props: SliderSectionProps) {
               type="button"
               ref={rightButtonRef}
             >
-              &rarr;
+              <svg
+                viewBox="0 0 100 100"
+                x="0px"
+                y="0px"
+                version="1.1"
+              >
+                <g transform="translate(10)">
+                  <polygon points="11.895,6 11.895,94 88.105,50" />
+                </g>
+              </svg>
             </button>
           </div>
           <IPhone
+            key={currentId}
             currentIndex={currentSlideIndex}
             messages={currentProduct?.messages}
           />

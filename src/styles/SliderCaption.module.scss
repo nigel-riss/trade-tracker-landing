@@ -23,9 +23,15 @@
   // border
   border-radius: 50%;
 
+  // visual
+  transition: all 0.25s ease-out;
+
   svg {
     // visual
     fill: rgb(var(--chineseWhite));
+
+    // visual
+    transition: all 0.25s ease-out;
   }
 }
 
@@ -38,7 +44,26 @@
   transition: all 0.25s ease-out;
 }
 
-.isCurrent {
+.caption:hover {
+  .title {
+    // typography
+    color: rgb(var(--dark), 0.5);
+  }
+
+  .icon svg {
+    // visual
+    fill: rgb(var(--dark), 1);
+    opacity: 0.5;
+  }
+}
+
+.caption:active {
+  // visual
+  opacity: 0.5;
+}
+
+.isCurrent,
+.isCurrent:hover {
   .icon {
     // visual
     background-color: rgb(var(--dark));
@@ -46,6 +71,7 @@
     svg {
       // visual
       fill: rgb(var(--green));
+      opacity: 1;
     }
   }
 
