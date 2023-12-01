@@ -37,7 +37,7 @@ export default function SliderSection(props: SliderSectionProps) {
     .find((product) => product.id === currentId);
 
   return (
-    <section className={styles.section}>
+    <section id="slider" className={styles.section}>
       <nav
         id="slider-nav"
         className={styles.mobileNav}

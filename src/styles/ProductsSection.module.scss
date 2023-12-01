@@ -7,6 +7,11 @@
 
   // visual
   background-color: rgb(var(--dark));
+  --initialOpacity: 1;
+  animation: fadeIn linear forwards;
+  animation-fill-mode: both;
+  animation-timeline: view();
+  animation-range: entry 30% cover 30%;
 
   @include atDesktopS {
     // box model
@@ -38,6 +43,7 @@
   @include atDesktopS {
     // box model
     width: 42rem;
+    margin-top: 4.5rem;
   }
 }
 
@@ -64,5 +70,18 @@
     width: var(--dWidth);
     margin: 0 auto;
     margin-top: 4.5rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    // visual
+    opacity: 0;
+    transform: translateY(30rem);
+  }
+  100% {
+    // visual
+    opacity: 1;
+    transform: translateY(0);
   }
 }

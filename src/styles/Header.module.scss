@@ -38,19 +38,24 @@
 
   // positioning
   position: absolute;
-  top: 2rem;
-  left: 6rem;
+  top: 12rem;
+  left: -6rem;
   z-index: -2;
   transform-origin: center center;
   transform: translate(-50%, -50%);
 
   // box model
   display: block;
+  height: 125rem;
+  width: 125rem;
   height: 75rem;
   width: 75rem;
 
   // visual
-  background: radial-gradient(37.59% 37.59% at 50% 50%, rgba(255, 255, 255, 0.17) 0%, rgba(32, 32, 32, 0.00) 100%);
+  
+  background-image: url('../assets/img/bgs/white-radial.svg');
+  // background: radial-gradient(37.59% 37.59% at 50% 50%, rgba(255, 255, 255, 0.17) 0%, rgba(32, 32, 32, 0.00) 100%);
+  background-size: cover;
 }
 
 .nav {

@@ -12,6 +12,10 @@
 
   // visual
   --initialOpacity: 1;
+  animation: fadeIn linear forwards;
+  animation-fill-mode: both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
 
   @include atTablet {
     // box model
@@ -27,6 +31,9 @@
     // box model
     flex-basis: calc(100% / 5 - 1.25rem);
     grid-column: span 1;
+
+    // visual
+    transition: all 0.5s ease-out;
   }
 }
 
@@ -101,7 +108,7 @@
   border-color: rgb(var(--green));
 
   // visual
-  background-color: rgb(var(--green));
+  background-color: rgb(var(--green), 1);
   transition: all 0.25s ease-out;
 
   .link {
@@ -133,24 +140,23 @@
   }
 }
 
-.card {
-  // visual
-  animation: fadeIn linear forwards;
-  animation-fill-mode: both;
-  animation-timeline: view();
-  animation-range: entry 50% cover 50%;
-
-  // visual
-  // opacity: 0;
-}
-
 @keyframes fadeIn {
-  from {
+  0% {
     // visual
     opacity: 0;
+    transform: translateY(30rem);
   }
-  to {
+  100% {
     // visual
     opacity: var(--initialOpacity);
+    // transform: translateY(0);
   }
+}
+
+@include atDesktopS {
+  .card:nth-of-type(1) { animation-range: entry 15% cover 27.5%; }
+  .card:nth-of-type(2) { animation-range: entry 20% cover 30%; }
+  .card:nth-of-type(3) { animation-range: entry 25% cover 32.5%; }
+  .card:nth-of-type(4) { animation-range: entry 30% cover 35%; }
+  .card:nth-of-type(5) { animation-range: entry 35% cover 37.5%; }
 }
