@@ -30,9 +30,9 @@
   background-image: linear-gradient(
     to bottom,
     rgb(var(--dark), 0) 0%,
-    rgb(var(--dark), 0.5) 75%,
     rgb(var(--dark), 1) 100%,
   );
+  background-size: contain;
 }
 
 .front,
