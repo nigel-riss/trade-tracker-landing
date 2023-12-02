@@ -11,10 +11,15 @@ export default function FAQSection() {
       id="faq"
       className={styles.section}
     >
-      <header className={styles.header}>
+      <header
+        className={styles.header}
+        data-aos="fade-right"
+      >
         <Title><strong>FAQs</strong></Title>
         <Subtitle>
-          For further enquiries, reach out to our support team
+          For further enquiries,
+          <br />
+          reach out to our support team
         </Subtitle>
         <ArrowLink
           href="#"

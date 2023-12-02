@@ -2,6 +2,9 @@
 import '@/styles/main.scss';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 export default function App(props: AppProps) {
@@ -9,6 +12,16 @@ export default function App(props: AppProps) {
     Component,
     pageProps,
   } = props;
+
+  useEffect(() => {
+    AOS.init({
+      disable: 'mobile',
+      duration: 1000,
+    });
+    AOS.refresh();
+    window.addEventListener('resize', AOS.refresh);
+    return () => window.removeEventListener('resize', AOS.refresh);
+  });
 
   return (
     <>

@@ -2,6 +2,10 @@
 
 
 .offer {
+  // positioning
+  position: relative;
+  z-index: -1;
+
   // box model
   margin-top: 1.25rem;
   padding: 1.5rem;

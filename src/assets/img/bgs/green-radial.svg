@@ -1,9 +1,10 @@
-<svg width="1440" height="2177" viewBox="0 0 1440 2177" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="719.5" cy="1088.5" r="1088.5" fill="url(#paint0_radial_188_925)"/>
-<defs>
-<radialGradient id="paint0_radial_188_925" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(719.5 1088.5) rotate(90) scale(818.235)">
-<stop stop-color="#2FE82B"/>
-<stop offset="1" stop-color="#202020" stop-opacity="0"/>
-</radialGradient>
-</defs>
-</svg>
+<svg width="2177" height="2177" viewBox="0 0 2177 2177" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.5">
+  <circle cx="1088.5" cy="1088.5" r="1088.5" fill="url(#paint0_radial_790_1239)"/>
+  <defs>
+  <radialGradient id="paint0_radial_790_1239" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1088.5 1088.5) rotate(90) scale(818.235)">
+  <stop stop-color="#2FE82B"/>
+  <stop offset="1" stop-color="#202020" stop-opacity="0"/>
+  </radialGradient>
+  </defs>
+  </svg>
+  

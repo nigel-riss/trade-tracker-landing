@@ -8,7 +8,7 @@ import FAQItem from './FAQItem';
 export default function FAQ() {
   return (
     <dl className={styles.faq}>
-      {faq.map((it) => {
+      {faq.map((it, index) => {
         const {
           id,
           question,
@@ -19,6 +19,7 @@ export default function FAQ() {
             key={id}
             question={question}
             answer={answer}
+            index={index}
           />
         );
       })}

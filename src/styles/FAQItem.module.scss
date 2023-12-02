@@ -85,22 +85,20 @@
   transition: all 0.375s ease-out;
 }
 
-.isOpen {
-  .answer {
-    // box model
-    max-height: 10rem;
+.answer.isOpen {
+  // box model
+  max-height: 10rem;
 
-    // visual
-    opacity: 1;
-  }
+  // visual
+  opacity: 1;
+}
 
-  .arrow {
+.arrow.isOpen {
+  // positioning
+  transform: translate(0.25rem, 0.25rem) rotate(-90deg);
+
+  @include atTablet {
     // positioning
-    transform: translate(0.25rem, 0.25rem) rotate(-90deg);
-
-    @include atTablet {
-      // positioning
-      transform: translate(0, 0) rotate(-90deg);
-    }
+    transform: translate(0, 0) rotate(-90deg);
   }
 }

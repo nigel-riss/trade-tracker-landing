@@ -20,7 +20,10 @@ export default function ProductsSection(props: ProductsSectionProps) {
         <ProductsSprites />
       </div>
 
-      <header className={styles.header}>
+      <header
+        className={styles.header}
+        data-aos="fade-up"
+      >
         <Title>Our products</Title>
         <Subtitle>
           Built by traders with years of experience, this Telegram bot offers
@@ -29,7 +32,7 @@ export default function ProductsSection(props: ProductsSectionProps) {
       </header>
 
       <div className={styles.content}>
-        {products.map((product: Product) => {
+        {products.map((product: Product, index) => {
           const {
             id,
             title,
@@ -47,6 +50,7 @@ export default function ProductsSection(props: ProductsSectionProps) {
               iconHeight={icon.height}
               iconWidth={icon.width}
               isComingSoon={isComingSoon}
+              index={index}
             />
           );
         })}

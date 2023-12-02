@@ -131,6 +131,7 @@ export default function Calculator(props: CalculatorProps) {
   return (
     <div
       className={styles.calculator}
+      data-aos="fade-up"
       ref={sectionRef}
     >
       <div className={styles.heading}>

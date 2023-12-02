@@ -4,12 +4,13 @@ import Link from 'next/link';
 
 
 interface BotCardProps {
-  botID: string,
-  title: string,
-  subtitle: string,
-  iconHeight: number,
-  iconWidth: number,
-  isComingSoon?: boolean,
+  botID: string;
+  title: string;
+  subtitle: string;
+  iconHeight: number;
+  iconWidth: number;
+  isComingSoon?: boolean;
+  index: number;
 }
 
 export default function BotCard(props: BotCardProps) {
@@ -20,6 +21,7 @@ export default function BotCard(props: BotCardProps) {
     iconHeight,
     iconWidth,
     isComingSoon = false,
+    index,
   } = props;
 
   return (
@@ -28,6 +30,8 @@ export default function BotCard(props: BotCardProps) {
         [styles.card]: true,
         [styles.isComingSoon]: isComingSoon,
       })}
+      data-aos="fade-up"
+      data-aos-delay={index * 100 + 300}
     >
       <Link
         className={styles.link}

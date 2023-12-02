@@ -14,7 +14,10 @@ export default function IPhone(props: IPhoneProps) {
   } = props;
 
   return (
-    <div className={styles.iphone}>
+    <div
+      className={styles.iphone}
+      data-aos="fade-left"
+    >
       <div className={styles.screen}>
         <div className={styles.badge}>/Start</div>
         <div className={styles.wrapper}>

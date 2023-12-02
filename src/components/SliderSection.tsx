@@ -84,7 +84,10 @@ export default function SliderSection(props: SliderSectionProps) {
           />
         </div>
 
-        <div className={styles.desktopSlider}>
+        <div
+          className={styles.desktopSlider}
+          data-aos="fade-right"
+        >
           {products
             .filter((product) => !product.isComingSoon)
             .map((product) => {

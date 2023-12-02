@@ -21,7 +21,10 @@ export default function PricingSection(props: PricingSectionProps) {
 
   return (
     <section id="pricing" className={styles.section}>
-      <header className={styles.header}>
+      <header
+        className={styles.header}
+        data-aos="fade-up"
+      >
         <Title>Pricing</Title>
         <Subtitle>
           YardTools is an indispensable part of any crypto traders toolkit,
