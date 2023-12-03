@@ -1,12 +1,16 @@
 .button {
+  // positioning
+  position: relative;
+  z-index: 2;
+
   // box model
   display: block;
   width: 100%;
   padding: 0.75rem;
 
   // border
-  border: none;
-  border-radius: 1.25rem;
+  border: 0.125rem solid rgb(var(--green), 0);
+  border-radius: 2.5rem;
 
   // typography
   color: rgb(var(--dark));
@@ -17,9 +21,50 @@
   appearance: none;
   background-color: rgb(var(--white));
   cursor: pointer;
+  transition: all 0.25s ease-out;
 }
 
-.isActive {
+.button::after {
+  content: "";
+
+  // positioning
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+
+  // border
+  border-radius: 2.5rem;
+
+  // box model
+  height: 100%;
+  width: 100%;
+
+  // visual
+  background-color: rgb(var(--green));
+  transition: all 0.25s ease-out;
+}
+
+.isActive,
+.button.isActive:hover {
   // visual
   background-color: rgb(var(--green));
 }
+
+.button:hover {
+  // border
+  border: 0.125rem solid rgb(var(--green));
+
+  // visual
+  // background-color: rgb(var(--green), 0.5);
+}
+
+// .button:active::after {
+//   // positioning
+//   transform: translate(-50%, -50%) scale(2);
+
+//   // visual
+//   background-color: rgb(var(--green), 0);
+// }

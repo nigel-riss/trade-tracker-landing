@@ -33,7 +33,10 @@ const getMenuItems = (
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={styles.footer}
+      data-aos="fade"
+    >
       <div className={styles.info}>
         <Logo />
         <p className={styles.description}>

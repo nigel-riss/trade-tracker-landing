@@ -1,24 +1,24 @@
 import styles from '@/styles/CTAButton.module.scss';
+import Link from 'next/link';
 
 
 interface CTAButtonProps {
   children: React.ReactNode;
-  onClick: () => void;
+  href: string;
 }
 
 export default function CTAButton(props: CTAButtonProps) {
   const {
     children,
-    onClick,
+    href,
   } = props;
 
   return (
-    <button
+    <Link
       className={styles.button}
-      onClick={onClick}
-      type="button"
+      href={href}
     >
       {children}
-    </button>
+    </Link>
   );
 }

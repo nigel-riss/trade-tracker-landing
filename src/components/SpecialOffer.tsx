@@ -12,9 +12,7 @@ export default function SpecialOffer() {
     >
       <h3 className={styles.title}>Special offer</h3>
       <div className={styles.button}>
-        <ContactButton
-          onClick={() => console.log('contact-button-clicked')}
-        />
+        <ContactButton href="#" />
       </div>
     </div>
   );

@@ -1,24 +1,22 @@
 import styles from '@/styles/ContactButton.module.scss';
 import ArrowIcon from '@/assets/icons/arrow.svg';
+import Link from 'next/link';
 
 
 interface ContactButtonProps {
-  onClick: () => void;
+  href: string;
 }
 
 export default function ContactButton(props: ContactButtonProps) {
-  const {
-    onClick,
-  } = props;
+  const { href } = props;
 
   return (
-    <button
+    <Link
       className={styles.button}
-      onClick={onClick}
-      type="button"
+      href={href}
     >
       Contact us
       <ArrowIcon className={styles.icon} />
-    </button>
+    </Link>
   );
 }

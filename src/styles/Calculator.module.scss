@@ -3,6 +3,10 @@
 
 .calculator {
   @include atDesktopS {
+    // positioning
+    position: relative;
+    z-index: 2;
+
     // box model
     margin: 0 auto;
     padding: 2.25rem 1.5rem;

@@ -1,27 +1,24 @@
 import styles from '@/styles/GhostButton.module.scss';
+import Link from 'next/link';
 
 
 interface GhostButtonProps {
   children: React.ReactNode;
-  disabled?: boolean;
-  onClick: () => void;
+  href: string;
 }
 
 export default function GhostButton(props: GhostButtonProps) {
   const {
     children,
-    disabled,
-    onClick,
+    href,
   } = props;
 
   return (
-    <button
+    <Link
       className={styles.button}
-      disabled={disabled}
-      onClick={onClick}
-      type="button"
+      href={href}
     >
       {children}
-    </button>
+    </Link>
   );
 }

@@ -14,11 +14,13 @@
   color: rgb(var(--white));
   font-size: 0.875rem;
   line-height: 1.5rem;
+  text-decoration: none;
 
   // visual
   appearance: none;
   background-color: rgb(var(--dark));
   cursor: pointer;
+  transition: all 0.25s ease-out;
 }
 
 .icon {
@@ -28,4 +30,20 @@
   // box model
   height: 1.5rem;
   width: 1.5rem;
+
+  // visual
+  transition: all 0.25s ease-out;
+}
+
+.button:hover {
+  // typography
+  color: rgb(var(--dark));
+
+  // visual
+  background-color: rgb(var(--white));
+
+  .icon {
+    // positioning
+    transform: translate(0.5rem, -0.125rem) rotate(-45deg);
+  }
 }

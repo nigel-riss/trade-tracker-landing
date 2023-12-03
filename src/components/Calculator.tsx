@@ -204,13 +204,10 @@ export default function Calculator(props: CalculatorProps) {
           </div>
         </div>
         <div className={styles.buttonsRow}>
-          <CTAButton onClick={() => {}}>
+          <CTAButton href="#">
             Buy
           </CTAButton>
-          <GhostButton
-            disabled
-            onClick={() => {}}
-          >
+          <GhostButton href="#">
             Free trial
           </GhostButton>
         </div>

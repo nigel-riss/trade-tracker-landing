@@ -12,12 +12,15 @@ export default function JoinUsSection() {
         <SocialSprites />
       </div>
 
-      <header className={styles.header}>
+      <header
+        className={styles.header}
+        data-aos="fade-up"
+      >
         <Title>Join us</Title>
       </header>
 
       <div className={styles.content}>
-        {social.map((it) => {
+        {social.map((it, index) => {
           const {
             id,
             href,
@@ -32,6 +35,7 @@ export default function JoinUsSection() {
               href={href}
               width={width}
               height={height}
+              index={index}
             />
           );
         })}
