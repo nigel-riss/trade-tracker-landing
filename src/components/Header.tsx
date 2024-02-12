@@ -14,11 +14,15 @@ export default function Header() {
 
       <div className={styles.caption}>
         <h1 className={styles.title}>
-          Unlock the next level
+          TRADE smart
+          <br />
+          earn EASY
         </h1>
         <p className={styles.subtitle}>
-          A unique set of tools that provides a detailed analysis of the volume
-          changes in currencies and info on the buyers making those trends.
+          Master the Market with Atlantes.io: Elevate Your Earnings,
+          Simplify Success. Dive into the&nbsp;essence of&nbsp;profit with tools
+          that illuminate trends and unlock potentials, making every
+          trade not just a&nbsp;transaction, but&nbsp;a&nbsp;triumph
         </p>
       </div>
 

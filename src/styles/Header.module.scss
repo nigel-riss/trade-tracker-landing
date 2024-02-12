@@ -31,7 +31,7 @@
     height: auto;
     min-height: calc(100vh - 4rem);
     padding: 3.25rem 0;
-    padding-bottom: 4.5rem;
+    // padding-bottom: 4.5rem;
   }
 }
 
@@ -110,10 +110,10 @@
 
   @include atDesktopS {
     // box model
-    display: flex;
+    // display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 9rem;
+    gap: 6rem;
     padding-bottom: 0;
     width: var(--dWidth);
 
@@ -129,7 +129,7 @@
 
   // typography
   font-family: var(--titleFont);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 500;
   line-height: 4rem;
 
@@ -163,6 +163,7 @@
 
   // typography
   font-family: var(--textFont);
+  font-family: var(--titleFont);
   font-size: 0.75rem;
 
   @include atTablet {
@@ -174,6 +175,7 @@
     // box model
     padding: 0;
     padding-bottom: 1rem;
+    padding-right: 26rem;
 
     // typography
     font-size: 1rem;

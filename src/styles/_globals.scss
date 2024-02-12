@@ -34,3 +34,25 @@ body {
   position: relative;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--green)) transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  background-color: rgb(var(--dark));
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--green));
+  border-radius: 10px;
+  border: none;
+}
