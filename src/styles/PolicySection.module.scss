@@ -15,10 +15,10 @@
 }
 
 .content {
-
   @include atDesktopS {
     // box model
     margin: 0 auto;
+    padding-right: 24rem;
     width: var(--dWidth);
   }
 
