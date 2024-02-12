@@ -38,6 +38,11 @@
 
   // typography
   font-size: 0.75rem;
+
+  @include atDesktopS {
+    // box model
+    margin-top: 3.25rem;
+  }
 }
 
 .navigation {
@@ -71,7 +76,7 @@
 
   @include atDesktopS {
     // box model
-    // fxb
+    justify-content: space-between;
   }
 }
 
@@ -89,8 +94,7 @@
 ul.list {
   // box model
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 3rem;
+  flex-direction: column;
   row-gap: 1.5rem;
   margin-top: 1.5rem;
 
@@ -100,6 +104,11 @@ ul.list {
   @include atTablet {
     // box model
     margin-top: 3rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    margin-right: 3rem;
   }
 }
 
@@ -120,6 +129,11 @@ ul.list {
   color: rgb(var(--white));
   font-size: 0.875rem;
   text-decoration: none;
+
+  @include atTablet {
+    // box model
+    white-space: nowrap;
+  }
 
   &:hover {
     // typography

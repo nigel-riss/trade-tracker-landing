@@ -33,7 +33,7 @@
   @include atDesktopS {
     // box model
     column-gap: 6rem;
-    justify-content: space-between;
+    // justify-content: space-between;
     margin: 0 auto;
     margin-top: 4.5rem;
     width: calc(var(--dWidth) - 2rem);

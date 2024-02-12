@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import Footer from '@/components/Footer';
 import SimpleHeader from '@/components/SimpleHeader';
 import PolicySection from '@/components/PolicySection';
@@ -11,8 +12,11 @@ export default function Terms() {
         title="Terms of&nbsp;Service"
       />
       <PolicySection>
-        <h2>Introduction</h2>
-        <p>This Affiliate Agreement ("Agreement") is between you, the Affiliate/Publisher ("Affiliate"), and Advertrek LTD ("Company"). By signing up as an affiliate, you acknowledge that you have read and understand the provisions set forth herein.</p>
+        <h2>Introduction:</h2>
+        <p>
+          Welcome to Atlantes.io. By accessing or using our products and services, you agree to be bound by the following terms and conditions (the &quot;Terms&quot;). Please read them carefully. If you do not agree to these Terms, you must not use our services.
+        </p>
+
         <h2>1. Affiliate</h2>
         <p>1.1. The Company accepts Affiliates at its sole discretion, with a minimum age requirement of 18 years.</p>
         <p>1.2. Upon acceptance, an Affiliate account will be set up for administrative, legal, and financial purposes.</p>
