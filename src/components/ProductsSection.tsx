@@ -26,8 +26,12 @@ export default function ProductsSection(props: ProductsSectionProps) {
       >
         <Title>Our products</Title>
         <Subtitle>
-          Built by traders with years of experience, this Telegram bot offers
-          at a glance what would normally take 10+ minutes of research.
+          From the minds of experts in big data, trading, and business
+          innovation, our product range is&nbsp;a&nbsp;testament to years
+          of&nbsp;mastery and success. Imagine replacing an entire
+          team of&nbsp;analysts and&nbsp;developers with our tools, each
+          engineered to deliver rapid, detailed insights into
+          the&nbsp;trading&nbsp;world
         </Subtitle>
       </header>
 

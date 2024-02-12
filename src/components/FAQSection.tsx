@@ -17,9 +17,10 @@ export default function FAQSection() {
       >
         <Title><strong>FAQs</strong></Title>
         <Subtitle>
-          For further enquiries,
+          Got Questions?
           <br />
-          reach out to our support team
+          Our Expert Support Team is Here to Help You Navigate
+          Through Your Queries
         </Subtitle>
         <ArrowLink
           href="#"

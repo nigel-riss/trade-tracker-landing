@@ -27,9 +27,11 @@ export default function PricingSection(props: PricingSectionProps) {
       >
         <Title>Pricing</Title>
         <Subtitle>
-          YardTools is an indispensable part of any crypto traders toolkit,
-          able to constantly monitor every token on the market with all
-          the information one may need in one place.
+          Experience Market Dominance with Atlantes.io: Essential
+          for every trader&apos;s arsenal, Atlantes is your all-seeing
+          eye across the crypto universe. Instantly access comprehensive
+          data on every token with unparalleled depth and precision.
+          Simplify success, maximize your market impact
         </Subtitle>
 
         <PeriodToggle
