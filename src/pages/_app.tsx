@@ -44,7 +44,7 @@ export default function App(props: AppProps) {
         <meta name="msapplication-TileColor" content="#131313" />
         <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=2" />
         <meta name="theme-color" content="#161616" />
-        <title>Atlantes.io – coming soon</title>
+        <title>Atlantes.io</title>
       </Head>
       <Component {...pageProps} />
     </>

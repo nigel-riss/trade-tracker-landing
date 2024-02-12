@@ -8,6 +8,11 @@
   // box model
   margin-top: 9rem;
   padding: 0 1.25rem;
+
+  @include atDesktopS {
+    // box model
+    margin-bottom: 6rem;
+  }
 }
 
 .section::before {
