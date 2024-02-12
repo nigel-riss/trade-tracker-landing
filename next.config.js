@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
+  // output: 'export',
 
   webpack(config) {
     // Configures webpack to handle SVG files with SVGR. SVGR optimizes and transforms SVG files
