@@ -6,7 +6,6 @@ export default function SimpleFooter() {
   return (
     <footer
       className={styles.footer}
-      data-aos="fade"
     >
       <div className={styles.legalInfo}>
         <p className={styles.copyrights}>Atlantes.eth © 2023</p>

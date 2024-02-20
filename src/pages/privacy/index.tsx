@@ -52,8 +52,11 @@ export default function Terms() {
         <p>
           If you have any questions about this Privacy Policy, please contact us via the support channels provided on our website.
         </p>
-        Effective Date: 01.11.2023 (Last Update)
-        This outline serves as a basic framework. Again, due to the intricacies of privacy laws and the specific operations of Atlantes.io, it&apos;s crucial to consult with legal professionals to ensure the Privacy Policy is compliant with all relevant laws and accurately reflects your data handling practices.
+
+        {/* Effective Date: 01.11.2023 (Last Update)
+        <p>
+          This outline serves as a basic framework. Again, due to the intricacies of privacy laws and the specific operations of Atlantes.io, it&apos;s crucial to consult with legal professionals to ensure the Privacy Policy is compliant with all relevant laws and accurately reflects your data handling practices.
+        </p> */}
 
       </PolicySection>
       <JoinUsSection />

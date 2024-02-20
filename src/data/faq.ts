@@ -11,7 +11,7 @@ const faq = [
   },
   {
     id: 2,
-    question: 'Can I customize notifications in the Telegram bot?',
+    question: 'Can I customize notifications in&nbsp;the&nbsp;Telegram bot?',
     answer: 'Yes, our Telegram bots offer flexible notification settings, allowing you to receive real-time information based on your chosen parameters, making trading more convenient and effective.',
   },
   {
