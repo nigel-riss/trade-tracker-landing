@@ -15,7 +15,7 @@ html {
 
   // visual
   background-color: rgb(var(--dark));
-  overflow-x: hidden;
+  // overflow-x: hidden;
   scroll-behavior: smooth;
 
   @include atTablet {
