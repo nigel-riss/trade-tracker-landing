@@ -9,6 +9,9 @@
   margin-top: 9rem;
   padding: 0 1.25rem;
 
+  // visual
+  overflow-x: clip;
+
   @include atDesktopS {
     // box model
     margin-bottom: 6rem;

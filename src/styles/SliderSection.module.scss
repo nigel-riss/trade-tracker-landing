@@ -7,6 +7,9 @@
   // box model
   padding: 9rem 0;
 
+  // visual
+  overflow-x: clip;
+
   @include atTablet {
     // box model
     background-image: none;
