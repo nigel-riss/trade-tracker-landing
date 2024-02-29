@@ -11,7 +11,7 @@ const faq = [
   },
   {
     id: 2,
-    question: 'Can I customize notifications in&nbsp;the&nbsp;Telegram bot?',
+    question: 'Can I customize notifications in the Telegram bot?',
     answer: 'Yes, our Telegram bots offer flexible notification settings, allowing you to receive real-time information based on your chosen parameters, making trading more convenient and effective.',
   },
   {
@@ -22,7 +22,7 @@ const faq = [
   {
     id: 4,
     question: 'Do you offer a trial period?',
-    answer: 'We provide a trial period for new users so you can explore all the benefits of our products before committng to a subscription.',
+    answer: 'We provide a trial period for new users so you can explore all the benefits of our products before committing to a subscription.',
   },
   {
     id: 5,
