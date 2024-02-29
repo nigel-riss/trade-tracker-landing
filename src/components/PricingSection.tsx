@@ -27,11 +27,9 @@ export default function PricingSection(props: PricingSectionProps) {
       >
         <Title>Pricing</Title>
         <Subtitle>
-          Experience Market Dominance with Atlantes.io: Essential
-          for every trader&apos;s arsenal, Atlantes is your all-seeing
-          eye across the crypto universe. Instantly access comprehensive
-          data on every token with unparalleled depth and precision.
-          Simplify success, maximize your market impact
+          Your trading edge: Access exclusive, in-depth crypto insights
+          with our Standard or Pro versions. Premium insights for serious
+          traders, priced to match your ambition
         </Subtitle>
 
         <PeriodToggle

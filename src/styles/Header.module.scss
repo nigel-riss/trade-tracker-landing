@@ -132,7 +132,7 @@
   font-family: var(--titleFont);
   font-size: 2.5rem;
   font-weight: 500;
-  line-height: 4rem;
+  line-height: 1;
 
   @include atDesktopS {
     // box model
@@ -141,7 +141,6 @@
 
     // typography
     font-size: 8rem;
-    line-height: 8rem;
 
     // visual
     animation-name: fadeLeft;
@@ -184,6 +183,16 @@
     // visual
     animation-name: fadeRight;
     animation-duration: 1s;
+  }
+}
+
+.subtitle span {
+  // box model
+  display: none;
+
+  @include atDesktopS {
+    // box model
+    display: inline;
   }
 }
 

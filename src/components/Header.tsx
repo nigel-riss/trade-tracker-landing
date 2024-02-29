@@ -19,10 +19,10 @@ export default function Header() {
           earn EASY
         </h1>
         <p className={styles.subtitle}>
-          Master the Market with Atlantes.io: Elevate Your Earnings,
-          Simplify Success. Dive into the&nbsp;essence of&nbsp;profit with tools
-          that illuminate trends and unlock potentials, making every
-          trade not just a&nbsp;transaction, but&nbsp;a&nbsp;triumph
+          Build Your Win: Use smart data to&nbsp;beat the&nbsp;market.
+          <span><br /></span>
+          <i> </i>
+          Make sure you&apos;re one of the top traders with&nbsp;Atlantes
         </p>
       </div>
 

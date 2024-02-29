@@ -10,9 +10,9 @@ export default function SpecialOffer() {
       className={styles.offer}
       data-aos="fade-down"
     >
-      <h3 className={styles.title}>Special offer</h3>
+      <h3 className={styles.title}>Do you have an offer?</h3>
       <div className={styles.button}>
-        <ContactButton href="#" />
+        <ContactButton href="mailto:info@atlantes.io" />
       </div>
     </div>
   );

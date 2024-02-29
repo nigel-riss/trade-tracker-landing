@@ -40,10 +40,8 @@ export default function Footer() {
       <div className={styles.info}>
         <Logo />
         <p className={styles.description}>
-          Master the Market with Atlantes.io: Elevate Your Earnings,
-          Simplify Success. Dive into the&nbsp;essence of&nbsp;profit with tools
-          that illuminate trends and unlock potentials, making every
-          trade not just a&nbsp;transaction, but&nbsp;a&nbsp;triumph
+          Build Your Win: Use smart data to beat the&nbsp;market.
+          Make sure you&apos;re one of&nbsp;the&nbsp;top traders with Atlantes
         </p>
       </div>
 
@@ -73,7 +71,7 @@ export default function Footer() {
 
       <div className={styles.legalInfo}>
         <p className={styles.copyrights}>
-          Atlantes.eth © 2023 &mdash;
+          Atlantes.eth © 2023 &mdash;&nbsp;
           {new Date().getFullYear() }
         </p>
         <div className={styles.legalLinks}>

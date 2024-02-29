@@ -26,12 +26,8 @@ export default function ProductsSection(props: ProductsSectionProps) {
       >
         <Title>Our products</Title>
         <Subtitle>
-          From the minds of experts in big data, trading, and business
-          innovation, our product range is&nbsp;a&nbsp;testament to years
-          of&nbsp;mastery and success. Imagine replacing an entire
-          team of&nbsp;analysts and&nbsp;developers with our tools, each
-          engineered to deliver rapid, detailed insights into
-          the&nbsp;trading&nbsp;world
+          Expert-crafted tools for trading insights: replace analysts
+          and developers, doubling your efficiency with our innovative products
         </Subtitle>
       </header>
 

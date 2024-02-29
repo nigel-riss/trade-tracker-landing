@@ -76,12 +76,12 @@ const products: Product[] = [
         messageIndex: 0,
       },
       {
-        title: 'Comprehensive Market Data',
+        title: 'Market Data',
         text: 'Dive into detailed market analytics with ease. From liquidity snapshots to market cap evaluations, our bot delivers the critical information you need directly to your fingertips.',
         messageIndex: 0,
       },
       {
-        title: 'Trader Activity Tracking',
+        title: 'Trader Activity',
         text: 'Gain insight into the behaviors that drive market dynamics. Our bot analyzes buyer and seller patterns, providing a clear picture of the trading landscape.',
         messageIndex: 0,
       },
@@ -97,7 +97,7 @@ const products: Product[] = [
       },
       {
         title: 'PRO Report',
-        text: 'Maximize your market edge with PRO Report. Gain the elite advantage with tailored insights and one-click trade execution. Spot trends and anomalies before they hit the mainstream with our advanced comparative analysis and historical data tracking. CSV/XLS Exports: Take control with the ability to export in-depth reports. Make informed decisions quickly, and act fast to seize profitable opportunities that others might miss. Don\'t just watch the market — dominate it. Subscribe to PRO and trade like a titan with Atlantes.io.',
+        text: 'Elevate your trading with PRO Report: Tailored insights, one-click trade execution, and trend analysis. With CSV/XLS exports, make swift, informed decisions to capitalize on market opportunities. Dominate the trading scene — upgrade to PRO for a titan’s advantage.',
         messageIndex: 0,
       },
     ],
@@ -160,7 +160,7 @@ const products: Product[] = [
     ],
     slides: [
       {
-        title: 'Comprehensive Wallet Overview',
+        title: 'Wallet Overview',
         text: 'Unlock a holistic view of wallet performance, including age, balance, and a detailed profit breakdown over key periods. Understand at a glance how wallets stack up over time, from daily changes to monthly trends, to inform your trading decisions with historical performance data.',
         messageIndex: 0,
       },
@@ -170,18 +170,13 @@ const products: Product[] = [
         messageIndex: 0,
       },
       {
-        title: 'Trading Dynamics & Precision Analytics',
-        text: 'Explore trading behavior with a detailed look at unique tokens, transaction counts, and average buy sizes. Our advanced metrics like average GAS costs, holding times, and sniping accuracy provide you with a comprehensive toolkit to strategize your trades with precision. Plus, gain a clear perspective on the distribution of profitable versus non-profitable trades to refine your investment strategy.',
+        title: 'Trading Dynamics',
+        text: 'Unlock trading insights with advanced metrics: unique tokens, transaction trends, and buy sizes. Harness data on GAS costs, holding times, and sniping accuracy for precise strategies. Analyze profitable vs. non-profitable trade distributions to enhance your investment approach.',
         messageIndex: 0,
       },
       {
-        title: 'Advanced Simulation Capabilities',
-        text: 'With Wallet Analyzer PRO, step into the future of trading with our state-of-the-art simulation feature. This powerful tool allows you to model trading scenarios based on extensive historical data, offering a glimpse into potential future outcomes. Test your strategies against past market conditions to refine your approach with unparalleled precision. Whether it\'s assessing the impact of major market movements or fine-tuning entry and exit points, our simulations provide the insights needed to elevate your trading strategy.',
-        messageIndex: 0,
-      },
-      {
-        title: 'Custom Data Export Options',
-        text: 'Wallet Analyzer PRO transcends traditional analytics by offering bespoke export options that cater to the most discerning traders. Tailor your data analysis by selecting specific time frames or blockchain blocks, with the convenience of exporting this information directly into CSV/XLS formats. This functionality not only enhances your ability to perform deep dives into market dynamics but also equips you with the agility to share insights, compile comprehensive reports, or integrate data with your own trading tools.',
+        title: 'Simulation and Data',
+        text: 'Unlock future trading success with Wallet Analyzer PRO. Simulate trading scenarios with historical data to refine strategies with precision. Test and adjust your tactics to navigate market dynamics confidently. Enhance your trading acumen with our cutting-edge simulation tool. Wallet Analyzer PRO transcends traditional analytics by offering bespoke export options that cater to the most discerning traders.',
         messageIndex: 0,
       },
     ],
@@ -242,18 +237,18 @@ const products: Product[] = [
     ],
     slides: [
       {
-        title: 'Real-Time Enhanced Alerts',
-        text: 'Profit Maker elevates your trading experience with cutting-edge, real-time alerts. Tailored to fit your unique trading style, these alerts ensure you\'re always in the loop on the most promising trade opportunities. Stay ahead with actionable insights that could redefine your trading success.',
+        title: 'Real-Time Alerts',
+        text: 'Profit Maker PRO elevates your trading experience with cutting-edge, real-time alerts.',
         messageIndex: 0,
       },
       {
-        title: 'Custom Report Exports - Introducing CopyTrade Report',
-        text: 'At the heart of Profit Maker is the revolutionary CopyTrade Report feature, a game-changer for traders looking to mirror the market\'s top performers. This exclusive tool provides an in-depth comparison of your trades against those of leading traders, offering a clear view of where you stand and how you can adjust your strategy for better results. With the ability to export these insights into CSV/XLS formats, the CopyTrade Report not only informs but empowers your trading decisions.',
+        title: 'Tailored Analysis',
+        text: 'Customize your market analysis with advanced filtering options, allowing you to focus on what truly matters to your portfolio.',
         messageIndex: 0,
       },
       {
-        title: 'Tailored Analysis for Precision Trading',
-        text: 'Customize your market analysis with advanced filtering options, allowing you to focus on what truly matters to your portfolio. Profit Maker gives you the keys to a deeper understanding of market trends, enabling you to dissect and analyze trading patterns with precision. Make informed decisions based on a robust analysis tailored specifically to your trading criteria.',
+        title: 'CopyTrade Report',
+        text: 'At the heart of Profit Maker PRO is the revolutionary CopyTrade Report feature, a game-changer for traders looking to mirror the market\'s top performers.',
         messageIndex: 0,
       },
     ],
