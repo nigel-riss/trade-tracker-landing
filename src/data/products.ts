@@ -48,9 +48,11 @@ const products: Product[] = [
     price: {
       one: {
         regular: 249,
+        pro: 399,
       },
       three: {
         regular: 699,
+        pro: 1099,
       },
     },
     features: [
@@ -134,12 +136,12 @@ const products: Product[] = [
     },
     price: {
       one: {
-        regular: 99,
-        pro: 249,
+        regular: 299,
+        pro: 599,
       },
       three: {
-        regular: 249,
-        pro: 699,
+        regular: 829,
+        pro: 1659,
       },
     },
     features: [
@@ -218,10 +220,10 @@ const products: Product[] = [
     },
     price: {
       one: {
-        regular: 499,
+        regular: 399,
       },
       three: {
-        regular: 1399,
+        regular: 1099,
       },
     },
     features: [
