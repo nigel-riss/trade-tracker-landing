@@ -45,7 +45,10 @@ export default function BotCard(props: BotCardProps) {
         </svg>
         <div className={styles.caption}>
           <h3 className={styles.title}>{title}</h3>
-          <p className={styles.subtitle}>{subtitle}</p>
+          <p
+            className={styles.subtitle}
+            dangerouslySetInnerHTML={{ __html: subtitle }}
+          />
         </div>
       </Link>
     </article>

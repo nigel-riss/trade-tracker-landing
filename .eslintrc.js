@@ -22,5 +22,6 @@ module.exports = {
       ignoreTemplateLiterals: true,
       ignoreUrls: true,
     }],
+    'react/no-danger': ['off'],
   },
 };
