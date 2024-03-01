@@ -15,7 +15,7 @@ interface PriceCardProps {
   isInCart: boolean;
   title: string;
   subtitle: string;
-  features: Feature[];
+  features: Feature;
   price: number;
   onPriceClick: (id: string) => void;
 }
@@ -59,25 +59,10 @@ export default function PriceCard(props: PriceCardProps) {
 
       <div className={styles.content}>
         <p className={styles.subtitle}>{subtitle}</p>
-        <ul className={styles.featureList}>
-          {features.map((feature: Feature) => {
-            const {
-              value,
-              title: featureTitle,
-            } = feature;
-
-            return (
-              <li
-                key={featureTitle}
-                className={styles.feature}
-              >
-                <span className={styles.featureValue}>{value}</span>
-                &nbsp;
-                <span className={styles.featureTitle}>{featureTitle}</span>
-              </li>
-            );
-          })}
-        </ul>
+        <div
+          className={styles.features}
+          dangerouslySetInnerHTML={{ __html: features.pro }}
+        />
         <div className={styles.priceBottom}>
           <PriceButton
             value={price}

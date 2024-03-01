@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 
 interface Feature {
-  value: string;
-  title: string;
+  regular?: string;
+  pro?: string;
 }
 
 interface Slide {
@@ -28,14 +28,14 @@ interface Product {
       pro?: number;
     },
   }
-  features: Feature[];
+  features: Feature;
   slides: Slide[];
   messages?: string[];
 }
 
 const products: Product[] = [
   {
-    id: 'trade-volume-bot',
+    id: 'tvb',
     title: `Trade
       Volume Bot`,
     description: 'Leverage the power of AI and Machine Learning with our Trade Volume Bot, featuring a proprietary rating system for tokens and&nbsp;assets. Benefit from our unique classification of transaction participants and&nbsp;stay ahead with real-time data.',
@@ -55,20 +55,14 @@ const products: Product[] = [
         pro: 1099,
       },
     },
-    features: [
-      {
-        value: '1000',
-        title: 'requests / month',
-      },
-      {
-        value: '100',
-        title: 'requests / day',
-      },
-      {
-        value: '1 user',
-        title: 'filter profile',
-      },
-    ],
+    features: {
+      regular: '<p><b>3 user</b> profiles</p>',
+      pro: `<ul>
+        <li><b>10 user</b> profiles</li>
+        <li>export token data for chosen time frame</li>
+        <li>whales configurator</li>
+      </ul>`,
+    },
     slides: [
       {
         title: 'Real-Time Alerts',
@@ -124,7 +118,7 @@ const products: Product[] = [
     ],
   },
   {
-    id: 'wallet-analyzer',
+    id: 'wa',
     title: `Wallet
       Analyzer`,
     description: 'Introducing the most precise and advanced Wallet Analyzer on the market. Access a suite of essential and&nbsp;unique metrics designed to&nbsp;provide a comprehensive analysis of your wallet\'s performance.',
@@ -144,20 +138,14 @@ const products: Product[] = [
         pro: 1659,
       },
     },
-    features: [
-      {
-        value: '1000',
-        title: 'requests / month',
-      },
-      {
-        value: '100',
-        title: 'requests / day',
-      },
-      {
-        value: '1 user',
-        title: 'filter profile',
-      },
-    ],
+    features: {
+      regular: '<p><b>30</b> requests per hour</p>',
+      pro: `<ul>
+        <li><b>unlimited</b> requests</li>
+        <li>time frame wallet search report</li>
+        <li>trade report and simulation</li>
+      </ul>`,
+    },
     slides: [
       {
         title: 'Wallet Overview',
@@ -203,7 +191,7 @@ const products: Product[] = [
     ],
   },
   {
-    id: 'profit-maker',
+    id: 'pm',
     title: `Profit
       Maker`,
     description: 'Track the most successful traders and&nbsp;gain insights with real-time summaries of their profitable trades. Profit Maker empowers you to mirror the strategies of top performers in&nbsp;the&nbsp;market.',
@@ -221,20 +209,7 @@ const products: Product[] = [
         regular: 1099,
       },
     },
-    features: [
-      {
-        value: '1000',
-        title: 'requests / month',
-      },
-      {
-        value: '100',
-        title: 'requests / day',
-      },
-      {
-        value: '1 user',
-        title: 'filter profile',
-      },
-    ],
+    features: {},
     slides: [
       {
         title: 'Real-Time Alerts',

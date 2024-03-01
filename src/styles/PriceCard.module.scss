@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    justify-content: flex-start;
     flex-basis: calc(50% - 0.625rem);
     flex-grow: 0;
     flex-shrink: 0;
@@ -51,6 +52,11 @@
 
   // visual
   cursor: pointer;
+
+  @include atDesktopS {
+    // typography
+    font-size: 1rem;
+  }
 }
 
 .price {
@@ -87,6 +93,9 @@
 
   @include atTablet {
     // box model
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     max-height: initial;
 
     // visual
@@ -105,33 +114,30 @@
 
   @include atTablet {
     // box model
+    flex-grow: 1;
     padding-top: 1rem;
+
+    // typography
+    font-size: 0.875rem;
   }
 }
 
-ul.featureList {
-  // box model
-  padding-left: 1rem;
+.features {
+  ul {
+    // box model
+    padding-left: 1rem;
+  
+    // list
+    list-style-type: disc;
+  
+    // typography
+    font-size: 0.875rem;
+  }
 
-  // list
-  list-style-type: disc;
-
-  // typography
-  font-size: 0.875rem;
-}
-
-.feature {
-  // box model
-  margin-top: 0.25rem;
-}
-
-.featureValue {
-  // typography
-  font-weight: 700;
-}
-
-.featureTitle {
-
+  li {
+    // box model
+    margin-top: 0.25rem;
+  }
 }
 
 .priceBottom {
@@ -141,8 +147,6 @@ ul.featureList {
   @include atTablet {
     // box model
     display: flex;
-    // align-items: stretch;
-    // justify-content: stretch;
     margin-top: 0.75rem;
     padding-top: 0.75rem;
 

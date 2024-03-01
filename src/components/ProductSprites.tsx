@@ -2,13 +2,13 @@ export default function ProductsSprites() {
   return (
     <svg>
       <defs>
-        <g id="trade-volume-bot-icon">
+        <g id="tvb-icon">
           <rect y="16" width="8" height="8" />
           <rect x="8" y="8" width="8" height="8" />
           <rect x="16" width="8" height="8" />
         </g>
 
-        <g id="wallet-analyzer-icon">
+        <g id="wa-icon">
           <path d="M0 10H10V20H0V10Z" />
           <rect x="20" y="10" width="10" height="10" />
           <rect x="10" y="20" width="10" height="10" />
@@ -16,7 +16,7 @@ export default function ProductsSprites() {
           <rect x="10" width="10" height="10" />
         </g>
 
-        <g id="profit-maker-icon">
+        <g id="pm-icon">
           <rect y="16" width="8" height="8" />
           <rect x="16" width="8" height="8" />
           <rect x="16" y="8" width="8" height="8" />
