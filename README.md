@@ -68,3 +68,184 @@ API + бот:
     profit-maker
 
 
+
+
+TRADE VOLUME BOT
+
+Real-Nime Alerst:
+
+**$PEPEFORK** | __Veryfied__
+----------------------------------
+🚨 **New Alert:** `1 in the last 2m31s`
+----------------------------------
+🔍 **Token Overview:**
+AI Rate: `5%`
+CA: `0xb3705fc53e15e71ac35bbd862b7f9b0bb69c39be`
+CA Age: `26h 31m` | Pair: `24h 98m`
+`Contact` | `Owner`
+
+Marlet Data:
+
+📊 **Market Data:**
+Liquidity: `$20.22k` 
+MCap: `$269k` | ATH: `$119k`
+Volume: `$32.74k`
+Tax: Buy `5%` / Sell `8%`
+
+Trader Activity: 
+
+👥 **Trading Activity:**
+Buyers: `89` (54 unique)
+Sellers: `78` (65 unique)
+Buys: `22.34k`| Sells: `10.4k`
+`Dextools` | `Dexscreener`
+
+Security Analysis:
+
+🔏 **Token Security:**
+Honeypot Status: `Yes/No`
+Verified: `Yes/No` | Liquidity Locked: `80%`
+Owner: `Renounced` | KYC: `Binance / N/A`
+Owner's Balance: `$565k`
+`Honeypot` | `TokenSniffer`
+
+Comunity Insights: 
+
+📈 **Community & Wallets:**
+**Holders:** `350` 
+  └ 30.0% | 5.5% | 1.8% | 1.8% |
+- **Presale:** `10` (40% sold, 60% hold)
+  └ % of total supply: `20%`
+- **Snipers:** `56` (40% sold, 60% hold)
+  └ % of total supply: `20%`
+- **1st 100 HLD:** `89` (40% sold, 60% hold)
+  └ % of total supply: `20%`
+- **Whales:** `10`
+  └ % of total supply: `20%`
+- **Fresh:** `34`
+  └ % of total supply: `20%`
+- **Transfer**: `58`
+  └ % of total supply: `20%`
+- **Smart Wallets:** `56` 
+- **MEV Bots:** `7` 
+- **Inactive Wallets:** `67`
+- **Dormant Wallets:** `56`
+`Maestro(PRO)` | `Banana` | `Unibot`
+
+
+
+WALLET ANALYZER
+
+Wallet Overview:
+
+`0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5`
+`etherscan` | `debank`
+
+📊 **CopyTrade Score:** 🔴
+
+🔐 **KYC Status:** `Yes`
+**Wallet Age:** `365 days`
+**Wallet Balance:** `$56k` 
+**Profit by Period:** 
+**1D:** ↓ `-3 ETH` | `$56k`
+**7D:** ↑ `1.2 ETH` | `$56k`
+**14D:** ↑ `5.78 ETH` | `$56k`
+**30D:** ↑ `1.2 ETH` | `$56k`
+
+🔍 **Analysis Period:** `7 days`
+**Profit Overview:** `1.2 ETH` | `$56k`
+**ROI:** `1987%`
+**Avg. Trade Freq.:** `2.16`
+
+Top Token Insights: 
+
+🔖 **Top Perfomance:** `7 days`
+
+**$Shiba:** `ROI 2467%`
+🏆 **Profit:** `1.2 ETH` | `$56k` 
+🔼 **Buy:** `0.1 ETH` / 🔽 **Sell:** `1.25 ETH`
+`TVB` | `Dextools` | `Etherscan`
+
+**$Shiba:** `ROI 2467%`
+🏆 **Profit:** `1.2 ETH` | `$56k` 
+🔼 **Buy:** `0.1 ETH` / 🔽 **Sell:** `1.25 ETH`
+`TVB` | `Dextools` | `Etherscan`
+
+**$Shiba:** `ROI 2467%`
+🏆 **Profit:** `1.2 ETH` | `$56k` 
+🔼 **Buy:** `0.1 ETH` / 🔽 **Sell:** `1.25 ETH`
+`TVB` | `Dextools` | `Etherscan`
+
+Trading Dynamics
+
+**Uniq. Tokens Count:** `12`
+**Buys:** `56`
+**Sells:** `53`
+**Avg. Buy:** `0.1 ETH`
+**Avg. GAS Cost:** `$10.12`
+**Avg. Holding Time:** `94 min`
+**Transfer % (Token):** `7%`
+🎯 **Sniping:** `23%`
+
+📈 **ROI Positive Trades %:**
+**0-30:** `12%`
+**30-100:** `26%`
+**100-500:** `75%`
+**500:** `10%`
+
+💔 **ROI Negative Trades**
+**0-30:** `24%`
+**30-50:** `10%`
+**50-100:** `2%`
+
+Simulation and Data: 
+Картинка во вложении 
+
+
+
+PROFIT MAKER
+
+Real Time Allerts: 
+
+**🚀 TOP PROFIT 🚀**
+
+🔐 **Wallet:** `0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5`
+`etherscan` | `debank` | `WA` 
+
+📊 **Token:** `$Shiba`
+`etherscan` | `dextools` | `TVB`
+
+💰 **Buy Amount:** `0.01 ETH`
+💵 **Sell Amount:** `0.45 ETH`
+📈 **ROI:** `1678%`
+🏆 **Profit:** `0.44 ETH`
+🔄 **Total Trades:** `5`
+
+
+Tailored Analysis: 
+
+__Report by Filters__
+
+**🚀 Position Opened**
+
+Trade Date (UTC): `2024-01-24 15:00:00`
+
+🔐 Wallet: `0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5`
+`etherscan` | `debank` | `WA`
+
+Token: `$Shiba`
+`etherscan` | 📊 `dextools` | `TVB`
+
+🟢 **Buy Amount:** `0.01 ETH`
+
+Total Trades: `1`
+
+
+
+CopyTrade Report: 
+картинка во вложении
+
+
+https://www.npmjs.com/package/react-markdown
+${'`'}
+
