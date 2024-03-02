@@ -17,6 +17,7 @@ export default function CTAButton(props: CTAButtonProps) {
     <Link
       className={styles.button}
       href={href}
+      target="_blank"
     >
       {children}
     </Link>

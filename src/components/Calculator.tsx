@@ -6,6 +6,7 @@ import {
   useState,
 } from 'react';
 import clsx from 'clsx';
+import API from '@/utils/api';
 import PriceCard from './PriceCard';
 import PlanToggle from './PlanToggle';
 import CTAButton from './CTAButton';
@@ -74,8 +75,30 @@ const calcTotalPrice = (
     0,
   );
 
-  const priceMultiplier = paidProductsCount > 1 ? 0.9 : 1;
+  const priceMultiplier = paidProductsCount > 1 ? 1 : 1;
   return totalPrice * priceMultiplier;
+};
+
+const getCheckoutLink = (
+  cartProducts: CartProducts,
+  isProPlan: boolean,
+  periodName: string,
+) => {
+  let query = API.CHECKOUT_ENDPOINT;
+
+  Object.entries(cartProducts)
+    .forEach(([productId, isPaid]) => {
+      if (isPaid) {
+        query += `products=${productId}`;
+        if (productId !== 'pm') {
+          query += isProPlan ? '_pro' : '';
+        }
+        query += (periodName === 'one') ? '_1m' : '_3m';
+        query += '&';
+      }
+    });
+
+  return query;
 };
 
 
@@ -135,7 +158,9 @@ export default function Calculator(props: CalculatorProps) {
       ref={sectionRef}
     >
       <div className={styles.heading}>
-        <h3 className={styles.title}>Choose products:</h3>
+        <h3 className={styles.title}>
+          Choose products:
+        </h3>
         <PlanToggle
           isChecked={isProPlan}
           onToggle={() => setIsProPlan(!isProPlan)}
@@ -204,7 +229,13 @@ export default function Calculator(props: CalculatorProps) {
           </div>
         </div>
         <div className={styles.buttonsRow}>
-          <CTAButton href="#">
+          <CTAButton
+            href={getCheckoutLink(
+              cartProducts,
+              isProPlan,
+              periodName,
+            )}
+          >
             Buy
           </CTAButton>
           <GhostButton href="#">
