@@ -29,9 +29,9 @@
 
   // box model
   display: flex;
-  height: 1.5em;
-  width: 2.75em;
-  padding: 0.125em;
+  // height: 1.5em;
+  width: 2.5em;
+  padding: 2px;
 
   // border
   border: 0.125em solid rgb(var(--dark));
@@ -75,7 +75,8 @@
 
   .slider {
     // positioning
-    transform: translateX(1.25em);
+    // transform: translateX(1.25em);
+    transform: translateX(calc(1.25em - 3px));
 
     // visual
     background-color: rgb(var(--white));
