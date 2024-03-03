@@ -1,5 +1,6 @@
 import styles from '@/styles/IPhone.module.scss';
 import clsx from 'clsx';
+// @ts-ignore
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 

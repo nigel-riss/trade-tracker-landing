@@ -61,7 +61,7 @@ export default function PriceCard(props: PriceCardProps) {
         <p className={styles.subtitle}>{subtitle}</p>
         <div
           className={styles.features}
-          dangerouslySetInnerHTML={{ __html: features.pro }}
+          dangerouslySetInnerHTML={{ __html: features.pro || '' }}
         />
         <div className={styles.priceBottom}>
           <PriceButton
