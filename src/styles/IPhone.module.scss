@@ -62,13 +62,16 @@
   // box model
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  // gap: 0.625rem;
   padding: 0.75rem;
   width: 100%;
 
   // border
   border-radius: 1.25rem;
 
+  // typography
+  color: rgb(var(--dark));
+  
   // visual
   background-color: rgb(var(--white));
 }
@@ -99,6 +102,14 @@
 
     // typography
     font-size: 0.75rem;
+  }
+
+    
+  h2,
+  p {
+    // typography
+    font-size: 0.625rem;
+    word-break: break-all;
   }
 }
 

@@ -1,5 +1,7 @@
 import styles from '@/styles/IPhone.module.scss';
 import clsx from 'clsx';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 
 interface IPhoneProps {
@@ -21,8 +23,8 @@ export default function IPhone(props: IPhoneProps) {
       <div className={styles.screen}>
         <div className={styles.badge}>/Start</div>
         <div className={styles.wrapper}>
-          {messages?.map((message) => (
-            <p
+          {messages?.map((message, index) => (
+            <div
               className={clsx({
                 [styles.message]: true,
                 [styles.messageCurrent]:
@@ -30,8 +32,10 @@ export default function IPhone(props: IPhoneProps) {
               })}
               key={message}
             >
-              {message}
-            </p>
+              <Markdown remarkPlugins={[remarkGfm]}>
+                {message}
+              </Markdown>
+            </div>
           ))}
         </div>
       </div>
