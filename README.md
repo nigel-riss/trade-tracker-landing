@@ -60,14 +60,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 4. Лимиты для ботов. И сразу желательно для про-версии. Т.к. это влияет на формат хранения вёрстки.
 5. Ссылки: "Free trial", "Contact us", "Learn more"
 
-API + бот:
-1. Нужно чтобы бот генерировал ссылку для чекаута в виде: dev.atlantes.io/checkout?invoiceId=...
-2. Предложение по айдишникам для для товаров (кейс можно поменять, camelCase, snake_case, kebab-case, без разницы).
-    trade-volume-bot
-    wallet-analyzer
-    profit-maker
-
-
 
 
 TRADE VOLUME BOT
@@ -251,3 +243,32 @@ ${'`'}
 
 https://codepen.io/soulwire/pen/mEMPrK
 
+Debug endpoint:  https://api.atlantes.io/dev/markAsPaid/INVOICE_ID 
+Invoice endpoint: https://api.atlantes.io/checkInvoice/INVOICE_ID
+
+
+
+Last Files:
+Pro Report.csv
+170.3 KB
+14:55
+
+Pro Report.xlsx
+9.5 KB
+14:55
+
+Simulation and Data.csv
+170.3 KB
+16:22
+
+Simulation and Data.xlsx
+11.7 KB
+16:22
+
+CopyTrade Report.csv
+170.3 KB
+15:34
+
+CopyTrade Report.xlsx
+11.7 KB
+15:34

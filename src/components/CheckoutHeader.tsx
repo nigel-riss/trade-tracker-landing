@@ -7,7 +7,20 @@ import MainMenu from './MainMenu';
 import CopyIcon from '../assets/icons/copy.svg';
 
 
-export default function CheckoutHeader() {
+interface CheckoutHeaderProps {
+  userName: string;
+  walletEth?: string | null;
+  walletTrc?: string | null;
+}
+
+
+export default function CheckoutHeader(props: CheckoutHeaderProps) {
+  const {
+    userName,
+    walletEth,
+    walletTrc,
+  } = props;
+
   return (
     <header
       className={clsx({
@@ -23,18 +36,33 @@ export default function CheckoutHeader() {
       <div className={styles.checkout}>
         <h1 className={styles.greeting}>
           Hi,
-          <em>@username</em>
+          <em>@{userName}</em>
         </h1>
         <p className={styles.text}>
-          To pay, you must use this link within <b>19 minutes 55 seconds</b> You can also select additional productsor <Link href="/"> return to the site</Link>. After payment you will be redirected to the telegram bot
+          To pay, you have to use this links within <b>19 minutes 55 seconds</b>
+          <br />
+          You can also <Link href="/"> return to the site</Link> and select additional products.
+          <br />
+          After payment you will be redirected to the telegram bot
         </p>
-        <button
-          className={styles.copyCode}
-          type="button"
-        >
-          0x06D7b160F31C8a017b28F5dfbD784d29c4b12A04
-          <CopyIcon />
-        </button>
+        {walletEth && (
+          <button
+            className={styles.copyCode}
+            type="button"
+          >
+            {walletEth}
+            <CopyIcon />
+          </button>
+        )}
+        {walletTrc && (
+          <button
+            className={styles.copyCode}
+            type="button"
+          >
+            {walletTrc}
+            <CopyIcon />
+          </button>
+        )}
       </div>
     </header>
   );

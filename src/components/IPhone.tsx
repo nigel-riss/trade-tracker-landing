@@ -23,7 +23,7 @@ export default function IPhone(props: IPhoneProps) {
       <div className={styles.screen}>
         <div className={styles.badge}>/Start</div>
         <div className={styles.wrapper}>
-          {messages?.map((message, index) => (
+          {messages?.map((message) => (
             <div
               className={clsx({
                 [styles.message]: true,
