@@ -280,7 +280,7 @@
   max-width: 42rem;
   margin: 0 auto;
   margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 2rem;
 
   // typography
   font-size: 0.875rem;
@@ -295,14 +295,41 @@
     color: rgb(var(--green));
     text-decoration: none;
   }
+
+  a:hover {
+    // typography
+    text-decoration: underline;
+  }
+}
+
+.wallet {
+  // box model
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  @include atDesktopS {
+    // box model
+    flex-direction: row;
+  }
+}
+
+.walletTitle {
+  // typography
+  font-family: var(--titleFont);
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .copyCode {
   // box model
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
+  display: block;
   padding: 0.75rem 1.5rem;
+  max-width: 100%;
 
   // border
   border: 1px solid rgb(var(--green));
@@ -310,20 +337,44 @@
 
   // typography
   color: rgb(var(--green));
+  font-family: var(--titleFont);
   font-weight: 700;
+  word-wrap: break-word;
+  white-space: normal;
 
   // visual
   appearance: none;
   background-color: transparent;
   cursor: pointer;
+  transition: all 0.25s ease-out;
 
   svg {
     // box model
     flex-basis: 1.5rem;
     flex-shrink: 0;
-    width: 1.5rem;
+    margin-left: 0.25rem;
+    width: 1.25rem;
 
     // visual
     fill: rgb(var(--green));
+    transition: all 0.25s ease-out;
   }
+}
+
+.copyCode:hover {
+  // typography
+  color: rgb(var(--dark));
+
+  // visual
+  background-color: rgb(var(--green));
+
+  svg {
+    // visual
+    fill: rgb(var(--dark));
+  }
+}
+
+.copyCode:active {
+  // visual
+  opacity: 0.5;
 }

@@ -19,13 +19,14 @@ interface InvoiceStatus {
 export default function Home() {
   const { invoiceId } = useRouter().query;
   const [invoiceStatus, setInvoiceStatus]: [InvoiceStatus, any] = useState({
-    userName: 'username1',
+    userName: 'username',
     validUntil: null,
-    walletEth: null,
-    walletTrc: null,
+    walletEth: '1230x0ac8d6ff25d3070961758c036ff6818595ceabbf',
+    walletTrc: '123TAK64JKcUxubkbBAmKKVbBUnCJxBvP23fZ',
   });
 
   const getInvoiceStatus = async () => {
+    console.log(invoiceId);
     if (!invoiceId) { return; }
     const response = await fetch(
       `${API.STATUS_ENDPOINT}${invoiceId}`,
@@ -44,7 +45,7 @@ export default function Home() {
     const requestInterval = window.setInterval(
       () => {
         console.log('hello');
-        getInvoiceStatus();
+        // getInvoiceStatus();
       },
       1000,
     );

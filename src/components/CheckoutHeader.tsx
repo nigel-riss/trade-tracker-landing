@@ -39,29 +39,38 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
           <em>@{userName}</em>
         </h1>
         <p className={styles.text}>
-          To pay, you have to use this links within <b>19 minutes 55 seconds</b>
+          To pay, you have to use this links within
+          <br />
+          <b>19 minutes 55 seconds</b>
           <br />
           You can also <Link href="/"> return to the site</Link> and select additional products.
           <br />
-          After payment you will be redirected to the telegram bot
+          After payment you will be redirected
+          to&nbsp;the&nbsp;telegram&nbsp;bot
         </p>
         {walletEth && (
-          <button
-            className={styles.copyCode}
-            type="button"
-          >
-            {walletEth}
-            <CopyIcon />
-          </button>
+          <div className={styles.wallet}>
+            <h2 className={styles.walletTitle}>ETH Wallet:</h2>
+            <button
+              className={styles.copyCode}
+              type="button"
+            >
+              {walletEth}
+              <CopyIcon />
+            </button>
+          </div>
         )}
         {walletTrc && (
-          <button
-            className={styles.copyCode}
-            type="button"
-          >
-            {walletTrc}
-            <CopyIcon />
-          </button>
+          <div className={styles.wallet}>
+            <h2 className={styles.walletTitle}>TRC Wallet:</h2>
+            <button
+              className={styles.copyCode}
+              type="button"
+            >
+              {walletTrc}
+              <CopyIcon />
+            </button>
+          </div>
         )}
       </div>
     </header>
