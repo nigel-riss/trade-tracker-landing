@@ -7,14 +7,15 @@ import {
 } from 'react';
 import clsx from 'clsx';
 import API from '@/utils/api';
+import durations from '@/data/duration';
 import PriceCard from './PriceCard';
 import PlanToggle from './PlanToggle';
 import CTAButton from './CTAButton';
 import GhostButton from './GhostButton';
+import PeriodToggle from './PeriodToggle';
 
 
 interface CalculatorProps {
-  periodName: string,
   products: Product[];
 }
 
@@ -104,7 +105,6 @@ const getCheckoutLink = (
 
 export default function Calculator(props: CalculatorProps) {
   const {
-    periodName,
     products,
   } = props;
 
@@ -113,6 +113,7 @@ export default function Calculator(props: CalculatorProps) {
     cart[product.id] = false;
   });
 
+  const [period, setPeriod] = useState(durations[0].name);
   const [isProPlan, setIsProPlan] = useState(false);
   const [isCartVisible, setIsCartVisible] = useState(false);
   const [cartProducts, setCartProducts] = useState(cart);
@@ -140,13 +141,13 @@ export default function Calculator(props: CalculatorProps) {
   const rawTotalPrice = calcRawTotalPrice(
     products,
     cartProducts,
-    periodName,
+    period,
     isProPlan,
   );
   const totalPrice = calcTotalPrice(
     products,
     cartProducts,
-    periodName,
+    period,
     isProPlan,
   );
   const isOriginalPriceShown = rawTotalPrice !== totalPrice;
@@ -158,9 +159,12 @@ export default function Calculator(props: CalculatorProps) {
       ref={sectionRef}
     >
       <div className={styles.heading}>
-        <h3 className={styles.title}>
-          Choose products:
-        </h3>
+        <PeriodToggle
+          value={period}
+          onToggle={(selectedValue: string) => {
+            setPeriod(selectedValue);
+          }}
+        />
         <PlanToggle
           isChecked={isProPlan}
           onToggle={() => setIsProPlan(!isProPlan)}
@@ -186,7 +190,7 @@ export default function Calculator(props: CalculatorProps) {
                 title={title}
                 subtitle={calcDescription}
                 features={features}
-                price={getProductPrice(product, periodName, isProPlan)}
+                price={getProductPrice(product, period, isProPlan)}
                 onPriceClick={(productId: string) => {
                   setCartProducts((prevState) => ({
                     ...prevState,
@@ -233,7 +237,7 @@ export default function Calculator(props: CalculatorProps) {
             href={getCheckoutLink(
               cartProducts,
               isProPlan,
-              periodName,
+              period,
             )}
           >
             Buy
