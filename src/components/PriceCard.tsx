@@ -12,6 +12,7 @@ import PriceButton from './PriceButton';
 
 interface PriceCardProps {
   id: string;
+  isPro?: boolean;
   isInCart: boolean;
   title: string;
   subtitle: string;
@@ -23,6 +24,7 @@ interface PriceCardProps {
 export default function PriceCard(props: PriceCardProps) {
   const {
     id,
+    isPro,
     isInCart,
     title,
     subtitle,
@@ -32,6 +34,8 @@ export default function PriceCard(props: PriceCardProps) {
   } = props;
 
   const [isOpen, setIsOpen] = useState(false);
+
+  const featuresList = isPro ? features.pro : features.regular;
 
   return (
     <article
@@ -61,7 +65,7 @@ export default function PriceCard(props: PriceCardProps) {
         <p className={styles.subtitle}>{subtitle}</p>
         <div
           className={styles.features}
-          dangerouslySetInnerHTML={{ __html: features.pro || '' }}
+          dangerouslySetInnerHTML={{ __html: featuresList || '' }}
         />
         <div className={styles.priceBottom}>
           <PriceButton

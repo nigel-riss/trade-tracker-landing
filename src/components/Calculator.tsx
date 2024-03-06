@@ -185,6 +185,7 @@ export default function Calculator(props: CalculatorProps) {
             return (
               <PriceCard
                 id={id}
+                isPro={isProPlan}
                 isInCart={cartProducts[id]}
                 key={id}
                 title={title}
@@ -215,13 +216,13 @@ export default function Calculator(props: CalculatorProps) {
               [styles.isOriginalPriceShown]: isOriginalPriceShown,
             })}
           >
-            <span className={styles.originalPrice}>
-              $
-              {rawTotalPrice.toFixed(2)}
-            </span>
             <span className={styles.currentPrice}>
               $
               {totalPrice.toFixed(2)}
+            </span>
+            <span className={styles.originalPrice}>
+              $
+              {rawTotalPrice.toFixed(2)}
             </span>
             <span className={styles.perMonth}> / per month</span>
           </div>

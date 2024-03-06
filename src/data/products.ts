@@ -56,7 +56,9 @@ const products: Product[] = [
       },
     },
     features: {
-      regular: '<p><b>3 user</b> profiles</p>',
+      regular: `<ul>
+        <li><b>3 user</b> profiles</li>
+      </ul>`,
       pro: `<ul>
         <li><b>10 user</b> profiles</li>
         <li>export token data for chosen time frame</li>
@@ -177,7 +179,9 @@ ${'`'}Maestro(PRO)${'`'} | ${'`'}Banana${'`'} | ${'`'}Unibot${'`'}
       },
     },
     features: {
-      regular: '<p><b>30</b> requests per hour</p>',
+      regular: `<ul>
+        <li><b>30</b> requests per hour</li>
+      </ul>`,
       pro: `<ul>
         <li><b>unlimited</b> requests</li>
         <li>time frame wallet search report</li>
