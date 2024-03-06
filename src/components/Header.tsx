@@ -20,9 +20,10 @@ export default function Header() {
         </h1>
         <p className={styles.subtitle}>
           Build Your Win: Use smart data to&nbsp;beat the&nbsp;market.
-          <span><br /></span>
+          {/* <span><br /></span> */}
           <i> </i>
-          Make sure you&apos;re one of the top traders with&nbsp;Atlantes
+          Make sure you&apos;re one of&nbsp;the&nbsp;top traders
+          with&nbsp;Atlantes
         </p>
       </div>
 

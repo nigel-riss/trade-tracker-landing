@@ -111,7 +111,7 @@
 
   @include atDesktopS {
     // box model
-    // display: flex;
+    display: flex;
     align-items: flex-end;
     justify-content: space-between;
     gap: 6rem;
@@ -140,7 +140,7 @@
     flex-shrink: 0;
 
     // typography
-    font-size: 8rem;
+    font-size: 5.5rem;
 
     // visual
     animation-name: fadeLeft;
@@ -174,11 +174,10 @@
   @include atDesktopS {
     // box model
     padding: 0;
-    padding-bottom: 1rem;
-    padding-right: 26rem;
 
     // typography
     font-size: 1rem;
+    // text-align: right;
 
     // visual
     animation-name: fadeRight;

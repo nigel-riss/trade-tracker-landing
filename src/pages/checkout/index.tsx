@@ -45,7 +45,7 @@ export default function Home() {
     const requestInterval = window.setInterval(
       () => {
         console.log('hello');
-        // getInvoiceStatus();
+        getInvoiceStatus();
       },
       1000,
     );
@@ -64,10 +64,10 @@ export default function Home() {
         walletTrc={invoiceStatus.walletTrc}
       />
 
-      <CheckoutCalculator
+      {/* <CheckoutCalculator
         periodName="three"
         products={products}
-      />
+      /> */}
 
       <SimpleFooter />
     </main>
