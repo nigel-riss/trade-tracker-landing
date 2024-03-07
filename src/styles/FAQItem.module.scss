@@ -56,7 +56,7 @@
   // visual
   background-image: url('../assets/icons/arrow.svg');
   background-size: cover;
-  transition: all 0.375s ease-out;
+  transition: all 0.375s linear;
 
   @include atTablet {
     // positioning
@@ -82,12 +82,12 @@
   // visual
   opacity: 0;
   overflow: hidden;
-  transition: all 0.375s ease-out;
+  transition: all 0.375s linear;
 }
 
 .answer.isOpen {
   // box model
-  max-height: 10rem;
+  max-height: 7rem;
 
   // visual
   opacity: 1;

@@ -23,7 +23,7 @@ export default function SocialButton(props: SocialButtonProps) {
     <Link
       className={styles.link}
       href={href}
-      data-aos="fade-left"
+      data-aos="fade-up"
       data-aos-delay={index * 100}
     >
       <svg
