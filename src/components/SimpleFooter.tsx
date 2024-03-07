@@ -1,11 +1,15 @@
 import styles from '@/styles/Footer.module.scss';
+import clsx from 'clsx';
 import Link from 'next/link';
 
 
 export default function SimpleFooter() {
   return (
     <footer
-      className={styles.footer}
+      className={clsx({
+        [styles.footer]: true,
+        [styles.simpleFooter]: true,
+      })}
     >
       <div className={styles.legalInfo}>
         <p className={styles.copyrights}>Atlantes.eth © 2023</p>

@@ -15,7 +15,16 @@
     justify-content: space-between;
     margin: 0 auto;
     margin-top: 9rem;
+    padding: 0;
+    padding-bottom: 3rem;
     width: var(--dWidth);
+  }
+}
+
+.simpleFooter {
+  @include atDesktopS {
+    // box model
+    margin-top: 0;
   }
 }
 
