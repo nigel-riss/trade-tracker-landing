@@ -1,8 +1,6 @@
 /* eslint-disable consistent-return */
-import CheckoutCalculator from '@/components/CheckoutCalculator';
 import CheckoutHeader from '@/components/CheckoutHeader';
 import SimpleFooter from '@/components/SimpleFooter';
-import products from '@/data/products';
 import API from '@/utils/api';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -13,36 +11,40 @@ interface InvoiceStatus {
   validUntil?: Date | null,
   walletEth?: string | null,
   walletTrc?: string | null,
+  products?: string[],
+  statur?: string,
+
 }
 
 
 export default function Home() {
-  const { invoiceId } = useRouter().query;
-  console.log(useRouter());
+  const router = useRouter();
+  const { invoiceId } = router.query;
+
   const [invoiceStatus, setInvoiceStatus]: [InvoiceStatus, any] = useState({
     userName: 'username',
     validUntil: null,
-    walletEth: '1230x0ac8d6ff25d3070961758c036ff6818595ceabbf',
-    walletTrc: '123TAK64JKcUxubkbBAmKKVbBUnCJxBvP23fZ',
+    walletEth: '0x0',
+    walletTrc: '0x1',
   });
-
-  const getInvoiceStatus = async () => {
-    console.log(invoiceId);
-    if (!invoiceId) { return; }
-    // return;
-    const response = await fetch(
-      `${API.STATUS_ENDPOINT}${invoiceId}`,
-    );
-    const data = await response.json();
-    setInvoiceStatus({
-      userName: data.TgUser as string,
-      walletEth: data.WalletEth as string,
-      walletTrc: data.WalletTrc as string,
-    });
-  };
 
   // let requestInterval: any = null;
   useEffect(() => {
+    const getInvoiceStatus = async () => {
+      console.log(invoiceId);
+      if (!invoiceId) { return; }
+      return;
+      const response = await fetch(
+        `${API.STATUS_ENDPOINT}${invoiceId}`,
+      );
+      const data = await response.json();
+      setInvoiceStatus({
+        userName: data.TgUser as string,
+        walletEth: data.WalletEth as string,
+        walletTrc: data.WalletTrc as string,
+      });
+    };
+
     // if (requestInterval !== null) { return; }
     const requestInterval = window.setInterval(
       () => {
@@ -56,7 +58,7 @@ export default function Home() {
       window.clearInterval(requestInterval);
       // requestInterval = null;
     };
-  }, []);
+  }, [router.isReady, invoiceId]);
 
   return (
     <main>
