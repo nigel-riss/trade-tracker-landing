@@ -18,6 +18,7 @@ interface InvoiceStatus {
 
 export default function Home() {
   const { invoiceId } = useRouter().query;
+  console.log(useRouter());
   const [invoiceStatus, setInvoiceStatus]: [InvoiceStatus, any] = useState({
     userName: 'username',
     validUntil: null,
@@ -28,6 +29,7 @@ export default function Home() {
   const getInvoiceStatus = async () => {
     console.log(invoiceId);
     if (!invoiceId) { return; }
+    // return;
     const response = await fetch(
       `${API.STATUS_ENDPOINT}${invoiceId}`,
     );
