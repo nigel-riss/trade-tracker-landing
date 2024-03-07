@@ -54,6 +54,9 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
             <button
               className={styles.copyCode}
               type="button"
+              onClick={() => {
+                navigator.clipboard.writeText(walletEth);
+              }}
             >
               {walletEth}
               <CopyIcon />
@@ -66,6 +69,9 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
             <button
               className={styles.copyCode}
               type="button"
+              onClick={() => {
+                navigator.clipboard.writeText(walletTrc);
+              }}
             >
               {walletTrc}
               <CopyIcon />
