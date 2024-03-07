@@ -11,6 +11,9 @@ interface CheckoutHeaderProps {
   userName: string;
   walletEth?: string | null;
   walletTrc?: string | null;
+  products?: string[],
+  status?: string,
+  price?: number,
 }
 
 
@@ -19,6 +22,9 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
     userName,
     walletEth,
     walletTrc,
+    products,
+    status,
+    price,
   } = props;
 
   return (
@@ -48,9 +54,10 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
           After payment you will be redirected
           to&nbsp;the&nbsp;telegram&nbsp;bot
         </p>
+
         {walletEth && (
           <div className={styles.wallet}>
-            <h2 className={styles.walletTitle}>ETH Wallet:</h2>
+            <h2 className={styles.title2}>ETH Wallet:</h2>
             <button
               className={styles.copyCode}
               type="button"
@@ -65,7 +72,7 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
         )}
         {walletTrc && (
           <div className={styles.wallet}>
-            <h2 className={styles.walletTitle}>TRC Wallet:</h2>
+            <h2 className={styles.title2}>TRC Wallet:</h2>
             <button
               className={styles.copyCode}
               type="button"
@@ -78,6 +85,20 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
             </button>
           </div>
         )}
+
+        <h2 className={styles.title2}>
+          You will get access for&nbsp;the&nbsp;following products:
+        </h2>
+        <ul className={styles.productsList}>
+          {products?.map((product) => (
+            <li key={product}>{product}</li>
+          ))}
+        </ul>
+
+        <div className={styles.price}>
+          <h2 className={styles.title2}>Total Amount:</h2>
+          <p className={styles.priceValue}>$354</p>
+        </div>
       </div>
     </header>
   );

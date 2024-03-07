@@ -12,8 +12,8 @@ interface InvoiceStatus {
   walletEth?: string | null,
   walletTrc?: string | null,
   products?: string[],
-  statur?: string,
-
+  status?: string,
+  price?: number,
 }
 
 
@@ -26,6 +26,9 @@ export default function Home() {
     validUntil: null,
     walletEth: '0x0',
     walletTrc: '0x1',
+    products: [],
+    status: 'pending',
+    price: 0,
   });
 
   // let requestInterval: any = null;
@@ -33,7 +36,7 @@ export default function Home() {
     const getInvoiceStatus = async () => {
       console.log(invoiceId);
       if (!invoiceId) { return; }
-      return;
+      // return;
       const response = await fetch(
         `${API.STATUS_ENDPOINT}${invoiceId}`,
       );
@@ -42,6 +45,9 @@ export default function Home() {
         userName: data.TgUser as string,
         walletEth: data.WalletEth as string,
         walletTrc: data.WalletTrc as string,
+        products: data.Products as string[],
+        status: data.Status as string,
+        price: data.Amount as number,
       });
     };
 
@@ -51,7 +57,7 @@ export default function Home() {
         console.log('hello');
         getInvoiceStatus();
       },
-      1000,
+      3000,
     );
 
     return () => {
@@ -66,6 +72,7 @@ export default function Home() {
         userName={invoiceStatus.userName}
         walletEth={invoiceStatus.walletEth}
         walletTrc={invoiceStatus.walletTrc}
+        products={invoiceStatus.products}
       />
 
       {/* <CheckoutCalculator
