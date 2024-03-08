@@ -45,19 +45,33 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
           <em>@{userName}</em>
         </h1>
         <p className={styles.text}>
-          To pay, you have to use this links within
+          To complete your subscription, please send the payment within
+          <b> 19 minutes 55 seconds</b>
           <br />
-          <b>19 minutes 55 seconds</b>
+          using one of&nbsp;the&nbsp;wallet below.
+          Feel free to <Link href="/"> revisit the site</Link> to add more products.
           <br />
-          You can also <Link href="/"> return to the site</Link> and select additional products.
-          <br />
-          After payment you will be redirected
-          to&nbsp;the&nbsp;telegram&nbsp;bot
+          After we receive the payment, you&amp;ll be redirected
+          to our Telegram Bot for immediate access.
         </p>
+
+        <div className={styles.statusWrapper}>
+          <h2 className={styles.title2}>Status:</h2>
+          <p
+            className={clsx({
+              [styles.status]: true,
+              [styles.statusWaiting]: status === 'waiting',
+              [styles.statusPaid]: status === 'paid',
+              [styles.statusExpired]: status === 'expired',
+            })}
+          >
+            {status}
+          </p>
+        </div>
 
         {walletEth && (
           <div className={styles.wallet}>
-            <h2 className={styles.title2}>ETH Wallet:</h2>
+            <h2 className={styles.title2}>USDT (TRC20):</h2>
             <button
               className={styles.copyCode}
               type="button"
@@ -72,7 +86,7 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
         )}
         {walletTrc && (
           <div className={styles.wallet}>
-            <h2 className={styles.title2}>TRC Wallet:</h2>
+            <h2 className={styles.title2}>USDT (ERC20):</h2>
             <button
               className={styles.copyCode}
               type="button"
@@ -87,7 +101,7 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
         )}
 
         <h2 className={styles.title2}>
-          You will get access for&nbsp;the&nbsp;following products:
+          Access Granted To:
         </h2>
         <ul className={styles.productsList}>
           {products?.map((product) => (
@@ -97,7 +111,7 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
 
         <div className={styles.price}>
           <h2 className={styles.title2}>Total Amount:</h2>
-          <p className={styles.priceValue}>${price}</p>
+          <p className={styles.priceValue}>{price} USDT</p>
         </div>
       </div>
     </header>

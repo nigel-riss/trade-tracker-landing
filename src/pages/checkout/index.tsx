@@ -21,6 +21,7 @@ export default function Home() {
   const router = useRouter();
   const { invoiceId } = router.query;
 
+  const [isOnceLoaded, setIsOnceLoaded] = useState(false);
   const [invoiceStatus, setInvoiceStatus]: [InvoiceStatus, any] = useState({
     userName: 'username',
     validUntil: null,
@@ -34,9 +35,9 @@ export default function Home() {
   // let requestInterval: any = null;
   useEffect(() => {
     const getInvoiceStatus = async () => {
-      console.log(invoiceId);
       if (!invoiceId) { return; }
       // return;
+
       const response = await fetch(
         `${API.STATUS_ENDPOINT}${invoiceId}`,
       );
@@ -51,12 +52,14 @@ export default function Home() {
       });
     };
 
+    if (!isOnceLoaded) {
+      getInvoiceStatus();
+      setIsOnceLoaded(true);
+    }
+
     // if (requestInterval !== null) { return; }
     const requestInterval = window.setInterval(
-      () => {
-        console.log('hello');
-        getInvoiceStatus();
-      },
+      () => getInvoiceStatus(),
       3000,
     );
 
@@ -64,7 +67,7 @@ export default function Home() {
       window.clearInterval(requestInterval);
       // requestInterval = null;
     };
-  }, [router.isReady, invoiceId]);
+  }, [router.isReady, invoiceId, isOnceLoaded]);
 
   return (
     <main>
@@ -74,6 +77,7 @@ export default function Home() {
         walletTrc={invoiceStatus.walletTrc}
         products={invoiceStatus.products}
         price={invoiceStatus.price}
+        status={invoiceStatus.status}
       />
 
       {/* <CheckoutCalculator
