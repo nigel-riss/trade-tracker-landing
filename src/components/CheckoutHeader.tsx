@@ -97,7 +97,7 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
 
         <div className={styles.price}>
           <h2 className={styles.title2}>Total Amount:</h2>
-          <p className={styles.priceValue}>$354</p>
+          <p className={styles.priceValue}>${price}</p>
         </div>
       </div>
     </header>

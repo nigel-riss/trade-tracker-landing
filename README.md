@@ -268,3 +268,25 @@ CopyTrade Report.csv
 CopyTrade Report.xlsx
 11.7 KB
 15:34
+
+
+{
+    "InvoiceId": "98197f34-8d1c-4ea0-8837-d1c9604bdb9d",
+    "TgUser": "nigel_riss",
+    "Products": [
+        "Trade Volume Bot PRO (3 months)",
+        "Wallet Analyzer PRO (3 months)",
+        "Profit Maker (3 month)"
+    ],
+    "ProductIds": [
+        "tvb_pro_3m",
+        "wa_pro_3m",
+        "pm_3m"
+    ],
+    "Until": "2024-03-07T00:48:32.597481Z",
+    "Amount": "3857",
+    "Status": "expired",
+    "WalletEth": "0x0ac8d6ff25d3070961758c036ff6818595ceabbf",
+    "WalletTrc": "TAK64JKcUxubkbBAmKKVbBUnCJxBvP23fZ"
+}
+

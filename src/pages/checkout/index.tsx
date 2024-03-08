@@ -12,7 +12,7 @@ interface InvoiceStatus {
   walletEth?: string | null,
   walletTrc?: string | null,
   products?: string[],
-  status?: string,
+  status?: 'expired' | 'waiting' | 'paid',
   price?: number,
 }
 
@@ -27,7 +27,7 @@ export default function Home() {
     walletEth: '0x0',
     walletTrc: '0x1',
     products: [],
-    status: 'pending',
+    status: 'waiting',
     price: 0,
   });
 
@@ -47,7 +47,7 @@ export default function Home() {
         walletTrc: data.WalletTrc as string,
         products: data.Products as string[],
         status: data.Status as string,
-        price: data.Amount as number,
+        price: +data.Amount as number,
       });
     };
 
@@ -73,6 +73,7 @@ export default function Home() {
         walletEth={invoiceStatus.walletEth}
         walletTrc={invoiceStatus.walletTrc}
         products={invoiceStatus.products}
+        price={invoiceStatus.price}
       />
 
       {/* <CheckoutCalculator
