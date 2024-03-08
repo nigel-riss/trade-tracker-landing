@@ -11,7 +11,7 @@ const social = [
   {
     id: 'telegram',
     title: 'Telegram',
-    href: '#',
+    href: 'https://t.me/atlantes_eth',
     width: 36,
     height: 37,
   },
