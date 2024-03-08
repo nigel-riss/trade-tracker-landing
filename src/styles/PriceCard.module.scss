@@ -138,6 +138,11 @@
     // box model
     margin-top: 0.25rem;
   }
+
+  s {
+    // typography
+    color: rgb(var(--dark), 0.5);
+  }
 }
 
 .priceBottom {

@@ -58,6 +58,8 @@ const products: Product[] = [
     features: {
       regular: `<ul>
         <li><b>3 user</b> profiles</li>
+        <li><s>export token data for chosen time frame</s></li>
+        <li><s>whales configurator</s></li>
       </ul>`,
       pro: `<ul>
         <li><b>10 user</b> profiles</li>
@@ -181,6 +183,8 @@ ${'`'}Maestro(PRO)${'`'} | ${'`'}Banana${'`'} | ${'`'}Unibot${'`'}
     features: {
       regular: `<ul>
         <li><b>30</b> requests per hour</li>
+        <li><s>time frame wallet search report</s></li>
+        <li><s>trade report and simulation</s></li>
       </ul>`,
       pro: `<ul>
         <li><b>unlimited</b> requests</li>
