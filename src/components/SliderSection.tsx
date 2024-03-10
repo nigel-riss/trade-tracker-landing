@@ -33,8 +33,7 @@ export default function SliderSection(props: SliderSectionProps) {
     rightButtonRef.current,
   ]);
 
-  const currentProduct:Product | undefined = products
-    .find((product) => product.id === currentId);
+  const currentProduct = products.find((product) => product.id === currentId);
 
   return (
     <section id="slider" className={styles.section}>
@@ -44,26 +43,23 @@ export default function SliderSection(props: SliderSectionProps) {
       >
         {products
           .filter((product) => !product.isComingSoon)
-          .map((product) => {
-            const {
-              id,
-              title,
-              icon,
-            } = product;
-            return (
-              <ProductButton
-                key={id}
-                id={id}
-                title={title}
-                onClick={() => {
-                  setCurrentId(id);
-                }}
-                iconWidth={icon.width}
-                iconHeight={icon.height}
-                isCurrent={currentId === id}
-              />
-            );
-          })}
+          .map(({
+            id,
+            title,
+            icon,
+          }) => (
+            <ProductButton
+              key={id}
+              id={id}
+              title={title}
+              onClick={() => {
+                setCurrentId(id);
+              }}
+              iconWidth={icon.width}
+              iconHeight={icon.height}
+              isCurrent={currentId === id}
+            />
+          ))}
       </nav>
 
       <div className={styles.content}>
@@ -90,46 +86,44 @@ export default function SliderSection(props: SliderSectionProps) {
         >
           {products
             .filter((product) => !product.isComingSoon)
-            .map((product) => {
-              const {
-                id,
-                title,
-                icon,
-              } = product;
-              return (
+            .map(({
+              id,
+              title,
+              icon,
+              slides,
+            }) => (
+              <div
+                className={styles.productContainer}
+                key={id}
+              >
+                <SliderCaption
+                  id={id}
+                  title={title}
+                  iconHeight={icon.height}
+                  iconWidth={icon.width}
+                  isCurrent={currentId === id}
+                  onClick={() => {
+                    setCurrentId(id);
+                  }}
+                />
                 <div
-                  className={styles.productContainer}
-                  key={id}
+                  className={clsx({
+                    [styles.sliderContainer]: true,
+                    [styles.isCurrent]: currentId === id,
+                  })}
                 >
-                  <SliderCaption
-                    id={id}
-                    title={title}
-                    iconHeight={icon.height}
-                    iconWidth={icon.width}
-                    isCurrent={currentId === id}
-                    onClick={() => {
-                      setCurrentId(id);
+                  <Slider
+                    key={id}
+                    slides={slides}
+                    leftButtonEl={leftButtonEl}
+                    rightButtonEl={rightButtonEl}
+                    onSlideChange={(index: number) => {
+                      setCurrentSlideIndex(index);
                     }}
                   />
-                  <div
-                    className={clsx({
-                      [styles.sliderContainer]: true,
-                      [styles.isCurrent]: currentId === id,
-                    })}
-                  >
-                    <Slider
-                      key={id}
-                      slides={product?.slides}
-                      leftButtonEl={leftButtonEl}
-                      rightButtonEl={rightButtonEl}
-                      onSlideChange={(index: number) => {
-                        setCurrentSlideIndex(index);
-                      }}
-                    />
-                  </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
         </div>
 
         <div className={styles.phoneContainer}>
@@ -176,7 +170,7 @@ export default function SliderSection(props: SliderSectionProps) {
           <IPhone
             key={currentId}
             currentIndex={currentSlideIndex}
-            messages={currentProduct?.messages}
+            slides={currentProduct?.slides}
           />
         </div>
       </div>

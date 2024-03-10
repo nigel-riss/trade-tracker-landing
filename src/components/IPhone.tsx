@@ -1,3 +1,4 @@
+import { Slide } from '@/data/products';
 import styles from '@/styles/IPhone.module.scss';
 import clsx from 'clsx';
 import Markdown from 'react-markdown';
@@ -6,13 +7,13 @@ import remarkGfm from 'remark-gfm';
 
 interface IPhoneProps {
   currentIndex: number;
-  messages?: string[];
+  slides?: Slide[];
 }
 
 export default function IPhone(props: IPhoneProps) {
   const {
     currentIndex,
-    messages,
+    slides,
   } = props;
 
   return (
@@ -23,20 +24,24 @@ export default function IPhone(props: IPhoneProps) {
       <div className={styles.screen}>
         <div className={styles.badge}>/Start</div>
         <div className={styles.wrapper}>
-          {messages?.map((message) => (
-            <div
-              className={clsx({
-                [styles.message]: true,
-                [styles.messageCurrent]:
-                  currentIndex === messages.indexOf(message),
-              })}
-              key={message}
-            >
-              <Markdown remarkPlugins={[remarkGfm]}>
-                {message}
-              </Markdown>
-            </div>
-          ))}
+          {slides?.map((slide, index) => {
+            if ('text' in slide.message) {
+              return (
+                <div
+                  className={clsx({
+                    [styles.message]: true,
+                    [styles.messageCurrent]: currentIndex === index,
+                  })}
+                  key={slide.message.text}
+                >
+                  <Markdown remarkPlugins={[remarkGfm]}>
+                    {slide.message.text}
+                  </Markdown>
+                </div>
+              );
+            }
+            return false;
+          })}
         </div>
       </div>
       <div className={styles.frame} />
