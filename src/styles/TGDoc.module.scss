@@ -1,0 +1,64 @@
+.doc {
+  // box model
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  padding: 0.75em;
+
+  // border
+  border-radius: 1.25em;
+
+  // typography
+  font-size: 1rem;
+
+  // visual
+  background-color: rgb(var(--chineseWhite));
+}
+
+.icon {
+  // box model
+  height: 3em;
+  width: 3em;
+  padding: 0.75em;
+
+  // border
+  border-radius: 50%;
+
+  // visual
+  background-color: #3da7fe;
+}
+
+.header {
+  // box model
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.name {
+  // typography
+  color: rgb(var(--dark));
+  font-size: 0.875em;
+}
+
+.sizeNTime {
+  // box model
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25em;
+  width: 100%;
+}
+
+.size {
+  // typography
+  color: rgb(var(--dark), 0.5);
+  font-size: 0.875em;
+}
+
+.time {
+  // positioning
+  transform: translateY(0.5em);
+  // typography
+  color: rgb(var(--dark), 0.5);
+  font-size: 0.75em;
+  font-style: italic;
+}
