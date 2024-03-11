@@ -1,10 +1,10 @@
 import { Slide } from '@/data/products';
 import styles from '@/styles/IPhone.module.scss';
-import clsx from 'clsx';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useEffect, useState } from 'react';
 import TGDoc from './TGDoc';
+import Message from './Message';
 
 
 interface IPhoneProps {
@@ -44,50 +44,32 @@ export default function IPhone(props: IPhoneProps) {
         >
           <div className={styles.badge}>/Start</div>
           <div className={styles.wrapper}>
-            {slides?.map((slide, index) => {
-              if ('text' in slide.message) {
-                return (
-                  <div
-                    className={clsx({
-                      [styles.message]: true,
-                      [styles.messageCurrent]: currentIndex === index,
-                    })}
-                    key={slide.message.text}
-                  >
-                    <Markdown remarkPlugins={[remarkGfm]}>
-                      {slide.message.text}
-                    </Markdown>
-                  </div>
-                );
-              }
-              if ('docs' in slide.message) {
-                return (
-                  <div
-                    className={clsx({
-                      [styles.message]: true,
-                      [styles.messageCurrent]: currentIndex === index,
-                    })}
-                    key={slide.message.offset}
-                  >
-                    {
-                      slide.message.docs.map(({
-                        fileName,
-                        fileSizeKB,
-                        time,
-                      }) => (
-                        <TGDoc
-                          fileName={fileName}
-                          fileSizeKB={fileSizeKB}
-                          time={time}
-                          key={fileName}
-                        />
-                      ))
-                    }
-                  </div>
-                );
-              }
-              return false;
-            })}
+            {slides?.map((slide, index) => (
+              <Message
+                isCurrent={currentIndex === index}
+                key={slide.title}
+              >
+                {('text' in slide.message) && (
+                  <Markdown remarkPlugins={[remarkGfm]}>
+                    {slide.message.text}
+                  </Markdown>
+                )}
+                {('docs' in slide.message) && (
+                  slide.message.docs.map(({
+                    fileName,
+                    fileSizeKB,
+                    time,
+                  }) => (
+                    <TGDoc
+                      fileName={fileName}
+                      fileSizeKB={fileSizeKB}
+                      time={time}
+                      key={fileName}
+                    />
+                  ))
+                )}
+              </Message>
+            ))}
           </div>
         </div>
       </div>

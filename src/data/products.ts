@@ -151,7 +151,7 @@ ${'`'}Honeypot${'`'} | ${'`'}TokenSniffer${'`'}
         message: {
           text: `
 📈 **Community & Wallets:**
-**Holders:** ${'`'}350${'`'} 
+- **Holders:** ${'`'}350${'`'} 
   └ 30.0% | 5.5% | 1.8% | 1.8% |
 - **Presale:** ${'`'}10${'`'} (40% sold, 60% hold)
   └ % of total supply: ${'`'}20%${'`'}
@@ -190,7 +190,7 @@ ${'`'}Maestro(PRO)${'`'} | ${'`'}Banana${'`'} | ${'`'}Unibot${'`'}
               time: '14:55',
             },
           ],
-          offset: -34,
+          offset: -31,
         },
       },
     ],
@@ -404,12 +404,12 @@ Total Trades: ${'`'}1${'`'}
           docs: [
             {
               fileName: 'CopyTrade Report.csv',
-              fileSizeKB: 0,
+              fileSizeKB: 170.3,
               time: '15:34',
             },
             {
               fileName: 'CopyTrade Report.xlsx',
-              fileSizeKB: 0,
+              fileSizeKB: 11.7,
               time: '15:34',
             },
           ],

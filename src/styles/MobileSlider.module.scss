@@ -46,4 +46,9 @@
   // box model
   display: flex;
   justify-content: flex-end;
+
+  @include atTablet {
+    // box model
+    display: none;
+  }
 }

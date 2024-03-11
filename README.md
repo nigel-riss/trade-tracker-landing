@@ -88,5 +88,5 @@ Invoice:
 
 BadgeFall -- update
 BotPriceCard features update on iOS
-Mobile slider full slide swipe
+Tablet slider buttons 
 

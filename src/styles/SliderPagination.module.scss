@@ -7,6 +7,9 @@
   justify-content: center;
   gap: 0.75rem;
 
+  // typography
+  font-size: 0;
+
   @include atDesktopS {
     // box model
     justify-content: flex-start;
@@ -26,6 +29,9 @@
 
   // border
   border-radius: 50%;
+
+  // typography
+  font-size: 0;
 
   // visual
   background-color: rgb(var(--dark));
