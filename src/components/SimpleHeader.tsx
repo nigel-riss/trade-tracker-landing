@@ -28,7 +28,7 @@ export default function SimpleHeader(props: SimpleHeaderProps) {
       </div>
 
       <div className={styles.back}>
-        <BadgeFall amount={3} />
+        <BadgeFall />
       </div>
     </header>
   );

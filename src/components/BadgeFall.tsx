@@ -1,11 +1,5 @@
 import styles from '@/styles/BadgeFall.module.scss';
-import badges from '@/data/badges';
 import Badge from './Badge';
-
-
-interface BadgeFallProps {
-  amount: number;
-}
 
 
 // const getBadges = (count: number) => (
@@ -15,9 +9,7 @@ interface BadgeFallProps {
 // );
 
 
-export default function BadgeFall(props: BadgeFallProps) {
-  const { amount } = props;
-
+export default function BadgeFall() {
   return (
     <div className={styles.fall}>
       <div className={styles.back}>

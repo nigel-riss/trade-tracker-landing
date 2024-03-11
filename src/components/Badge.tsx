@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import styles from '@/styles/Badge.module.scss';
-import { get } from 'http';
 
 
 interface BadgeProps {
