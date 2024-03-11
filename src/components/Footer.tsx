@@ -71,7 +71,7 @@ export default function Footer() {
 
       <div className={styles.legalInfo}>
         <p className={styles.copyrights}>
-          Atlantes.eth © 2023 &mdash;&nbsp;
+          © Atlantes.eth&nbsp;
           {new Date().getFullYear() }
         </p>
         <div className={styles.legalLinks}>
