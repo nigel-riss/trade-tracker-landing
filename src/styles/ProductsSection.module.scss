@@ -6,6 +6,7 @@
   position: relative;
 
   // box model
+  margin-bottom: 6rem;
   padding: 3rem 1.25rem;
 
   @include atDesktopS {
@@ -13,10 +14,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4.5rem 0;
-    padding-bottom: 9rem;
+    margin-bottom: 0;
     min-height: calc(100vh - 4rem);
     min-height: calc(100svh - 4rem);
+    padding: 4.5rem 0;
+    padding-bottom: 9rem;
   }
 }
 
