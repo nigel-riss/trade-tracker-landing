@@ -334,7 +334,7 @@ ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
     id: 'pm',
     title: `Profit
       Maker`,
-    description: 'Track the most successful traders and&nbsp;gain insights with real-time summaries of their profitable trades. Profit Maker empowers you to mirror the strategies of top performers in&nbsp;the&nbsp;market.',
+    description: 'Track the most successful traders and&nbsp;gain insights with&nbsp;real-time summaries of their profitable trades. Profit Maker empowers you to mirror the strategies of top performers in&nbsp;the&nbsp;market.',
     calcDescription: 'Track the most successful traders and gain insights with real-time summaries of their profitable trades.',
     href: '#',
     icon: {

@@ -7,11 +7,15 @@ import BotCard from './BotCard';
 
 
 interface ProductsSectionProps {
+  productClickHandler: (id: string) => void;
   products: Product[];
 }
 
 export default function ProductsSection(props: ProductsSectionProps) {
-  const { products } = props;
+  const {
+    products,
+    productClickHandler,
+  } = props;
 
   return (
     <section className={styles.section}>
@@ -51,6 +55,7 @@ export default function ProductsSection(props: ProductsSectionProps) {
               iconWidth={icon.width}
               isComingSoon={isComingSoon}
               index={index}
+              clickHandler={productClickHandler}
             />
           );
         })}

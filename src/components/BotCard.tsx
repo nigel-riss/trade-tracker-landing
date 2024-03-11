@@ -11,6 +11,7 @@ interface BotCardProps {
   iconWidth: number;
   isComingSoon?: boolean;
   index: number;
+  clickHandler: (id: string) => void;
 }
 
 export default function BotCard(props: BotCardProps) {
@@ -22,6 +23,7 @@ export default function BotCard(props: BotCardProps) {
     iconWidth,
     isComingSoon = false,
     index,
+    clickHandler,
   } = props;
 
   return (
@@ -36,6 +38,7 @@ export default function BotCard(props: BotCardProps) {
       <Link
         className={styles.link}
         href="#slider"
+        onClick={() => clickHandler(botID)}
       >
         <svg
           className={styles.icon}

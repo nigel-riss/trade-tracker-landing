@@ -17,6 +17,7 @@ export default function Home() {
       <Header />
       <ProductsSection
         products={products}
+        productClickHandler={(id: string) => setCurrentProductId(id)}
       />
       <SliderSection
         products={products}
