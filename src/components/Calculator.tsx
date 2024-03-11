@@ -233,6 +233,14 @@ export default function Calculator(props: CalculatorProps) {
             />
           </div>
         </div>
+        <div className={styles.mobilePeriod}>
+          <PeriodToggle
+            value={period}
+            onToggle={(selectedValue: string) => {
+              setPeriod(selectedValue);
+            }}
+          />
+        </div>
         <div className={styles.buttonsRow}>
           <CTAButton
             href={getCheckoutLink(

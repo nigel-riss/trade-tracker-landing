@@ -33,7 +33,7 @@ export default function PeriodToggle(props: PeriodToggleProps) {
             <input
               id={name}
               className={styles.input}
-              type="radio"
+              type="checkbox"
               name="duration"
               value={name}
               checked={isChecked}

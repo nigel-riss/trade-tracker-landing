@@ -1,5 +1,3 @@
-'';
-
 import styles from '@/styles/PricingSection.module.scss';
 import { Product } from '@/data/products';
 import Title from './Title';

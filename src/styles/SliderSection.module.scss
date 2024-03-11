@@ -13,6 +13,7 @@
   @include atTablet {
     // box model
     background-image: none;
+    margin-bottom: 4.5rem;
   }
 
   @include atDesktopS {

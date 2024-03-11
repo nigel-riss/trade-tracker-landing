@@ -1,3 +1,6 @@
+@import './mixins';
+
+
 .toggle {
   // positioning
   position: relative;
@@ -32,11 +35,18 @@
 
   // typography
   color: rgb(var(--dark), 0.5);
+  font-size: 0.875rem;
+  font-weight: 700;
   text-align: center;
 
   // visual
   cursor: pointer;
   transition: all 0.25s ease-out;
+
+  @include atDesktopS {
+    // typography
+    font-size: 1rem;
+  }
 }
 
 .input {
