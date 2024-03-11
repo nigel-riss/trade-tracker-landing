@@ -6,9 +6,12 @@ import JoinUsSection from '@/components/JoinUsSection';
 import PricingSection from '@/components/PricingSection';
 import ProductsSection from '@/components/ProductsSection';
 import SliderSection from '@/components/SliderSection';
+import { useState } from 'react';
 
 
 export default function Home() {
+  const [currentProductId, setCurrentProductId] = useState(products[0].id);
+
   return (
     <main>
       <Header />
@@ -17,6 +20,8 @@ export default function Home() {
       />
       <SliderSection
         products={products}
+        currentProductId={currentProductId}
+        onProductChange={(id: string) => setCurrentProductId(id)}
       />
       <PricingSection
         products={products}

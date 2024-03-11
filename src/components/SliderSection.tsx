@@ -10,12 +10,17 @@ import SliderPagination from './SliderPagination';
 
 
 interface SliderSectionProps {
+  currentProductId: string;
+  onProductChange: (id: string) => void;
   products: Product[];
 }
 
 export default function SliderSection(props: SliderSectionProps) {
-  const { products } = props;
-  const [currentId, setCurrentId] = useState(products[0].id);
+  const {
+    currentProductId,
+    onProductChange,
+    products,
+  } = props;
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   // const [currentProduct, setCurrentProduct] = useState(products[0]);
 
@@ -33,7 +38,8 @@ export default function SliderSection(props: SliderSectionProps) {
     rightButtonRef.current,
   ]);
 
-  const currentProduct = products.find((product) => product.id === currentId);
+  const currentProduct = products
+    .find((product) => product.id === currentProductId);
 
   return (
     <section id="slider" className={styles.section}>
@@ -53,11 +59,11 @@ export default function SliderSection(props: SliderSectionProps) {
               id={id}
               title={title}
               onClick={() => {
-                setCurrentId(id);
+                onProductChange(id);
               }}
               iconWidth={icon.width}
               iconHeight={icon.height}
-              isCurrent={currentId === id}
+              isCurrent={currentProductId === id}
             />
           ))}
       </nav>
@@ -70,7 +76,7 @@ export default function SliderSection(props: SliderSectionProps) {
 
         <div className={styles.mobileSlider}>
           <Slider
-            key={currentId}
+            key={currentProductId}
             slides={currentProduct?.slides}
             leftButtonEl={leftButtonEl}
             rightButtonEl={rightButtonEl}
@@ -101,16 +107,16 @@ export default function SliderSection(props: SliderSectionProps) {
                   title={title}
                   iconHeight={icon.height}
                   iconWidth={icon.width}
-                  isCurrent={currentId === id}
+                  isCurrent={currentProductId === id}
                   onClick={() => {
-                    setCurrentId(id);
+                    onProductChange(id);
                     setCurrentSlideIndex(0);
                   }}
                 />
                 <div
                   className={clsx({
                     [styles.sliderContainer]: true,
-                    [styles.isCurrent]: currentId === id,
+                    [styles.isCurrent]: currentProductId === id,
                   })}
                 >
                   <Slider
@@ -119,7 +125,7 @@ export default function SliderSection(props: SliderSectionProps) {
                     leftButtonEl={leftButtonEl}
                     rightButtonEl={rightButtonEl}
                     onSlideChange={(index: number) => {
-                      if (id === currentId) {
+                      if (id === currentProductId) {
                         setCurrentSlideIndex(index);
                       }
                     }}
@@ -171,7 +177,7 @@ export default function SliderSection(props: SliderSectionProps) {
             </button>
           </div>
           <IPhone
-            key={currentId}
+            key={currentProductId}
             currentIndex={currentSlideIndex}
             slides={currentProduct?.slides}
           />
