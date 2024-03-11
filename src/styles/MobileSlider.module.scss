@@ -4,14 +4,15 @@
 .slider {
   // positioning
   position: relative;
+  display: flex;
 }
 
 .slide {
   // box model
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   margin-top: 2rem;
+  height: 100%;
 
   @include atTablet {
     // box model
@@ -20,15 +21,6 @@
 
     // typography
     text-align: center;
-  }
-
-  @include atDesktopS {
-    // box model
-    padding: 0;
-    width: 23rem;
-
-    // typography
-    text-align: left;
   }
 }
 
@@ -48,4 +40,10 @@
   // typography
   color: rgb(var(--dark));
   font-size: 0.75rem;
+}
+
+.messageWrapper {
+  // box model
+  display: flex;
+  justify-content: flex-end;
 }

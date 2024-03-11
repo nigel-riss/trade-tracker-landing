@@ -34,31 +34,38 @@ export default function MobileSlider(props: MobileSliderProps) {
       loop
     >
       {slides && slides.map((slide) => (
-        <SwiperSlide key={slide.title}>
+        <SwiperSlide
+          key={slide.title}
+          style={{
+            height: 'auto',
+          }}
+        >
           <div className={styles.slide}>
             <h3 className={styles.title}>{slide.title}</h3>
             <p className={styles.text}>{slide.text}</p>
-            <Message>
-              {('text' in slide.message) && (
-                <Markdown remarkPlugins={[remarkGfm]}>
-                  {slide.message.text}
-                </Markdown>
-              )}
-              {('docs' in slide.message) && (
-                slide.message.docs.map(({
-                  fileName,
-                  fileSizeKB,
-                  time,
-                }) => (
-                  <TGDoc
-                    fileName={fileName}
-                    fileSizeKB={fileSizeKB}
-                    time={time}
-                    key={fileName}
-                  />
-                ))
-              )}
-            </Message>
+            <div className={styles.messageWrapper}>
+              <Message>
+                {('text' in slide.message) && (
+                  <Markdown remarkPlugins={[remarkGfm]}>
+                    {slide.message.text}
+                  </Markdown>
+                )}
+                {('docs' in slide.message) && (
+                  slide.message.docs.map(({
+                    fileName,
+                    fileSizeKB,
+                    time,
+                  }) => (
+                    <TGDoc
+                      fileName={fileName}
+                      fileSizeKB={fileSizeKB}
+                      time={time}
+                      key={fileName}
+                    />
+                  ))
+                )}
+              </Message>
+            </div>
           </div>
         </SwiperSlide>
       ))}
