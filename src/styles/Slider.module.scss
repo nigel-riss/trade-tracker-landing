@@ -85,9 +85,13 @@
 
 .slide {
   // box model
-  padding: 2.25rem 0;
-
+  margin-top: 2rem;
+  
   @include atTablet {
+    // box model
+    padding: 2.25rem 0;
+    margin-top: 0;
+
     // typography
     text-align: center;
   }

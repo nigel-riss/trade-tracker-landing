@@ -34,7 +34,10 @@ export default function IPhone(props: IPhoneProps) {
                   })}
                   key={slide.message.text}
                 >
-                  <Markdown remarkPlugins={[remarkGfm]}>
+                  <Markdown
+                    remarkPlugins={[remarkGfm]}
+                    disallowedElements={['-']}
+                  >
                     {slide.message.text}
                   </Markdown>
                 </div>
