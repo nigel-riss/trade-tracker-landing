@@ -34,11 +34,14 @@ export default function IPhone(props: IPhoneProps) {
   const extraStyles = matches
     ? { transform: `translateY(${slides?.[currentIndex]?.message.offset}em)` }
     : {};
+  const fadeAnimation = matches
+    ? 'fade-left'
+    : '';
 
   return (
     <div
       className={styles.iphone}
-      data-aos="fade-left"
+      data-aos={fadeAnimation}
     >
       <div className={styles.screenWrapper}>
         <div
