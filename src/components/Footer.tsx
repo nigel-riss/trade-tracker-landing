@@ -22,7 +22,7 @@ const getMenuItems = (
     >
       <Link
         className={styles.link}
-        href={`/${href}`}
+        href={`${href}`}
       >
         {title}
       </Link>
