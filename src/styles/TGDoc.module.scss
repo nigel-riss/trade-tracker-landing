@@ -8,18 +8,16 @@
   // border
   border-radius: 1.25em;
 
-  // typography
-  font-size: 0.75rem;
-
   // visual
   background-color: rgb(var(--chineseWhite));
 }
 
 .icon {
   // box model
-  height: 3em;
-  width: 3em;
-  padding: 0.75em;
+  flex-basis: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
+  padding: 0.875em;
 
   // border
   border-radius: 50%;
@@ -34,7 +32,10 @@
   flex-shrink: 0;
 }
 
-.name {
+h3.name {
+  // box model
+  padding-right: 2em;
+
   // typography
   color: rgb(var(--dark));
   font-size: 0.875em;
@@ -44,17 +45,17 @@
   // box model
   display: flex;
   justify-content: space-between;
-  margin-top: 0.25em;
+  margin-top: 0.325em;
   width: 100%;
 }
 
-.size {
+p.size {
   // typography
   color: rgb(var(--dark), 0.5);
   font-size: 0.875em;
 }
 
-.time {
+p.time {
   // positioning
   transform: translateY(0.5em);
   // typography

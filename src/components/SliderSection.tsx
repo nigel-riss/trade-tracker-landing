@@ -8,6 +8,7 @@ import ProductButton from './ProductButton';
 import Slider from './Slider';
 import SliderCaption from './SliderCaption';
 import SliderPagination from './SliderPagination';
+import MobileSlider from './MobileSlider';
 
 
 interface SliderSectionProps {
@@ -83,11 +84,9 @@ export default function SliderSection(props: SliderSectionProps) {
         />
 
         <div className={styles.mobileSlider}>
-          <Slider
+          <MobileSlider
             key={currentProductId}
             slides={currentProduct?.slides}
-            leftButtonEl={leftButtonEl}
-            rightButtonEl={rightButtonEl}
             onSlideChange={(index: number) => {
               setCurrentSlideIndeces((prev) => ({
                 ...prev,

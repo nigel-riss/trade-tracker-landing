@@ -252,6 +252,9 @@
 }
 
 .phoneContainer {
+  // box model
+  display: none;
+
   @include atTablet {
     // positioning
     position: relative;
