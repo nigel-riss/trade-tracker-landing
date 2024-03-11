@@ -3,11 +3,13 @@ import styles from '@/styles/Slider.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 import {
   Swiper,
   SwiperSlide,
 } from 'swiper/react';
 import {
+  EffectFade,
   Navigation,
 } from 'swiper/modules';
 
@@ -31,6 +33,7 @@ export default function Slider(props: SliderProps) {
   return (
     <Swiper
       className={styles.slider}
+      // effect="fade"
       spaceBetween={50}
       slidesPerView={1}
       onSlideChange={(swiper) => {
@@ -44,6 +47,7 @@ export default function Slider(props: SliderProps) {
         nextEl: rightButtonEl,
       }}
       modules={[
+        // EffectFade,
         Navigation,
       ]}
     >
