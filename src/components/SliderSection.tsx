@@ -118,7 +118,9 @@ export default function SliderSection(props: SliderSectionProps) {
                     leftButtonEl={leftButtonEl}
                     rightButtonEl={rightButtonEl}
                     onSlideChange={(index: number) => {
-                      setCurrentSlideIndex(index);
+                      if (id === currentId) {
+                        setCurrentSlideIndex(index);
+                      }
                     }}
                   />
                 </div>
