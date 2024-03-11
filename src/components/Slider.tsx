@@ -47,9 +47,6 @@ export default function Slider(props: SliderProps) {
         Navigation,
       ]}
     >
-      {/* <div className={styles.navigation}>
-        <button className={styles.prev}>&larr;</button>
-      </div> */}
       {slides && slides.map((slide) => (
         <SwiperSlide key={slide.title}>
           <div className={styles.slide}>

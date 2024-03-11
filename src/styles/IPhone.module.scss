@@ -18,7 +18,7 @@
     // visual
     background-image: url('../assets/img/deco/iphone-bg.png');
     background-size: cover;
-    overflow: hidden;
+    overflow: clip;
   }
 }
 
@@ -38,6 +38,9 @@
     min-height: auto;
     padding: 1.25rem;
     padding-top: 6rem;
+
+    // visual
+    transition: all 0.25s ease-in-out;
   }
 
   @include atDesktopS {
@@ -114,7 +117,9 @@
 
   @include atTablet {
     // box model
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
     padding: 0;
     padding-right: 2.25rem;
 
@@ -158,7 +163,7 @@
 
 .messageCurrent {
   // box model
-  display: block;
+  display: flex;
 
   // visual
   animation-name: fadeTop;

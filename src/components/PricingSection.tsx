@@ -6,7 +6,6 @@ import Title from './Title';
 import Subtitle from './Subtitle';
 import Calculator from './Calculator';
 import SpecialOffer from './SpecialOffer';
-import TGDoc from './TGDoc';
 
 
 interface PricingSectionProps {
@@ -18,11 +17,6 @@ export default function PricingSection(props: PricingSectionProps) {
 
   return (
     <section id="pricing" className={styles.section}>
-      <TGDoc
-        fileName="Profit Maker.csv"
-        fileSizeKB={107.3}
-        time="16:55"
-      />
       <header
         className={styles.header}
         data-aos="fade-up"

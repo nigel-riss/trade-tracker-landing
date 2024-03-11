@@ -16,10 +16,15 @@ interface TGDoc {
   time: string;
 }
 
+interface DocsMessage {
+  docs: TGDoc[];
+  offset?: number;
+}
+
 interface Slide {
   title: string;
   text: string;
-  message: Message | TGDoc[];
+  message: Message | DocsMessage;
 }
 
 interface Product {
@@ -42,6 +47,7 @@ interface Product {
   features: Feature;
   slides: Slide[];
 }
+
 
 const products: Product[] = [
   {
@@ -107,7 +113,7 @@ MCap: ${'`'}$269k${'`'} | ATH: ${'`'}$119k${'`'}
 Volume: ${'`'}$32.74k${'`'}
 Tax: Buy ${'`'}5%${'`'} / Sell ${'`'}8%${'`'}
           `,
-          offset: 0,
+          offset: -10,
         },
       },
       {
@@ -121,7 +127,7 @@ Sellers: ${'`'}78${'`'} (65 unique)
 Buys: ${'`'}22.34k${'`'}| Sells: ${'`'}10.4k${'`'}
 ${'`'}Dextools${'`'} | ${'`'}Dexscreener${'`'}
           `,
-          offset: 0,
+          offset: -15,
         },
       },
       {
@@ -136,7 +142,7 @@ Owner: ${'`'}Renounced${'`'} | KYC: ${'`'}Binance / N/A${'`'}
 Owner's Balance: ${'`'}$565k${'`'}
 ${'`'}Honeypot${'`'} | ${'`'}TokenSniffer${'`'}
           `,
-          offset: 0,
+          offset: -20,
         },
       },
       {
@@ -165,24 +171,27 @@ ${'`'}Honeypot${'`'} | ${'`'}TokenSniffer${'`'}
 - **Dormant Wallets:** ${'`'}56${'`'}
 ${'`'}Maestro(PRO)${'`'} | ${'`'}Banana${'`'} | ${'`'}Unibot${'`'}
           `,
-          offset: 0,
+          offset: -25,
         },
       },
       {
         title: 'PRO Report',
         text: 'Elevate your trading with PRO Report: Tailored insights, one-click trade execution, and trend analysis. With CSV/XLS exports, make swift, informed decisions to capitalize on market opportunities. Dominate the trading scene — upgrade to PRO for a titan’s advantage.',
-        message: [
-          {
-            fileName: 'Pro Report.csv',
-            fileSizeKB: 170.3,
-            time: '14:55',
-          },
-          {
-            fileName: 'Pro Report.xlsx',
-            fileSizeKB: 9.5,
-            time: '14:55',
-          },
-        ],
+        message: {
+          docs: [
+            {
+              fileName: 'Pro Report.csv',
+              fileSizeKB: 170.3,
+              time: '14:55',
+            },
+            {
+              fileName: 'Pro Report.xlsx',
+              fileSizeKB: 9.5,
+              time: '14:55',
+            },
+          ],
+          offset: -32,
+        },
       },
     ],
   },
@@ -269,7 +278,7 @@ ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
 🔼 **Buy:** ${'`'}0.1 ETH${'`'} / 🔽 **Sell:** ${'`'}1.25 ETH${'`'}
 ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
           `,
-          offset: 0,
+          offset: -18,
         },
       },
       {
@@ -297,24 +306,27 @@ ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
 **30-50:** ${'`'}10%${'`'}
 **50-100:** ${'`'}2%${'`'}
           `,
-          offset: 0,
+          offset: -33,
         },
       },
       {
         title: 'Simulation and Data',
         text: 'Unlock future trading success with Wallet Analyzer PRO. Simulate trading scenarios with historical data to refine strategies with precision. Test and adjust your tactics to navigate market dynamics confidently. Enhance your trading acumen with our cutting-edge simulation tool. Wallet Analyzer PRO transcends traditional analytics by offering bespoke export options that cater to the most discerning traders.',
-        message: [
-          {
-            fileName: 'Simulation and Data.csv',
-            fileSizeKB: 170.3,
-            time: '16:22',
-          },
-          {
-            fileName: 'Simulation and Data.xlsx',
-            fileSizeKB: 11.7,
-            time: '16:22',
-          },
-        ],
+        message: {
+          docs: [
+            {
+              fileName: 'Simulation and Data.csv',
+              fileSizeKB: 170.3,
+              time: '16:22',
+            },
+            {
+              fileName: 'Simulation and Data.xlsx',
+              fileSizeKB: 11.7,
+              time: '16:22',
+            },
+          ],
+          offset: -33,
+        },
       },
     ],
   },
@@ -382,28 +394,32 @@ ${'`'}etherscan${'`'} | 📊 ${'`'}dextools${'`'} | ${'`'}TVB${'`'}
 
 Total Trades: ${'`'}1${'`'}
           `,
-          offset: 0,
+          offset: -11,
         },
       },
       {
         title: 'CopyTrade Report',
         text: 'At the heart of Profit Maker PRO is the revolutionary CopyTrade Report feature, a game-changer for traders looking to mirror the market\'s top performers.',
-        message: [
-          {
-            fileName: 'CopyTrade Report.csv',
-            fileSizeKB: 0,
-            time: '15:34',
-          },
-          {
-            fileName: 'CopyTrade Report.xlsx',
-            fileSizeKB: 0,
-            time: '15:34',
-          },
-        ],
+        message: {
+          docs: [
+            {
+              fileName: 'CopyTrade Report.csv',
+              fileSizeKB: 0,
+              time: '15:34',
+            },
+            {
+              fileName: 'CopyTrade Report.xlsx',
+              fileSizeKB: 0,
+              time: '15:34',
+            },
+          ],
+          offset: -11,
+        },
       },
     ],
   },
 ];
+
 
 export default products;
 export type {
