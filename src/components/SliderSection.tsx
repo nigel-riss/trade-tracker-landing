@@ -104,6 +104,7 @@ export default function SliderSection(props: SliderSectionProps) {
                   isCurrent={currentId === id}
                   onClick={() => {
                     setCurrentId(id);
+                    setCurrentSlideIndex(0);
                   }}
                 />
                 <div

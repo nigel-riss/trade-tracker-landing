@@ -8,6 +8,7 @@
 
     // box model
     width: 19rem;
+    padding: 0.75rem 0;
 
     // border
     border-radius: 3rem;
@@ -20,6 +21,14 @@
     background-size: cover;
     overflow: clip;
   }
+}
+
+.screenWrapper {
+  // box model
+  height: 100%;
+
+  // visual
+  overflow: clip;
 }
 
 .screen {
@@ -99,6 +108,8 @@
 .message {
   // box model
   display: none;
+  flex-direction: column;
+  gap: 0.625rem;
   padding: 1.125rem;
 
   // border
@@ -118,8 +129,6 @@
   @include atTablet {
     // box model
     display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
     padding: 0;
     padding-right: 2.25rem;
 
