@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { Product } from '@/data/products';
 import styles from '@/styles/SliderSection.module.scss';
 import { useEffect, useRef, useState } from 'react';
@@ -77,7 +78,7 @@ export default function SliderSection(props: SliderSectionProps) {
 
       <div className={styles.content}>
         <SliderPagination
-          currentIndex={currentSlideIndeces[currentProductId]}
+          currentIndex={currentSlideIndeces[currentProductId as keyof typeof currentSlideIndeces]}
           slidesCount={currentProduct?.slides.length || 0}
         />
 
@@ -191,7 +192,7 @@ export default function SliderSection(props: SliderSectionProps) {
           </div>
           <IPhone
             key={currentProductId}
-            currentIndex={currentSlideIndeces[currentProductId]}
+            currentIndex={currentSlideIndeces[currentProductId as keyof typeof currentSlideIndeces]}
             slides={currentProduct?.slides}
           />
         </div>
