@@ -24,11 +24,13 @@
 
   // box model
   display: inline-block;
+  flex-grow: 0.5rem;
   height: 0.5rem;
   width: 0.5rem;
 
   // border
   border-radius: 50%;
+  // border: 1px solid 
 
   // typography
   font-size: 0;

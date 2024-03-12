@@ -108,6 +108,7 @@ ${'`'}Contact${'`'} | ${'`'}Owner${'`'}
         message: {
           text: `
 📊 **Market Data:**
+
 Liquidity: ${'`'}$20.22k${'`'}
 MCap: ${'`'}$269k${'`'} | ATH: ${'`'}$119k${'`'}
 Volume: ${'`'}$32.74k${'`'}
@@ -122,6 +123,7 @@ Tax: Buy ${'`'}5%${'`'} / Sell ${'`'}8%${'`'}
         message: {
           text: `
 👥 **Trading Activity:**
+
 Buyers: ${'`'}89${'`'} (54 unique)
 Sellers: ${'`'}78${'`'} (65 unique)
 Buys: ${'`'}22.34k${'`'}| Sells: ${'`'}10.4k${'`'}
@@ -136,6 +138,7 @@ ${'`'}Dextools${'`'} | ${'`'}Dexscreener${'`'}
         message: {
           text: `
 🔏 **Token Security:**
+
 Honeypot Status: ${'`'}Yes/No${'`'}
 Verified: ${'`'}Yes/No${'`'} | Liquidity Locked: ${'`'}80%${'`'}
 Owner: ${'`'}Renounced${'`'} | KYC: ${'`'}Binance / N/A${'`'}

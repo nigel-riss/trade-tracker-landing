@@ -1,10 +1,12 @@
 import { Slide } from '@/data/products';
 import styles from '@/styles/MobileSlider.module.scss';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import {
   Swiper,
   SwiperSlide,
 } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Message from './Message';
@@ -13,12 +15,16 @@ import TGDoc from './TGDoc';
 
 interface MobileSliderProps {
   slides?: Slide[],
+  leftButtonEl: HTMLElement | null,
+  rightButtonEl: HTMLElement | null,
   onSlideChange: (index: number) => void,
 }
 
 export default function MobileSlider(props: MobileSliderProps) {
   const {
     slides,
+    leftButtonEl,
+    rightButtonEl,
     onSlideChange,
   } = props;
 
@@ -32,6 +38,14 @@ export default function MobileSlider(props: MobileSliderProps) {
         onSlideChange(swiper.realIndex);
       }}
       loop
+      navigation={{
+        enabled: true,
+        prevEl: leftButtonEl,
+        nextEl: rightButtonEl,
+      }}
+      modules={[
+        Navigation,
+      ]}
     >
       {slides && slides.map((slide) => (
         <SwiperSlide
