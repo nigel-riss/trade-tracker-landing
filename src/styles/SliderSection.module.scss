@@ -153,57 +153,6 @@
   }
 }
 
-.button {
-  // positioning
-  position: relative;
-
-  // box model
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.5rem;
-  width: 2.5rem;
-
-  // border
-  border: none;
-  border-radius: 50%;
-
-  // typography
-  color: rgb(var(--white));
-  font-size: 0;
-
-  // visual
-  appearance: none;
-  background-color: rgb(var(--dark));
-  cursor: pointer;
-  transition: all 0.25s ease-out;
-}
-
-.button svg {
-  // box model
-  height: 1rem;
-  width: 1rem;
-
-  // visual
-  fill: rgb(var(--white));
-}
-
-.button:hover {
-  // visual
-  background-color: rgb(var(--green));
-}
-
-.button:active {
-  // visual
-  opacity: 0.5;
-}
-
-.buttonLeft {
-  // positioning
-  transform-origin: center center;
-  transform: rotate(180deg);
-}
-
 .mobileSlider {
   @include atDesktopS {
     // box model

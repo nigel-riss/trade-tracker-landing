@@ -9,6 +9,8 @@ import MobileSlider from './MobileSlider';
 import Slider from './Slider';
 import SliderCaption from './SliderCaption';
 import SliderPagination from './SliderPagination';
+import LeftButton from './LeftButton';
+import RightButton from './RightButton';
 
 
 interface SliderSectionProps {
@@ -152,44 +154,8 @@ export default function SliderSection(props: SliderSectionProps) {
 
         <div className={styles.phoneContainer}>
           <div className={styles.navigation}>
-            <button
-              className={clsx({
-                [styles.button]: true,
-                [styles.buttonLeft]: true,
-              })}
-              type="button"
-              ref={leftButtonRef}
-            >
-              <svg
-                viewBox="0 0 100 100"
-                x="0px"
-                y="0px"
-                version="1.1"
-              >
-                <g transform="translate(10)">
-                  <polygon points="11.895,6 11.895,94 88.105,50" />
-                </g>
-              </svg>
-            </button>
-            <button
-              className={clsx({
-                [styles.button]: true,
-                [styles.buttonRight]: true,
-              })}
-              type="button"
-              ref={rightButtonRef}
-            >
-              <svg
-                viewBox="0 0 100 100"
-                x="0px"
-                y="0px"
-                version="1.1"
-              >
-                <g transform="translate(10)">
-                  <polygon points="11.895,6 11.895,94 88.105,50" />
-                </g>
-              </svg>
-            </button>
+            <LeftButton ref={leftButtonRef} />
+            <RightButton ref={rightButtonRef} />
           </div>
           <IPhone
             key={currentProductId}
