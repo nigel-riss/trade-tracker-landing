@@ -6,11 +6,11 @@ import clsx from 'clsx';
 import IPhone from './IPhone';
 import ProductButton from './ProductButton';
 import MobileSlider from './MobileSlider';
-import Slider from './Slider';
 import SliderCaption from './SliderCaption';
 import SliderPagination from './SliderPagination';
 import LeftButton from './LeftButton';
 import RightButton from './RightButton';
+import DesktopSlider from './DesktopSlider';
 
 
 interface SliderSectionProps {
@@ -26,14 +26,14 @@ export default function SliderSection(props: SliderSectionProps) {
     products,
   } = props;
 
-  const [currentSlideIndeces, setCurrentSlideIndeces] = useState(
-    products.reduce(
-      (acc, curr) => ({ ...acc, [curr.id]: 0 }),
-      {},
-    ),
-  );
+  // const [currentSlideIndeces, setCurrentSlideIndeces] = useState(
+  //   products.reduce(
+  //     (acc, curr) => ({ ...acc, [curr.id]: 0 }),
+  //     {},
+  //   ),
+  // );
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-  console.log(currentSlideIndeces);
 
   const leftButtonRef = useRef(null);
   const [leftButtonEl, setLeftButtonEl] = useState(null);
@@ -81,7 +81,7 @@ export default function SliderSection(props: SliderSectionProps) {
 
       <div className={styles.content}>
         <SliderPagination
-          currentIndex={currentSlideIndeces[currentProductId as keyof typeof currentSlideIndeces]}
+          currentIndex={currentSlideIndex}
           slidesCount={currentProduct?.slides.length || 0}
         />
 
@@ -92,10 +92,7 @@ export default function SliderSection(props: SliderSectionProps) {
             leftButtonEl={leftButtonEl}
             rightButtonEl={rightButtonEl}
             onSlideChange={(index: number) => {
-              setCurrentSlideIndeces((prev) => ({
-                ...prev,
-                [currentProductId]: index,
-              }));
+              setCurrentSlideIndex(index);
             }}
           />
         </div>
@@ -124,7 +121,7 @@ export default function SliderSection(props: SliderSectionProps) {
                   isCurrent={currentProductId === id}
                   onClick={() => {
                     onProductChange(id);
-                    // setCurrentSlideIndex(0);
+                    setCurrentSlideIndex(0);
                   }}
                 />
                 <div
@@ -133,11 +130,12 @@ export default function SliderSection(props: SliderSectionProps) {
                     [styles.isCurrent]: currentProductId === id,
                   })}
                 >
-                  <Slider
+                  <DesktopSlider
                     key={id}
                     slides={slides}
-                    leftButtonEl={leftButtonEl}
-                    rightButtonEl={rightButtonEl}
+                    currentSlideId={currentSlideIndex}
+                  />
+                  {/* <Slider
                     onSlideChange={(index: number) => {
                       if (id === currentProductId) {
                         setCurrentSlideIndeces((prev) => ({
@@ -146,7 +144,7 @@ export default function SliderSection(props: SliderSectionProps) {
                         }));
                       }
                     }}
-                  />
+                  /> */}
                 </div>
               </div>
             ))}
@@ -157,9 +155,31 @@ export default function SliderSection(props: SliderSectionProps) {
             <LeftButton ref={leftButtonRef} />
             <RightButton ref={rightButtonRef} />
           </div>
+          <div className={styles.desktopNavigation}>
+            <LeftButton
+              clickHandler={() => {
+                if (!currentProduct) { return; }
+                if (currentSlideIndex <= 0) {
+                  setCurrentSlideIndex(currentProduct.slides.length - 1);
+                } else {
+                  setCurrentSlideIndex((prev) => prev - 1);
+                }
+              }}
+            />
+            <RightButton
+              clickHandler={() => {
+                if (!currentProduct) { return; }
+                if (currentSlideIndex >= currentProduct.slides.length - 1) {
+                  setCurrentSlideIndex(0);
+                } else {
+                  setCurrentSlideIndex((prev) => prev + 1);
+                }
+              }}
+            />
+          </div>
           <IPhone
             key={currentProductId}
-            currentIndex={currentSlideIndeces[currentProductId as keyof typeof currentSlideIndeces]}
+            currentIndex={currentSlideIndex}
             slides={currentProduct?.slides}
           />
         </div>

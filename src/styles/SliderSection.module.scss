@@ -134,7 +134,8 @@
   }
 }
 
-.navigation {
+.navigation,
+.desktopNavigation {
   // box model
   display: none;
 
@@ -150,6 +151,23 @@
     // box model
     display: flex;
     justify-content: space-between;
+  }
+
+  @include atDesktopS {
+    // box model
+    display: none;
+  }
+}
+
+.desktopNavigation {
+  @include atTablet {
+    // box model
+    display: none;
+  }
+
+  @include atDesktopS {
+    // box model
+    display: flex;
   }
 }
 
@@ -181,6 +199,7 @@
 .sliderContainer {
   // box model
   max-height: 0;
+  width: 23rem;
 
   // visual
   opacity: 0;
