@@ -6,11 +6,13 @@ import BadgeFall from './BadgeFall';
 
 interface SimpleHeaderProps {
   title: string;
+  subtitle?: string;
 }
 
 export default function SimpleHeader(props: SimpleHeaderProps) {
   const {
     title,
+    subtitle,
   } = props;
 
   return (
@@ -25,6 +27,7 @@ export default function SimpleHeader(props: SimpleHeaderProps) {
           className={styles.title}
           dangerouslySetInnerHTML={{ __html: title }}
         />
+        {subtitle && (<p className={styles.subtitle}>{subtitle}</p>)}
       </div>
 
       <div className={styles.back}>

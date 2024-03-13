@@ -124,6 +124,10 @@
 }
 
 .title {
+  // positioning
+  position: relative;
+  transform: translateX(0.5em);
+
   // box model
   margin: 0;
   margin-top: 6rem;
@@ -133,6 +137,11 @@
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1;
+
+  @include atTablet {
+    // positioning
+    transform: none;
+  }
 
   @include atDesktopS {
     // box model
@@ -151,8 +160,18 @@
 .title::before {
   content: "/";
 
+  // positioning
+  position: absolute;
+  left: -0.625em;
+
   // typography
   color: rgba(var(--green));
+
+  @include atTablet {
+    // positioning
+    position: static;
+    left: 0;
+  }
 }
 
 .subtitle {
