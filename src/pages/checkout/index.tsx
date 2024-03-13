@@ -32,7 +32,6 @@ export default function Home() {
     price: 0,
   });
 
-  // let requestInterval: any = null;
   useEffect(() => {
     const getInvoiceStatus = async () => {
       if (!invoiceId) { return; }
@@ -65,7 +64,6 @@ export default function Home() {
 
     return () => {
       window.clearInterval(requestInterval);
-      // requestInterval = null;
     };
   }, [router.isReady, invoiceId, isOnceLoaded]);
 
