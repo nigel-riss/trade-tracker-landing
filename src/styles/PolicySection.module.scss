@@ -23,6 +23,9 @@
   }
 
   h2 {
+    // positioning
+    position: relative;
+
     // box model
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -42,6 +45,12 @@
 
     // typography
     color: rgb(var(--green));
+
+    @include atDesktopS {
+      // positioning
+      position: absolute;
+      left: -0.625em;
+    }
   }
 
   p {
