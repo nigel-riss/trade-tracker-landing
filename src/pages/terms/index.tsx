@@ -49,7 +49,7 @@ export default function Terms() {
 
         <h2>7. Acceptable Use</h2>
         <p>
-          You must use Atlantes.io solely for lawful purposes and in a manner that does not infringe the rights of, restrict or inhibit anyone else's use and enjoyment of Atlantes.io. Prohibited activities include, but are not limited to, unauthorized copying, reproduction, or modification of any part of our Services.
+          You must use Atlantes.io solely for lawful purposes and in a manner that does not infringe the rights of, restrict or inhibit anyone else&apos;s use and enjoyment of Atlantes.io. Prohibited activities include, but are not limited to, unauthorized copying, reproduction, or modification of any part of our Services.
         </p>
 
         <h2>8. Disclaimer</h2>
