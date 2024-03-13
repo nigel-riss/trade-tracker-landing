@@ -100,7 +100,13 @@
 }
 
 .caption {
+  // positioning
+  transform: translateX(1em);
+
   @include atTablet {
+    // positioning
+    transform: none;
+
     // box model
     padding-bottom: 18rem;
     width: 24rem;
@@ -126,7 +132,6 @@
 .title {
   // positioning
   position: relative;
-  transform: translateX(0.5em);
 
   // box model
   margin: 0;
@@ -138,18 +143,13 @@
   font-weight: 500;
   line-height: 1;
 
-  @include atTablet {
-    // positioning
-    transform: none;
-  }
-
   @include atDesktopS {
     // box model
     flex-basis: 43rem;
     flex-shrink: 0;
 
     // typography
-    font-size: 5.5rem;
+    font-size: 6.5rem;
 
     // visual
     animation-name: fadeLeft;
@@ -171,6 +171,12 @@
     // positioning
     position: static;
     left: 0;
+  }
+
+  @include atDesktopS {
+    // positioning
+    position: absolute;
+    left: -0.625em;
   }
 }
 
