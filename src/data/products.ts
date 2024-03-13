@@ -56,7 +56,7 @@ const products: Product[] = [
       Volume Bot`,
     description: 'Leverage the power of AI and Machine Learning with our Trade Volume Bot, featuring a proprietary rating system for tokens and&nbsp;assets. Benefit from our unique classification of transaction participants and&nbsp;stay ahead with real-time data.',
     calcDescription: 'AI and Machine Learning proprietary rating system for tokens and assets.',
-    href: '#',
+    href: '#products',
     icon: {
       height: 24,
       width: 24,
@@ -170,7 +170,7 @@ ${'`'}Honeypot${'`'} | ${'`'}TokenSniffer${'`'}
   └ % of supply: ${'`'}0%${'`'}
 - **Smart Wallets:** ${'`'}0${'`'}
   └ % of supply: ${'`'}0%${'`'}
-  - **Smart Snipers:** ${'`'}3${'`'} 
+- **Smart Snipers:** ${'`'}3${'`'}
   └ % of supply: ${'`'}0.6%${'`'}
 - **Tax Holders:** ${'`'}0${'`'}
   └ % of supply: ${'`'}0%${'`'}
@@ -207,7 +207,7 @@ ${'`'}Honeypot${'`'} | ${'`'}TokenSniffer${'`'}
       Analyzer`,
     description: 'Introducing the most precise and advanced Wallet Analyzer on the market. Access a suite of essential and&nbsp;unique metrics designed to&nbsp;provide a comprehensive analysis of your wallet\'s performance.',
     calcDescription: 'Most precise and advanced Wallet Analyzer on the market.',
-    href: '#',
+    href: '#products',
     icon: {
       height: 30,
       width: 30,
@@ -342,7 +342,7 @@ ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
       Maker`,
     description: 'Track the most successful traders and&nbsp;gain insights with&nbsp;real-time summaries of their profitable trades. Profit Maker empowers you to mirror the strategies of top performers in&nbsp;the&nbsp;market.',
     calcDescription: 'Track the most successful traders and gain insights with real-time summaries of their profitable trades.',
-    href: '#',
+    href: '#products',
     icon: {
       height: 24,
       width: 24,
