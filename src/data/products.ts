@@ -154,27 +154,30 @@ ${'`'}Honeypot${'`'} | ${'`'}TokenSniffer${'`'}
         message: {
           text: `
 📈 **Community & Wallets:**
-- **Holders:** ${'`'}350${'`'} 
-  └ 30.0% | 5.5% | 1.8% | 1.8% |
-- **Presale:** ${'`'}10${'`'} (40% sold, 60% hold)
-  └ % of total supply: ${'`'}20%${'`'}
-- **Snipers:** ${'`'}56${'`'} (40% sold, 60% hold)
-  └ % of total supply: ${'`'}20%${'`'}
-- **1st 100 HLD:** ${'`'}89${'`'} (40% sold, 60% hold)
-  └ % of total supply: ${'`'}20%${'`'}
-- **Whales:** ${'`'}10${'`'}
-  └ % of total supply: ${'`'}20%${'`'}
-- **Fresh:** ${'`'}34${'`'}
-  └ % of total supply: ${'`'}20%${'`'}
-- **Transfer**: ${'`'}58${'`'}
-  └ % of total supply: ${'`'}20%${'`'}
-- **Smart Wallets:** ${'`'}56${'`'} 
-- **MEV Bots:** ${'`'}7${'`'} 
-- **Inactive Wallets:** ${'`'}67${'`'}
-- **Dormant Wallets:** ${'`'}56${'`'}
-${'`'}Maestro(PRO)${'`'} | ${'`'}Banana${'`'} | ${'`'}Unibot${'`'}
+- **Holders:** ${'`'}170${'`'}
+  └ 4.6% | 3.5% | 2.3% | 1.2% |
+- **Presale:** ${'`'}1${'`'} (0% sold, 100% hold)
+  └ % of supply: ${'`'}0%${'`'}
+- **Snipers:** ${'`'}115${'`'} (4% sold, 96% hold)
+  └ % of supply: ${'`'}86.3%${'`'}
+- **1st 100 HLD:** ${'`'}100${'`'} (0% sold, 100% hold)
+  └ % of supply: ${'`'}84.0%${'`'}
+- **Whales:** ${'`'}19${'`'}
+  └ % of supply: ${'`'}3.1%${'`'}
+- **Fresh:** ${'`'}0${'`'}
+  └ % of supply: ${'`'}0%${'`'}
+- **Transfer**: ${'`'}0${'`'}
+  └ % of supply: ${'`'}0%${'`'}
+- **Smart Wallets:** ${'`'}0${'`'}
+  └ % of supply: ${'`'}0%${'`'}
+  - **Smart Snipers:** ${'`'}3${'`'} 
+  └ % of supply: ${'`'}0.6%${'`'}
+- **Tax Holders:** ${'`'}0${'`'}
+  └ % of supply: ${'`'}0%${'`'}
+- **Inactive Wallets:** ${'`'}0${'`'}
+- **Dormant Wallets:** ${'`'}1${'`'}
           `,
-          offset: -25,
+          offset: -28,
         },
       },
       {
@@ -193,7 +196,7 @@ ${'`'}Maestro(PRO)${'`'} | ${'`'}Banana${'`'} | ${'`'}Unibot${'`'}
               time: '14:55',
             },
           ],
-          offset: -31,
+          offset: -35,
         },
       },
     ],
