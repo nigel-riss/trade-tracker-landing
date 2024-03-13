@@ -6,11 +6,21 @@ import JoinUsSection from '@/components/JoinUsSection';
 import PricingSection from '@/components/PricingSection';
 import ProductsSection from '@/components/ProductsSection';
 import SliderSection from '@/components/SliderSection';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import Cookies from '@/utils/cookies';
 
 
 export default function Home() {
+  const router = useRouter();
+
   const [currentProductId, setCurrentProductId] = useState(products[0].id);
+
+  useEffect(() => {
+    if (!router.isReady) { return; }
+
+    Cookies.checkAndSave(router.query);
+  }, [router.isReady, router.query]);
 
   return (
     <main>
