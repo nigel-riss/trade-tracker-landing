@@ -26,6 +26,11 @@ const menu: MenuItem[] = [
     title: 'Questions',
     href: '/#faq',
   },
+  {
+    id: 'docs',
+    title: 'Documentation',
+    href: 'https://www.gitbook.com/',
+  },
 ];
 
 

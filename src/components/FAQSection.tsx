@@ -23,7 +23,7 @@ export default function FAQSection() {
           Through Your Queries
         </Subtitle>
         <ArrowLink
-          href="#"
+          href="https://www.gitbook.com/"
           text="Learn more"
         />
       </header>

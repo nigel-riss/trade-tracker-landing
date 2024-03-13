@@ -32,7 +32,7 @@ const social = [
   {
     id: 'twitter',
     title: 'X (Twitter)',
-    href: '#',
+    href: 'https://x.com/atlantes_io',
     width: 36,
     height: 37,
   },
