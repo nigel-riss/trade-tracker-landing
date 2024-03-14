@@ -6,6 +6,7 @@ import Logo from './Logo';
 import MainMenu from './MainMenu';
 import CopyIcon from '../assets/icons/copy.svg';
 import Preloader from './Preloader';
+import InvoiceStatus from './InvoiceStatus';
 
 
 interface CheckoutHeaderProps {
@@ -43,7 +44,7 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
       <div className={styles.checkout}>
         {!userName && <Preloader />}
 
-        {userName && (
+        {userName && (status === 'waiting') && (
           <div className={styles.invoice}>
             <h1 className={styles.greeting}>
               Hi,
@@ -66,8 +67,8 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
                 className={clsx({
                   [styles.status]: true,
                   [styles.statusWaiting]: status === 'waiting',
-                  [styles.statusPaid]: status === 'paid',
-                  [styles.statusExpired]: status === 'expired',
+                  // [styles.statusPaid]: status === 'paid',
+                  // [styles.statusExpired]: status === 'expired',
                 })}
               >
                 {status}
@@ -121,6 +122,10 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
               </div>
             </div>
           </div>
+        )}
+
+        {userName && status && (status !== 'waiting') && (
+          <InvoiceStatus status={status} />
         )}
       </div>
     </header>

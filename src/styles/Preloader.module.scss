@@ -10,7 +10,7 @@
   width: 100%;
 }
 
-.preloader:before {
+.preloader::before {
   content: "";
 
   // positioning
