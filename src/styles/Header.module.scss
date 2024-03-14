@@ -16,7 +16,7 @@
   padding-bottom: 4.5rem;
 
   // visual
-  overflow: hidden;
+  overflow-x: clip;
 
   @include atTablet {
     // box model
@@ -39,11 +39,12 @@
 .headerMini {
   // box model
   height: auto;
+  min-height: calc(100vh - 8rem);
 
   @include atDesktopS {
     // box model
     height: auto;
-    min-height: auto;
+    min-height: calc(100vh - 10rem);
   }
 }
 
@@ -265,20 +266,33 @@
 .checkout {
   // box model
   display: flex;
+  flex-shrink: 0;
+  flex-grow: 2;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   margin-top: 3rem;
 
-  // typography
-  // text-align: center;
-  align-items: flex-start;
-
   @include atDesktopS {
     // box model
-    width: var(--dWidth);
+    justify-content: center;
     margin: 0 auto;
     margin-top: 3rem;
+    width: var(--dWidth);
   }
+}
+
+.invoice {
+  // box model
+  width: 100%;
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+  // margin-top: 3rem;
+
+  // typography
+  // text-align: center;
+  // align-items: flex-start;
 }
 
 .greeting {
@@ -286,6 +300,16 @@
   font-family: var(--titleFont);
   font-size: 1.5rem;
   font-weight: 500;
+
+  @include atTablet {
+    // typography
+    text-align: center;
+  }
+
+  @include atDesktopS {
+    // typography
+    text-align: left;
+  }
 
   em {
     // typography
@@ -312,9 +336,20 @@
   // typography
   font-size: 0.875rem;
 
+  @include atTablet {
+    // typography
+    text-align: center;
+  }
+
+  @include atDesktopS {
+    // typography
+    text-align: left;
+  }
+
   b {
     // typography
     color: rgb(var(--green));
+    white-space: nowrap;
   }
 
   a {
@@ -412,12 +447,10 @@ ul.productsList {
   margin-top: 1rem;
   padding: 0;
 
-  // typography
-  text-align: left;
-
   li {
     // typography
     font-family: var(--titleFont);
+    font-size: 0.875rem;
   }
 
   li:before {
@@ -432,6 +465,18 @@ ul.productsList {
   align-items: center;
   gap: 1rem;
   margin-top: 1.5rem;
+
+  @include atTablet {
+    // box model
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    justify-content: start;
+    margin-top: 1.5rem;
+  }
 }
 
 .priceValue {
@@ -476,4 +521,19 @@ ul.productsList {
 
 .statusExpired {
   color: hsl(6, 96%, 50%);
+}
+
+.access {
+  // typography
+  text-align: left;
+
+  @include atTablet {
+    // typography
+    text-align: center;
+  }
+
+  @include atDesktopS {
+    // typography
+    text-align: left;
+  }
 }

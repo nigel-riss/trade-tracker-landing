@@ -22,6 +22,9 @@
 }
 
 .simpleFooter {
+  // box model
+  margin-top: 1.5rem;
+
   @include atDesktopS {
     // box model
     margin-top: 0;

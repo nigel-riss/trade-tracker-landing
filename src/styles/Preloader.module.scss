@@ -1,0 +1,55 @@
+.preloader {
+  // positioning
+  position: relative;
+
+  // box model
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.preloader:before {
+  content: "";
+
+  // positioning
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -3;
+  transform-origin: center center;
+  transform: translate(-50%, -50% );
+
+  // box model
+  display: block;
+  height: 32rem;
+  width: 32rem;
+
+  // visual
+  background-image: url('../assets/img/bgs/green-radial.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  opacity: 0.5;
+
+  // @include atDesktopS {
+  //   // box model
+  //   height: 130rem;
+  //   width: 130rem;
+  // }
+}
+
+.loading {
+  // typography
+  color: rgb(var(--green));
+  font-family: var(--titleFont);
+  font-weight: 500;
+}
+
+.preloader svg {
+  // box model
+  height: 5rem;
+  width: 5rem;
+}

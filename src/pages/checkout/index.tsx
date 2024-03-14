@@ -23,7 +23,7 @@ export default function Home() {
 
   const [isOnceLoaded, setIsOnceLoaded] = useState(false);
   const [invoiceStatus, setInvoiceStatus]: [InvoiceStatus, any] = useState({
-    userName: 'username',
+    userName: '',
     validUntil: null,
     walletEth: '0x0',
     walletTrc: '0x1',
