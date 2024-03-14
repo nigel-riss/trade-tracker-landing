@@ -510,15 +510,26 @@ ul.productsList {
 }
 
 .status {
+  // box model
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
   // typography
   font-family: var(--titleFont);
   font-size: 1.25rem;
   font-weight: 500;
   text-transform: uppercase;
+
+  svg {
+    // box model
+    height: 2rem;
+    width: 2rem;
+  }
 }
 
 .statusWaiting {
-  color: hsl(56, 100%, 60%);
+  color: #fff133;
 }
 
 .statusPaid {

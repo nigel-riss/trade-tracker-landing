@@ -7,6 +7,7 @@ import MainMenu from './MainMenu';
 import CopyIcon from '../assets/icons/copy.svg';
 import Preloader from './Preloader';
 import InvoiceStatus from './InvoiceStatus';
+import ProgressIcon from '../assets/progress-yellow.svg';
 
 
 interface CheckoutHeaderProps {
@@ -72,6 +73,7 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
                 })}
               >
                 {status}
+                <ProgressIcon />
               </p>
             </div>
 
