@@ -1,5 +1,6 @@
 import styles from '@/styles/InvoiceStatus.module.scss';
 import clsx from 'clsx';
+import { stat } from 'fs';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -18,7 +19,9 @@ export default function InvoiceStatus(props: InvoiceStatusProps) {
 
   useEffect(() => {
     if (!router.isReady) { return; }
-    router.push('/');
+    if (status === 'paid') {
+      router.push('/');
+    }
   }, [status, router, router.isReady]);
 
   return (

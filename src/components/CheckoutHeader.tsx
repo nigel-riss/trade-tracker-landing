@@ -8,10 +8,12 @@ import CopyIcon from '../assets/icons/copy.svg';
 import Preloader from './Preloader';
 import InvoiceStatus from './InvoiceStatus';
 import ProgressIcon from '../assets/progress-yellow.svg';
+import CountdownTimer from './CountdownTimer';
 
 
 interface CheckoutHeaderProps {
   userName: string;
+  validUntil?: string | null;
   walletEth?: string | null;
   walletTrc?: string | null;
   products?: string[],
@@ -23,6 +25,7 @@ interface CheckoutHeaderProps {
 export default function CheckoutHeader(props: CheckoutHeaderProps) {
   const {
     userName,
+    validUntil,
     walletEth,
     walletTrc,
     products,
@@ -53,7 +56,7 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
             </h1>
             <p className={styles.text}>
               To complete your subscription, please send the payment within
-              <b> 19 minutes 55 seconds</b>
+              <CountdownTimer date={validUntil || ''} />
               <br />
               using one of&nbsp;the&nbsp;wallet below.
               Feel free to <Link href="/"> revisit the site</Link> to add more products.

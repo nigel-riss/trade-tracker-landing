@@ -43,6 +43,7 @@ export default function Home() {
       const data = await response.json();
       setInvoiceStatus({
         userName: data.TgUser as string,
+        validUntil: data.Until as string,
         walletEth: data.WalletEth as string,
         walletTrc: data.WalletTrc as string,
         products: data.Products as string[],
@@ -71,6 +72,7 @@ export default function Home() {
     <main>
       <CheckoutHeader
         userName={invoiceStatus.userName}
+        validUntil={invoiceStatus.validUntil}
         walletEth={invoiceStatus.walletEth}
         walletTrc={invoiceStatus.walletTrc}
         products={invoiceStatus.products}
