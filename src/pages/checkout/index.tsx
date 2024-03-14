@@ -2,7 +2,6 @@
 import CheckoutHeader from '@/components/CheckoutHeader';
 import SimpleFooter from '@/components/SimpleFooter';
 import API from '@/utils/api';
-import Cookies from '@/utils/cookies';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 

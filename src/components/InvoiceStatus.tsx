@@ -4,7 +4,7 @@ import Cookies from '@/utils/cookies';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
 interface InvoiceStatusProps {
@@ -17,9 +17,12 @@ export default function InvoiceStatus(props: InvoiceStatusProps) {
   } = props;
 
   const router = useRouter();
+  const [redirectUrl, setRedirectUrl] = useState('');
 
   useEffect(() => {
     if (!router.isReady) { return; }
+    setRedirectUrl(API.CHECKOUT_ENDPOINT + Cookies.getQuery());
+
     // if (status === 'paid') {
     //   router.push('/');
     // }
@@ -41,7 +44,7 @@ export default function InvoiceStatus(props: InvoiceStatusProps) {
       </p>
       <p className={styles.text}>
         {status === 'paid' && (
-          <Link href={API.CHECKOUT_ENDPOINT + Cookies.getQuery()}>
+          <Link href={redirectUrl}>
             Or you can use this link
           </Link>
         )}

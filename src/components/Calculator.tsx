@@ -139,6 +139,15 @@ export default function Calculator(props: CalculatorProps) {
     };
   }, []);
 
+  const [buyUrl, setBuyUrl] = useState('');
+  useEffect(() => {
+    setBuyUrl(getCheckoutLink(
+      cartProducts,
+      isProPlan,
+      period,
+    ));
+  }, [cartProducts, isProPlan, period]);
+
   const rawTotalPrice = calcRawTotalPrice(
     products,
     cartProducts,
@@ -244,11 +253,7 @@ export default function Calculator(props: CalculatorProps) {
         </div>
         <div className={styles.buttonsRow}>
           <CTAButton
-            href={getCheckoutLink(
-              cartProducts,
-              isProPlan,
-              period,
-            )}
+            href={buyUrl}
           >
             Buy
           </CTAButton>
