@@ -8,6 +8,7 @@ import {
 import clsx from 'clsx';
 import API from '@/utils/api';
 import durations from '@/data/duration';
+import Cookies from '@/utils/cookies';
 import PriceCard from './PriceCard';
 import PlanToggle from './PlanToggle';
 import CTAButton from './CTAButton';
@@ -85,7 +86,7 @@ const getCheckoutLink = (
   isProPlan: boolean,
   periodName: string,
 ) => {
-  let query = API.CHECKOUT_ENDPOINT;
+  let query = API.CHECKOUT_ENDPOINT + Cookies.getQuery();
 
   Object.entries(cartProducts)
     .forEach(([productId, isPaid]) => {

@@ -25,6 +25,15 @@ export default class Cookies {
     }
   }
 
+  public static getQuery() {
+    const marksMap = Cookies.getAll();
+    let query = '';
+    marksMap.forEach((value, key) => {
+      query += `${encodeURIComponent(key)}=${encodeURIComponent(value)}&`;
+    });
+    return query;
+  }
+
   private static clear(marks: string[]) {
     marks.forEach((mark) => {
       document.cookie = `${mark}=; expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
@@ -45,11 +54,15 @@ export default class Cookies {
   }
 
   private static update() {
+    Cookies.set(Cookies.getAll());
+  }
+
+  private static getAll() {
     const marksMap = new Map();
     MARKS.forEach((mark) => {
       const value = Cookies.get(mark);
       if (value) { marksMap.set(mark, value); }
     });
-    Cookies.set(marksMap);
+    return marksMap;
   }
 }

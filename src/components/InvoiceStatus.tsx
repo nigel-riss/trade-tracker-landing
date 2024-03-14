@@ -1,6 +1,7 @@
 import styles from '@/styles/InvoiceStatus.module.scss';
+import API from '@/utils/api';
+import Cookies from '@/utils/cookies';
 import clsx from 'clsx';
-import { stat } from 'fs';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -19,9 +20,9 @@ export default function InvoiceStatus(props: InvoiceStatusProps) {
 
   useEffect(() => {
     if (!router.isReady) { return; }
-    if (status === 'paid') {
-      router.push('/');
-    }
+    // if (status === 'paid') {
+    //   router.push('/');
+    // }
   }, [status, router, router.isReady]);
 
   return (
@@ -40,7 +41,9 @@ export default function InvoiceStatus(props: InvoiceStatusProps) {
       </p>
       <p className={styles.text}>
         {status === 'paid' && (
-          <Link href="/">Or you can use this link</Link>
+          <Link href={API.CHECKOUT_ENDPOINT + Cookies.getQuery()}>
+            Or you can use this link
+          </Link>
         )}
         {status === 'expired' && (
           <Link href="/#pricing">Return to the site</Link>

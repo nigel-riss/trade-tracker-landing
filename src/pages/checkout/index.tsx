@@ -2,13 +2,14 @@
 import CheckoutHeader from '@/components/CheckoutHeader';
 import SimpleFooter from '@/components/SimpleFooter';
 import API from '@/utils/api';
+import Cookies from '@/utils/cookies';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 
 interface InvoiceStatus {
   userName: string,
-  validUntil?: Date | null,
+  validUntil?: string | null,
   walletEth?: string | null,
   walletTrc?: string | null,
   products?: string[],
@@ -36,6 +37,9 @@ export default function Home() {
     const getInvoiceStatus = async () => {
       if (!invoiceId) { return; }
       // return;
+      // console.log(
+      //   Cookies.getQuery(),
+      // );
 
       const response = await fetch(
         `${API.STATUS_ENDPOINT}${invoiceId}`,
