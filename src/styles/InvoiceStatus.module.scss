@@ -75,6 +75,11 @@
     // typography
     font-size: 1rem;
   }
+
+  @include atDesktopS {
+    // typography
+    font-size: 1.325rem;
+  }
 }
 
 .badge {
@@ -93,6 +98,11 @@
   @include atTablet {
     // typography
     font-size: 1rem;
+  }
+
+  @include atDesktopS {
+    // typography
+    font-size: 1.225rem;
   }
 
   &::before {
