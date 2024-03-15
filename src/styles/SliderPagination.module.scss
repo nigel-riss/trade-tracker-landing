@@ -17,28 +17,41 @@
   }
 }
 
+// .bullet {
+//   // box model
+//   display: inline-block;
+//   flex-grow: 0;
+//   flex-shrink: 0;
+//   flex-basis: 0.5rem;
+//   height: 0.5rem;
+//   width: 0.5rem;
+
+//   // border
+//   // border-radius: 50%;
+//   // border: 1px solid 
+
+//   // typography
+//   font-size: 0;
+
+//   // visual
+//   background-color: rgb(var(--dark));
+//   transition: all 0.25s ease-out;
+// }
+
+// .currentBullet {
+//   // visual
+//   background-color: rgb(var(--green));
+// }
+
 .bullet {
-  // box model
-  display: inline-block;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 0.5rem;
   height: 0.5rem;
   width: 0.5rem;
 
-  // border
-  // border-radius: 50%;
-  // border: 1px solid 
-
-  // typography
-  font-size: 0;
-
   // visual
-  background-color: rgb(var(--dark));
-  transition: all 0.25s ease-out;
+  fill: rgb(var(--dark))
 }
 
 .currentBullet {
   // visual
-  background-color: rgb(var(--green));
+  fill: rgb(var(--green));
 }
