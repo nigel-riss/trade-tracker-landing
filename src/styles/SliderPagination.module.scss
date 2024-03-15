@@ -18,13 +18,11 @@
 }
 
 .bullet {
-  // positioning
-  transform-origin: center center;
-  transform: scale(1);
-
   // box model
   display: inline-block;
-  flex-grow: 0.5rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 0.5rem;
   height: 0.5rem;
   width: 0.5rem;
 
@@ -41,9 +39,6 @@
 }
 
 .currentBullet {
-  // positioning
-  // transform: scale(1.25);
-
   // visual
   background-color: rgb(var(--green));
 }
