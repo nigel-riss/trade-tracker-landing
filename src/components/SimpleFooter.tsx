@@ -12,7 +12,10 @@ export default function SimpleFooter() {
       })}
     >
       <div className={styles.legalInfo}>
-        <p className={styles.copyrights}>Atlantes.eth © 2023</p>
+        <p className={styles.copyrights}>
+          © Atlantes.eth&nbsp;
+          {new Date().getFullYear() }
+        </p>
         <div className={styles.legalLinks}>
           <Link
             className={styles.legalLink}
