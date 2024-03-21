@@ -97,7 +97,7 @@ ${'`'}-------------------------------${'`'}
 AI Rate: ${'`'}5%${'`'}
 CA: ${'`'}0xb3705fc53e15e71ac35bbd862b7f9b0bb69c39be${'`'}
 CA Age: ${'`'}26h 31m${'`'} | Pair: ${'`'}24h 98m${'`'}
-${'`'}Contact${'`'} | ${'`'}Owner${'`'}
+[Contact]() | [Owner]()
           `,
           offset: 0,
         },
@@ -127,7 +127,7 @@ Tax: Buy ${'`'}5%${'`'} / Sell ${'`'}8%${'`'}
 Buyers: ${'`'}89${'`'} (54 unique)
 Sellers: ${'`'}78${'`'} (65 unique)
 Buys: ${'`'}22.34k${'`'}| Sells: ${'`'}10.4k${'`'}
-${'`'}Dextools${'`'} | ${'`'}Dexscreener${'`'}
+[Dextools]() | [Dexscreener]()
           `,
           offset: -15,
         },
@@ -143,7 +143,7 @@ Honeypot Status: ${'`'}Yes/No${'`'}
 Verified: ${'`'}Yes/No${'`'} | Liquidity Locked: ${'`'}80%${'`'}
 Owner: ${'`'}Renounced${'`'} | KYC: ${'`'}Binance / N/A${'`'}
 Owner's Balance: ${'`'}$565k${'`'}
-${'`'}Honeypot${'`'} | ${'`'}TokenSniffer${'`'}
+[Honeypot]() | [TokenSniffer]()
           `,
           offset: -20,
         },
@@ -241,7 +241,7 @@ ${'`'}Honeypot${'`'} | ${'`'}TokenSniffer${'`'}
         message: {
           text: `
 ${'`'}0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5${'`'}
-[etherscan]() | [debank]()
+[Etherscan]() | [Debank]()
 
 **Wallet Age:** ${'`'}365 days${'`'}
 **Current Balance:** ${'`'}$56k${'`'}
@@ -273,17 +273,17 @@ ${'`'}0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5${'`'}
 &nbsp;&nbsp;&nbsp;&nbsp;├  ROI: ${'`'}273%${'`'}
 &nbsp;&nbsp;&nbsp;&nbsp;├  Profit: ${'`'}0.92${'`'} ETH | ${'`'}$3.75k${'`'}
 &nbsp;&nbsp;&nbsp;&nbsp;└  Buy ${'`'}0.3${'`'} ETH → Sell ${'`'}1.26${'`'} ETH
-  ${'`'}TVB${'`'} | [Dextools]() | [Etherscan]()
+  [TVB]() | [Dextools]() | [Etherscan]()
 ├ **$BIKINI**
 &nbsp;&nbsp;&nbsp;&nbsp;├  ROI: ${'`'}462%${'`'}
 &nbsp;&nbsp;&nbsp;&nbsp;├  Profit: ${'`'}0.57${'`'} ETH | ${'`'}$2.25k${'`'}
 &nbsp;&nbsp;&nbsp;&nbsp;└  Buy ${'`'}0.1${'`'} ETH → Sell ${'`'}0.69${'`'} ETH
-  ${'`'}TVB${'`'} | [Dextools]() | [Etherscan]()
+  [TVB]() | [Dextools]() | [Etherscan]()
 └ **$PIPI**
 &nbsp;&nbsp;&nbsp;&nbsp;├  ROI: ${'`'}5%${'`'}
 &nbsp;&nbsp;&nbsp;&nbsp;├  Profit: ${'`'}0.05${'`'} ETH | ${'`'}$185${'`'}
 &nbsp;&nbsp;&nbsp;&nbsp;└  Buy ${'`'}1${'`'} ETH → Sell ${'`'}1.08${'`'} ETH
-  ${'`'}TVB${'`'} | [Dextools]() | [Etherscan]()
+  [TVB]() | [Dextools]() | [Etherscan]()
           `,
           offset: -18,
         },
@@ -366,10 +366,10 @@ ${'`'}0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5${'`'}
 **🚀 TOP PROFIT 🚀**
 
 🔐 **Wallet:** ${'`'}0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5${'`'}
-${'`'}etherscan${'`'} | ${'`'}debank${'`'} | ${'`'}WA${'`'} 
+[Dextools]() | [Etherscan]() | [WA]()
 
 📊 **Token:** ${'`'}$Shiba${'`'}
-${'`'}etherscan${'`'} | ${'`'}dextools${'`'} | ${'`'}TVB${'`'}
+[Dextools]() | [Etherscan]() | [TVB]()
 
 💰 **Buy Amount:** ${'`'}0.01 ETH${'`'}
 💵 **Sell Amount:** ${'`'}0.45 ETH${'`'}
@@ -392,10 +392,10 @@ __Report by Filters__
 Trade Date (UTC): ${'`'}2024-01-24 15:00:00${'`'}
 
 🔐 Wallet: ${'`'}0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5${'`'}
-${'`'}etherscan${'`'} | ${'`'}debank${'`'} | ${'`'}WA${'`'}
+[Dextools]() | [Etherscan]() | [WA]()
 
 Token: ${'`'}$Shiba${'`'}
-${'`'}etherscan${'`'} | 📊 ${'`'}dextools${'`'} | ${'`'}TVB${'`'}
+[Dextools]() | [Etherscan]() | [TVB]()
 
 🟢 **Buy Amount:** ${'`'}0.01 ETH${'`'}
 
