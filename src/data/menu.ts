@@ -29,7 +29,7 @@ const menu: MenuItem[] = [
   {
     id: 'docs',
     title: 'Documentation',
-    href: 'https://www.gitbook.com/',
+    href: 'https://docs.atlantes.io/',
   },
 ];
 
