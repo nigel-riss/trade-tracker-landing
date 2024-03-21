@@ -80,14 +80,14 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
               </p>
             </div>
 
-            {walletEth && (
+            {walletTrc && (
               <div className={styles.wallet}>
                 <h2 className={styles.title2}>USDT (TRC20):</h2>
                 <button
                   className={styles.copyCode}
                   type="button"
                   onClick={() => {
-                    navigator.clipboard.writeText(walletEth);
+                    navigator.clipboard.writeText(walletTrc);
                   }}
                 >
                   {walletEth}
@@ -95,14 +95,14 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
                 </button>
               </div>
             )}
-            {walletTrc && (
+            {walletEth && (
               <div className={styles.wallet}>
                 <h2 className={styles.title2}>USDT (ERC20):</h2>
                 <button
                   className={styles.copyCode}
                   type="button"
                   onClick={() => {
-                    navigator.clipboard.writeText(walletTrc);
+                    navigator.clipboard.writeText(walletEth);
                   }}
                 >
                   {walletTrc}
