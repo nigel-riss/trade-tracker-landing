@@ -267,22 +267,23 @@ ${'`'}etherscan${'`'} | ${'`'}debank${'`'}
         text: 'Dive into the specifics with our analysis of the top 3 performing tokens over the last 7 days. Gain actionable insights from each token\'s ROI, buy/sell dynamics, and direct links to essential trading resources, setting you up to follow the leads of the most lucrative moves in the market.',
         message: {
           text: `
-🔖 **Top Perfomance:** ${'`'}7 days${'`'}
+🏆 **Top Performing Assets**
 
-**$Shiba:** ${'`'}ROI 2467%${'`'}
-🏆 **Profit:** ${'`'}1.2 ETH${'`'} | ${'`'}$56k${'`'} 
-🔼 **Buy:** ${'`'}0.1 ETH${'`'} / 🔽 **Sell:** ${'`'}1.25 ETH${'`'}
-${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
-
-**$Shiba:** ${'`'}ROI 2467%${'`'}
-🏆 **Profit:** ${'`'}1.2 ETH${'`'} | ${'`'}$56k${'`'} 
-🔼 **Buy:** ${'`'}0.1 ETH${'`'} / 🔽 **Sell:** ${'`'}1.25 ETH${'`'}
-${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
-
-**$Shiba:** ${'`'}ROI 2467%${'`'}
-🏆 **Profit:** ${'`'}1.2 ETH${'`'} | ${'`'}$56k${'`'} 
-🔼 **Buy:** ${'`'}0.1 ETH${'`'} / 🔽 **Sell:** ${'`'}1.25 ETH${'`'}
-${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
+├ $HELGA
+  ├  **ROI:** 273%
+  ├  **Profit:** 0.92 ETH | $3.75k
+  └  Buy 0.3 ETH → Sell 1.26 ETH
+  TVB | Dextools | Etherscan 
+├ $BIKINI
+  ├  **ROI:** 462%
+  ├  **Profit:** 0.57 ETH | $2.25k
+  └  Buy 0.1 ETH → Sell 0.69 ETH
+  TVB | Dextools | Etherscan 
+└ $PIPI
+  ├  **ROI:** 5%
+  ├  **Profit:** 0.05 ETH | $185
+  └  Buy 1 ETH → Sell 1.08 ETH
+  TVB | Dextools | Etherscan
           `,
           offset: -18,
         },
