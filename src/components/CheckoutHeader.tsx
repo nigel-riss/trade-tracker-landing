@@ -90,7 +90,7 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
                     navigator.clipboard.writeText(walletTrc);
                   }}
                 >
-                  {walletEth}
+                  {walletTrc}
                   <CopyIcon />
                 </button>
               </div>
@@ -105,7 +105,7 @@ export default function CheckoutHeader(props: CheckoutHeaderProps) {
                     navigator.clipboard.writeText(walletEth);
                   }}
                 >
-                  {walletTrc}
+                  {walletEth}
                   <CopyIcon />
                 </button>
               </div>
