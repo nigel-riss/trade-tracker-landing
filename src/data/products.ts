@@ -241,20 +241,20 @@ ${'`'}Honeypot${'`'} | ${'`'}TokenSniffer${'`'}
         message: {
           text: `
 ${'`'}0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5${'`'}
-${'`'}etherscan${'`'} | ${'`'}debank${'`'}
+[etherscan]() | [debank]()
 
-📊 **CopyTrade Score:** 🔴
-
-🔐 **KYC Status:** ${'`'}Yes${'`'}
 **Wallet Age:** ${'`'}365 days${'`'}
-**Wallet Balance:** ${'`'}$56k${'`'} 
+**Current Balance:** ${'`'}$56k${'`'}
+**CopyTrade Score:** 🔴
+
+💵 **Performance Metrics**
 **Profit by Period:** 
 **1D:** ↓ ${'`'}-3 ETH${'`'} | ${'`'}$56k${'`'}
 **7D:** ↑ ${'`'}1.2 ETH${'`'} | ${'`'}$56k${'`'}
 **14D:** ↑ ${'`'}5.78 ETH${'`'} | ${'`'}$56k${'`'}
 **30D:** ↑ ${'`'}1.2 ETH${'`'} | ${'`'}$56k${'`'}
 
-🔍 **Analysis Period:** ${'`'}7 days${'`'}
+📊 **Analysis Period:** ${'`'}7 days${'`'}
 **Profit Overview:** ${'`'}1.2 ETH${'`'} | ${'`'}$56k${'`'}
 **ROI:** ${'`'}1987%${'`'}
 **Avg. Trade Freq.:** ${'`'}2.16${'`'}
@@ -269,21 +269,21 @@ ${'`'}etherscan${'`'} | ${'`'}debank${'`'}
           text: `
 🏆 **Top Performing Assets**
 
-├ $HELGA
-  ├  ROI: ${'`'}273%${'`'}
-  ├  Profit: ${'`'}0.92${'`'} ETH | ${'`'}$3.75k${'`'}
-  └  Buy ${'`'}0.3${'`'} ETH → Sell ${'`'}1.26${'`'} ETH
-  ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
-├ $BIKINI
-  ├  ROI: ${'`'}462%${'`'}
-  ├  Profit: ${'`'}0.57${'`'} ETH | ${'`'}$2.25k${'`'}
-  └  Buy ${'`'}0.1${'`'} ETH → Sell ${'`'}0.69${'`'} ETH
-  ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
-└ $PIPI
-  ├  ROI: ${'`'}5%${'`'}
-  ├  Profit: ${'`'}0.05${'`'} ETH | ${'`'}$185${'`'}
-  └  Buy ${'`'}1${'`'} ETH → Sell ${'`'}1.08${'`'} ETH
-  ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
+├ **$HELGA**
+&nbsp;&nbsp;&nbsp;&nbsp;├  ROI: ${'`'}273%${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;├  Profit: ${'`'}0.92${'`'} ETH | ${'`'}$3.75k${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;└  Buy ${'`'}0.3${'`'} ETH → Sell ${'`'}1.26${'`'} ETH
+  ${'`'}TVB${'`'} | [Dextools]() | [Etherscan]()
+├ **$BIKINI**
+&nbsp;&nbsp;&nbsp;&nbsp;├  ROI: ${'`'}462%${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;├  Profit: ${'`'}0.57${'`'} ETH | ${'`'}$2.25k${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;└  Buy ${'`'}0.1${'`'} ETH → Sell ${'`'}0.69${'`'} ETH
+  ${'`'}TVB${'`'} | [Dextools]() | [Etherscan]()
+└ **$PIPI**
+&nbsp;&nbsp;&nbsp;&nbsp;├  ROI: ${'`'}5%${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;├  Profit: ${'`'}0.05${'`'} ETH | ${'`'}$185${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;└  Buy ${'`'}1${'`'} ETH → Sell ${'`'}1.08${'`'} ETH
+  ${'`'}TVB${'`'} | [Dextools]() | [Etherscan]()
           `,
           offset: -18,
         },

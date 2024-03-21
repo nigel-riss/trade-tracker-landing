@@ -68,6 +68,12 @@
       content: '- ';
     }
   }
+
+  a {
+    // typography
+    color: rgb(var(--green));
+    color: #3d6a97;
+  }
 }
 
 .messageCurrent {
