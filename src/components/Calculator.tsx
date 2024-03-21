@@ -257,7 +257,7 @@ export default function Calculator(props: CalculatorProps) {
           >
             Buy
           </CTAButton>
-          <GhostButton href="#">
+          <GhostButton href="https://t.me/atlantes_master_bot">
             Free trial
           </GhostButton>
         </div>

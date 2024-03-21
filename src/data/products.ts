@@ -270,20 +270,20 @@ ${'`'}etherscan${'`'} | ${'`'}debank${'`'}
 🏆 **Top Performing Assets**
 
 ├ $HELGA
-  ├  **ROI:** 273%
-  ├  **Profit:** 0.92 ETH | $3.75k
-  └  Buy 0.3 ETH → Sell 1.26 ETH
-  TVB | Dextools | Etherscan 
+  ├  ROI: ${'`'}273%${'`'}
+  ├  Profit: ${'`'}0.92${'`'} ETH | ${'`'}$3.75k${'`'}
+  └  Buy ${'`'}0.3${'`'} ETH → Sell ${'`'}1.26${'`'} ETH
+  ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
 ├ $BIKINI
-  ├  **ROI:** 462%
-  ├  **Profit:** 0.57 ETH | $2.25k
-  └  Buy 0.1 ETH → Sell 0.69 ETH
-  TVB | Dextools | Etherscan 
+  ├  ROI: ${'`'}462%${'`'}
+  ├  Profit: ${'`'}0.57${'`'} ETH | ${'`'}$2.25k${'`'}
+  └  Buy ${'`'}0.1${'`'} ETH → Sell ${'`'}0.69${'`'} ETH
+  ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
 └ $PIPI
-  ├  **ROI:** 5%
-  ├  **Profit:** 0.05 ETH | $185
-  └  Buy 1 ETH → Sell 1.08 ETH
-  TVB | Dextools | Etherscan
+  ├  ROI: ${'`'}5%${'`'}
+  ├  Profit: ${'`'}0.05${'`'} ETH | ${'`'}$185${'`'}
+  └  Buy ${'`'}1${'`'} ETH → Sell ${'`'}1.08${'`'} ETH
+  ${'`'}TVB${'`'} | ${'`'}Dextools${'`'} | ${'`'}Etherscan${'`'}
           `,
           offset: -18,
         },
