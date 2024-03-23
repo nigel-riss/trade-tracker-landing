@@ -89,14 +89,14 @@ const products: Product[] = [
         text: 'Stay ahead of the curve with instant notifications about significant market movements. Our Trade Volume Bot ensures you never miss an opportunity, alerting you to hot tokens and trends as they unfold.',
         message: {
           text: `
-**$PEPEFORK** | __Veryfied__
+[$TEQ]() | #
 ${'`'}-------------------------------${'`'}
-🚨 **New Alert:** ${'`'}1 in the last 2m31s${'`'}
+🚨 **Alert Time (UTC):** ${'`'}2024-03-21${'`'}
+${'`'}15:47:35${'`'}
 ${'`'}-------------------------------${'`'}
 🔍 **Token Overview:**
-AI Rate: ${'`'}5%${'`'}
-CA: ${'`'}0xb3705fc53e15e71ac35bbd862b7f9b0bb69c39be${'`'}
-CA Age: ${'`'}26h 31m${'`'} | Pair: ${'`'}24h 98m${'`'}
+CA: ${'`'}0x23150e1db43a04ae1ea993b76dd3c37156cabe0f${'`'}
+CA Age: ${'`'}188h57m36s${'`'} | Pair: ${'`'}161h3m24s${'`'}
 [Contract]() | [Owner]()
           `,
           offset: 0,
@@ -109,12 +109,13 @@ CA Age: ${'`'}26h 31m${'`'} | Pair: ${'`'}24h 98m${'`'}
           text: `
 📊 **Market Data:**
 
-Liquidity: ${'`'}$20.22k${'`'}
-MCap: ${'`'}$269k${'`'} | ATH: ${'`'}$119k${'`'}
-Volume: ${'`'}$32.74k${'`'}
-Tax: Buy ${'`'}5%${'`'} / Sell ${'`'}8%${'`'}
+Liquidity: ${'`'}$712.67k${'`'}
+MCap: ${'`'}$11.24m${'`'} | ATH: ${'`'}$15.16m${'`'}
+MC/Liq Ratio: ${'`'}15.76${'`'}
+Volume: ${'`'}$11.33m${'`'}
+Tax: Buy ${'`'}40%${'`'} / Sell ${'`'}40%${'`'}
           `,
-          offset: -10,
+          offset: -11,
         },
       },
       {
@@ -124,12 +125,13 @@ Tax: Buy ${'`'}5%${'`'} / Sell ${'`'}8%${'`'}
           text: `
 👥 **Trading Activity:**
 
-Buyers: ${'`'}89${'`'} (54 unique)
-Sellers: ${'`'}78${'`'} (65 unique)
-Buys: ${'`'}22.34k${'`'}| Sells: ${'`'}10.4k${'`'}
+Buyers: ${'`'}3035${'`'} (2070 unique)
+Sellers: ${'`'}1320${'`'} (774 unique)
+Buyers/Sellers Ratio: ${'`'}2.67${'`'}
+Buys: ${'`'}6.17m${'`'} | Sells: ${'`'}5.16m${'`'}
 [Dextools]() | [Dexscreener]()
           `,
-          offset: -15,
+          offset: -17,
         },
       },
       {
@@ -145,7 +147,7 @@ Owner: ${'`'}Renounced${'`'} | KYC: ${'`'}Binance / N/A${'`'}
 Owner's Balance: ${'`'}$565k${'`'}
 [Honeypot]() | [TokenSniffer]()
           `,
-          offset: -20,
+          offset: -23,
         },
       },
       {
@@ -154,30 +156,29 @@ Owner's Balance: ${'`'}$565k${'`'}
         message: {
           text: `
 📈 **Community & Wallets:**
-- **Holders:** ${'`'}170${'`'}
-  └ 4.6% | 3.5% | 2.3% | 1.2% |
-- **Presale:** ${'`'}1${'`'} (0% sold, 100% hold)
-  └ % of supply: ${'`'}0%${'`'}
-- **Snipers:** ${'`'}115${'`'} (4% sold, 96% hold)
-  └ % of supply: ${'`'}86.3%${'`'}
-- **1st 100 HLD:** ${'`'}100${'`'} (0% sold, 100% hold)
-  └ % of supply: ${'`'}84.0%${'`'}
-- **Whales:** ${'`'}19${'`'}
-  └ % of supply: ${'`'}3.1%${'`'}
+- **Holders:** ${'`'}1690${'`'}
+- **Presale:** ${'`'}1${'`'} (0% sold, 0% hold)
+&nbsp;&nbsp;└ % of supply: ${'`'}0%${'`'}
+- **Snipers:** ${'`'}168${'`'} (35% sold, 65% hold)
+&nbsp;&nbsp;└ % of supply: ${'`'}31.2%${'`'}
+- **1st 100 HLD:** ${'`'}100${'`'} (15% sold, 85% hold)
+&nbsp;&nbsp;└ % of supply: ${'`'}28.8%${'`'}
+- **Whales:** ${'`'}10${'`'}
+&nbsp;&nbsp;└ % of supply: ${'`'}0.7%${'`'}
 - **Fresh:** ${'`'}0${'`'}
-  └ % of supply: ${'`'}0%${'`'}
-- **Transfer**: ${'`'}0${'`'}
-  └ % of supply: ${'`'}0%${'`'}
+&nbsp;&nbsp;└ % of supply: ${'`'}0%${'`'}
+- **Transfer**: ${'`'}141${'`'}
+&nbsp;&nbsp;└ % of supply: ${'`'}21.1%${'`'}
 - **Smart Wallets:** ${'`'}0${'`'}
-  └ % of supply: ${'`'}0%${'`'}
-- **Smart Snipers:** ${'`'}3${'`'}
-  └ % of supply: ${'`'}0.6%${'`'}
-- **Tax Holders:** ${'`'}0${'`'}
-  └ % of supply: ${'`'}0%${'`'}
-- **Inactive Wallets:** ${'`'}0${'`'}
-- **Dormant Wallets:** ${'`'}1${'`'}
+&nbsp;&nbsp;└ % of supply: ${'`'}0%${'`'}
+- **Smart Snipers:** ${'`'}0${'`'}
+&nbsp;&nbsp;└ % of supply: ${'`'}0%${'`'}
+- **Tax Holders:** ${'`'}1${'`'}
+&nbsp;&nbsp;└ % of supply: ${'`'}0%${'`'}
+- **Inactive Wallets:** ${'`'}8${'`'}
+- **Dormant Wallets:** ${'`'}43${'`'}
           `,
-          offset: -28,
+          offset: -30,
         },
       },
       {
@@ -196,7 +197,7 @@ Owner's Balance: ${'`'}$565k${'`'}
               time: '14:55',
             },
           ],
-          offset: -35,
+          offset: -36,
         },
       },
     ],
@@ -240,24 +241,25 @@ Owner's Balance: ${'`'}$565k${'`'}
         text: 'Unlock a holistic view of wallet performance, including age, balance, and a detailed profit breakdown over key periods. Understand at a glance how wallets stack up over time, from daily changes to monthly trends, to inform your trading decisions with historical performance data.',
         message: {
           text: `
-${'`'}0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5${'`'}
+${'`'}0xa5b0fbdab57ef38555f2daef601c91a418ca8e73${'`'}
 [Etherscan]() | [Debank]()
 
-**Wallet Age:** ${'`'}365 days${'`'}
-**Current Balance:** ${'`'}$56k${'`'}
-**CopyTrade Score:** 🔴
+**Wallet Age:** ${'`'}975h17m39s${'`'}
+**Current Balance:** ${'`'}$16.31k${'`'}
 
+${'`'}-------------------------------${'`'}
 💵 **Performance Metrics**
 **Profit by Period:** 
-**1D:** ↓ ${'`'}-3 ETH${'`'} | ${'`'}$56k${'`'}
-**7D:** ↑ ${'`'}1.2 ETH${'`'} | ${'`'}$56k${'`'}
-**14D:** ↑ ${'`'}5.78 ETH${'`'} | ${'`'}$56k${'`'}
-**30D:** ↑ ${'`'}1.2 ETH${'`'} | ${'`'}$56k${'`'}
+**1D:** ↑ ${'`'}< 0.01 ETH${'`'} | ${'`'}$0${'`'}
+**7D:** ↑ ${'`'}15.93 ETH${'`'} | ${'`'}$59.84k${'`'}
+**14D:** ↑ ${'`'}15.41 ETH${'`'} | ${'`'}$61.70k${'`'}
+**30D:** ↑ ${'`'}15.16 ETH${'`'} | ${'`'}$57.48k${'`'}
+
+${'`'}-------------------------------${'`'}
 
 📊 **Analysis Period:** ${'`'}7 days${'`'}
-**Profit Overview:** ${'`'}1.2 ETH${'`'} | ${'`'}$56k${'`'}
-**ROI:** ${'`'}1987%${'`'}
-**Avg. Trade Freq.:** ${'`'}2.16${'`'}
+**Profit:** ${'`'}15.81 ETH${'`'} | ${'`'}$59.38k${'`'}
+**ROI:** ${'`'}244%${'`'} | **WR:**${'`'}29%${'`'}
           `,
           offset: 0,
         },
@@ -269,20 +271,20 @@ ${'`'}0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5${'`'}
           text: `
 🏆 **Top Performing Assets**
 
-├ **$HELGA**
-&nbsp;&nbsp;&nbsp;&nbsp;├  ROI: ${'`'}273%${'`'}
-&nbsp;&nbsp;&nbsp;&nbsp;├  Profit: ${'`'}0.92${'`'} ETH | ${'`'}$3.75k${'`'}
-&nbsp;&nbsp;&nbsp;&nbsp;└  Buy ${'`'}0.3${'`'} ETH → Sell ${'`'}1.26${'`'} ETH
+├ [$TEQ]()
+&nbsp;&nbsp;&nbsp;&nbsp;├  **ROI:** ${'`'}328%${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;├  **Profit:** ${'`'}16.09${'`'} ETH | ${'`'}$60.49k${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;└  **Buy** ${'`'}0.3${'`'} ETH → **Sell** ${'`'}1.26${'`'} ETH
   [TVB]() | [Dextools]() | [Etherscan]()
-├ **$BIKINI**
-&nbsp;&nbsp;&nbsp;&nbsp;├  ROI: ${'`'}462%${'`'}
-&nbsp;&nbsp;&nbsp;&nbsp;├  Profit: ${'`'}0.57${'`'} ETH | ${'`'}$2.25k${'`'}
-&nbsp;&nbsp;&nbsp;&nbsp;└  Buy ${'`'}0.1${'`'} ETH → Sell ${'`'}0.69${'`'} ETH
+├ [$DEFEND]()
+&nbsp;&nbsp;&nbsp;&nbsp;├  **ROI:** ${'`'}299%${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;├  **Profit:** ${'`'}0.35${'`'} ETH | ${'`'}$1.20k${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;└  **Buy** ${'`'}0.03${'`'} ETH → **Sell** ${'`'}0.47${'`'} ETH
   [TVB]() | [Dextools]() | [Etherscan]()
-└ **$PIPI**
-&nbsp;&nbsp;&nbsp;&nbsp;├  ROI: ${'`'}5%${'`'}
-&nbsp;&nbsp;&nbsp;&nbsp;├  Profit: ${'`'}0.05${'`'} ETH | ${'`'}$185${'`'}
-&nbsp;&nbsp;&nbsp;&nbsp;└  Buy ${'`'}1${'`'} ETH → Sell ${'`'}1.08${'`'} ETH
+└ [$PIRATES]()
+&nbsp;&nbsp;&nbsp;&nbsp;├  **ROI:** ${'`'}191%${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;├  **Profit:** ${'`'}0.14${'`'} ETH | ${'`'}$478${'`'}
+&nbsp;&nbsp;&nbsp;&nbsp;└  **Buy** ${'`'}0.04${'`'} ETH → **Sell** ${'`'}0.21${'`'} ETH
   [TVB]() | [Dextools]() | [Etherscan]()
           `,
           offset: -18,
@@ -293,27 +295,31 @@ ${'`'}0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5${'`'}
         text: 'Unlock trading insights with advanced metrics: unique tokens, transaction trends, and buy sizes. Harness data on GAS costs, holding times, and sniping accuracy for precise strategies. Analyze profitable vs. non-profitable trade distributions to enhance your investment approach.',
         message: {
           text: `
-**Uniq. Tokens Count:** ${'`'}12${'`'}
-**Buys:** ${'`'}56${'`'}
-**Sells:** ${'`'}53${'`'}
-**Avg. Buy:** ${'`'}0.1 ETH${'`'}
-**Avg. GAS Cost:** ${'`'}$10.12${'`'}
-**Avg. Holding Time:** ${'`'}94 min${'`'}
-**Transfer % (Token):** ${'`'}7%${'`'}
-🎯 **Sniping:** ${'`'}23%${'`'}
+🎯 **Trade Insights**
 
-📈 **ROI Positive Trades %:**
-**0-30:** ${'`'}12%${'`'}
-**30-100:** ${'`'}26%${'`'}
-**100-500:** ${'`'}75%${'`'}
-**500:** ${'`'}10%${'`'}
+**Uniq. Tokens Count:** ${'`'}14${'`'}
+**Buys:** ${'`'}11${'`'} | **Sells:** ${'`'}13${'`'}
+**Avg. Trade Frequency:** ${'`'}1.71${'`'}
+**Avg. Buy:** ${'`'}0.36 ETH${'`'}
+**Avg. Gas Cost:** ${'`'}$404${'`'}
+**Avg. Holding Time:** ${'`'}12h49m39s${'`'}
+**Transfer % (Token):** ${'`'}21%${'`'}
+**Sniping Activity:** ${'`'}57%${'`'}
 
-💔 **ROI Negative Trades**
-**0-30:** ${'`'}24%${'`'}
-**30-50:** ${'`'}10%${'`'}
-**50-100:** ${'`'}2%${'`'}
+${'`'}-------------------------------${'`'}
+📈 **ROI Distribution**
+
+**Positive Trades**
+├**0-30%:** ${'`'}0%${'`'}
+├**30-100%:** ${'`'}0%${'`'}
+├**100-500%:** ${'`'}75%${'`'}
+└**500+%:** ${'`'}25%${'`'}
+**ROI Negative Trades**
+├**0-30%:** ${'`'}25%${'`'}
+├**30-50%:** ${'`'}12%${'`'}
+└**50-100%:** ${'`'}62%${'`'}
           `,
-          offset: -32,
+          offset: -33,
         },
       },
       {
@@ -332,7 +338,7 @@ ${'`'}0x8b9de9f8ac145af0a007d9d3c47817c6885d88c5${'`'}
               time: '16:22',
             },
           ],
-          offset: -34,
+          offset: -38,
         },
       },
     ],
