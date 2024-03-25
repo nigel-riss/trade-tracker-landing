@@ -40,7 +40,7 @@ export default function App(props: AppProps) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2fe82b" />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
         <meta name="msapplication-TileColor" content="#131313" />
         <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
         <meta name="theme-color" content="#161616" />
