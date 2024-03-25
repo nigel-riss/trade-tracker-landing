@@ -44,8 +44,20 @@ export default function App(props: AppProps) {
         <meta name="msapplication-TileColor" content="#131313" />
         <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
         <meta name="theme-color" content="#161616" />
-        <meta name="yandex-verification" content="fbeb9797998f001e" />
+        <meta name="yandex-verification" content="c3071bbd6bc9ce61" />
         <title>Atlantes.io</title>
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://atlantes.io" />
+        <meta property="og:title" content="TRADE smart earn EASY" />
+        <meta property="og:description" content="Build Your Win: Use smart data to beat the market. Make sure you're one of the top traders with Atlantes" />
+        <meta property="og:image" content="https://atlantes.io/og.jpg" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://atlantes.io" />
+        <meta property="twitter:title" content="TRADE smart earn EASY" />
+        <meta property="twitter:description" content="Build Your Win: Use smart data to beat the market. Make sure you're one of the top traders with Atlantes" />
+        <meta property="twitter:image" content="" />
       </Head>
       <Component {...pageProps} />
     </>
