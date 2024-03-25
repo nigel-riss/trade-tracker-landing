@@ -44,6 +44,7 @@ export default function App(props: AppProps) {
         <meta name="msapplication-TileColor" content="#131313" />
         <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=3" />
         <meta name="theme-color" content="#161616" />
+        <meta name="yandex-verification" content="fbeb9797998f001e" />
         <title>Atlantes.io</title>
       </Head>
       <Component {...pageProps} />

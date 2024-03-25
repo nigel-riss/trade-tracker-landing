@@ -32,14 +32,14 @@ export default function Document() {
         {/* Google Tag Manager */}
         <Script
           strategy="beforeInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-3ERTQKH3JL"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16510442974"
         />
         <Script id="google-analytics" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-3ERTQKH3JL');
+            gtag('config', 'AW-16510442974');
           `}
         </Script>
 
