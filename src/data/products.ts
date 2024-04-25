@@ -55,7 +55,7 @@ const products: Product[] = [
     title: `Trade
       Volume Bot`,
     description: 'Leverage the power of AI and Machine Learning with our Trade Volume Bot, featuring a proprietary rating system for tokens and&nbsp;assets. Benefit from our unique classification of transaction participants and&nbsp;stay ahead with real-time data.',
-    calcDescription: 'AI and Machine Learning proprietary rating system for tokens and assets.',
+    calcDescription: 'Real-Time AI driven Trading insights.',
     href: '#products',
     icon: {
       height: 24,
@@ -63,21 +63,25 @@ const products: Product[] = [
     },
     price: {
       one: {
-        regular: 249,
-        pro: 399,
+        regular: 39,
+        pro: 149,
       },
       three: {
-        regular: 699,
-        pro: 1099,
+        regular: 99,
+        pro: 349,
       },
     },
     features: {
       regular: `<ul>
+        <li>detailed market data, trading activity</li>
+        <li>community & wallets analytics</li>
         <li><b>3 user</b> profiles</li>
         <li><s>export token data for chosen time frame</s></li>
         <li><s>whales configurator</s></li>
       </ul>`,
       pro: `<ul>
+        <li>detailed market data, trading activity</li>
+        <li>community & wallets analytics</li>
         <li><b>10 user</b> profiles</li>
         <li>export token data for chosen time frame</li>
         <li>whales configurator</li>
@@ -215,22 +219,26 @@ Owner's Balance: ${'`'}$565k${'`'}
     },
     price: {
       one: {
-        regular: 299,
-        pro: 599,
+        regular: 49,
+        pro: 159,
       },
       three: {
-        regular: 829,
-        pro: 1659,
+        regular: 109,
+        pro: 369,
       },
     },
     features: {
       regular: `<ul>
         <li><b>30</b> requests per hour</li>
+        <li>perfomance metrics & insights</li>
+        <li>roi distribution by trades</li>
         <li><s>time frame wallet search report</s></li>
         <li><s>trade report and simulation</s></li>
       </ul>`,
       pro: `<ul>
         <li><b>unlimited</b> requests</li>
+        <li>perfomance metrics & insights</li>
+        <li>roi distribution by trades</li>
         <li>time frame wallet search report</li>
         <li>trade report and simulation</li>
       </ul>`,
@@ -356,10 +364,10 @@ ${'`'}-------------------------------${'`'}
     },
     price: {
       one: {
-        regular: 399,
+        regular: 39,
       },
       three: {
-        regular: 1099,
+        regular: 99,
       },
     },
     features: {},
